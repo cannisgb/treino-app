@@ -1,0 +1,110 @@
+// Base de dados da app de treino. É uma base PostgreSQL PRÓPRIA, separada da
+// do site Look Signature: nenhuma tabela é partilhada.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id                 String   @id @default(cuid())
+  name               String
+  email              String   @unique
+  passwordHash       String
+  role               String   @default("ATHLETE") // "ATHLETE" | "TRAINER"
+  sex                String?  // "M" | "F" — escolhe as referências de proporção e força
+  catalogLang        String   @default("pt") // "pt" | "en" — idioma dos nomes dos exercícios
+  mustChangePassword Boolean  @default(false)
+  createdAt          DateTime @default(now())
+
+  // Cliente → o seu treinador
+  trainerId String?
+  trainer   User?   @relation("TrainerAthletes", fields: [trainerId], references: [id], onDelete: SetNull)
+  athletes  User[]  @relation("TrainerAthletes")
+
+  measurements        BodyMeasurement[]
+  sessions            WorkoutSession[]     @relation("AthleteSessions")
+  plans               TrainingPlan[]       @relation("AthletePlans")
+  passwordResetTokens PasswordResetToken[]
+}
+
+// Medidas corporais em cm (peso em kg). Todos opcionais: regista-se o que se mediu.
+model BodyMeasurement {
+  id        String   @id @default(cuid())
+  athlete   User     @relation(fields: [athleteId], references: [id], onDelete: Cascade)
+  athleteId String
+  date      DateTime @default(now())
+  weightKg  Float?
+  wrist     Float?
+  neck      Float?
+  shoulders Float?
+  chest     Float?
+  arm       Float?
+  forearm   Float?
+  waist     Float?
+  hips      Float?
+  thigh     Float?
+  calf      Float?
+  notes     String?
+  createdAt DateTime @default(now())
+
+  @@index([athleteId, date])
+}
+
+model WorkoutSession {
+  id        String         @id @default(cuid())
+  athlete   User           @relation("AthleteSessions", fields: [athleteId], references: [id], onDelete: Cascade)
+  athleteId String
+  trainerId String?
+  date      DateTime       @default(now())
+  title     String?
+  notes     String?
+  entries   WorkoutEntry[]
+  createdAt DateTime       @default(now())
+
+  @@index([athleteId, date])
+}
+
+// Uma linha por exercício na sessão. exerciseId refere o catálogo
+// (src/data/catalog.json), por isso o nome aparece em PT ou EN conforme a escolha.
+model WorkoutEntry {
+  id         String         @id @default(cuid())
+  session    WorkoutSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  sessionId  String
+  exerciseId String
+  sets       Int
+  reps       Int
+  kg         Float          @default(0)
+  order      Int            @default(0)
+
+  @@index([exerciseId])
+}
+
+model TrainingPlan {
+  id          String    @id @default(cuid())
+  athlete     User      @relation("AthletePlans", fields: [athleteId], references: [id], onDelete: Cascade)
+  athleteId   String
+  trainerId   String
+  goal        String    // hipertrofia | forca | gordura | misto
+  daysPerWeek Int
+  minutes     Int
+  data        Json      // { days: [{ name, items: [{ exerciseId, sets, reps, kg, priority }] }] }
+  status      String    @default("draft") // draft | published
+  createdAt   DateTime  @default(now())
+  publishedAt DateTime?
+
+  @@index([athleteId, status])
+}
+
+model PasswordResetToken {
+  id        String   @id @default(cuid())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    String
+  tokenHash String   @unique
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+}

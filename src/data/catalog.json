@@ -1,0 +1,3358 @@
+{
+  "meta": {
+    "versao": "1.0",
+    "notas": [
+      "Padrões = 1RM estimado ÷ peso corporal (Epley: carga × (1 + reps/30)), salvo metrica 'reps'.",
+      "Valores de orientação para adultos 18–40 anos; o treinador pode editá-los por cliente.",
+      "Prensa 45º varia muito entre máquinas (peso do carro, ângulo): usar o histórico do próprio cliente como referência principal.",
+      "tipo_carga: barra_total = barra + discos; por_halter = peso de um halter; maquina = valor da pilha; lastro = peso adicional ao corpo; assistencia = contrapeso (subtrair ao peso corporal)."
+    ]
+  },
+  "exercicios": [
+    {
+      "id": "barbell_bench_press",
+      "nome_pt": "Supino plano com barra",
+      "nome_en": "Barbell Bench Press",
+      "grupo": "peito",
+      "secundarios": [
+        "triceps",
+        "ombros"
+      ],
+      "equipamento": "barra",
+      "tipo": "composto",
+      "padrao_movimento": "empurrar_horizontal",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "incline_barbell_bench_press",
+      "nome_pt": "Supino inclinado com barra",
+      "nome_en": "Incline Barbell Bench Press",
+      "grupo": "peito",
+      "secundarios": [
+        "ombros",
+        "triceps"
+      ],
+      "equipamento": "barra",
+      "tipo": "composto",
+      "padrao_movimento": "empurrar_horizontal",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "decline_barbell_bench_press",
+      "nome_pt": "Supino declinado com barra",
+      "nome_en": "Decline Barbell Bench Press",
+      "grupo": "peito",
+      "secundarios": [
+        "triceps"
+      ],
+      "equipamento": "barra",
+      "tipo": "composto",
+      "padrao_movimento": "empurrar_horizontal",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "dumbbell_bench_press",
+      "nome_pt": "Supino plano com halteres",
+      "nome_en": "Dumbbell Bench Press",
+      "grupo": "peito",
+      "secundarios": [
+        "triceps",
+        "ombros"
+      ],
+      "equipamento": "halteres",
+      "tipo": "composto",
+      "padrao_movimento": "empurrar_horizontal",
+      "unilateral": false,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "incline_dumbbell_press",
+      "nome_pt": "Supino inclinado com halteres",
+      "nome_en": "Incline Dumbbell Press",
+      "grupo": "peito",
+      "secundarios": [
+        "ombros",
+        "triceps"
+      ],
+      "equipamento": "halteres",
+      "tipo": "composto",
+      "padrao_movimento": "empurrar_horizontal",
+      "unilateral": false,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "decline_dumbbell_press",
+      "nome_pt": "Supino declinado com halteres",
+      "nome_en": "Decline Dumbbell Press",
+      "grupo": "peito",
+      "secundarios": [
+        "triceps"
+      ],
+      "equipamento": "halteres",
+      "tipo": "composto",
+      "padrao_movimento": "empurrar_horizontal",
+      "unilateral": false,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "neutral_grip_dumbbell_press",
+      "nome_pt": "Supino com halteres pega neutra",
+      "nome_en": "Neutral-Grip Dumbbell Press",
+      "grupo": "peito",
+      "secundarios": [
+        "triceps"
+      ],
+      "equipamento": "halteres",
+      "tipo": "composto",
+      "padrao_movimento": "empurrar_horizontal",
+      "unilateral": false,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "machine_chest_press",
+      "nome_pt": "Supino na máquina",
+      "nome_en": "Machine Chest Press",
+      "grupo": "peito",
+      "secundarios": [
+        "triceps",
+        "ombros"
+      ],
+      "equipamento": "maquina",
+      "tipo": "composto",
+      "padrao_movimento": "empurrar_horizontal",
+      "unilateral": false,
+      "tipo_carga": "maquina"
+    },
+    {
+      "id": "incline_machine_press",
+      "nome_pt": "Supino inclinado na máquina",
+      "nome_en": "Incline Machine Press",
+      "grupo": "peito",
+      "secundarios": [
+        "ombros",
+        "triceps"
+      ],
+      "equipamento": "maquina",
+      "tipo": "composto",
+      "padrao_movimento": "empurrar_horizontal",
+      "unilateral": false,
+      "tipo_carga": "maquina"
+    },
+    {
+      "id": "smith_machine_bench_press",
+      "nome_pt": "Supino no Smith",
+      "nome_en": "Smith Machine Bench Press",
+      "grupo": "peito",
+      "secundarios": [
+        "triceps",
+        "ombros"
+      ],
+      "equipamento": "smith",
+      "tipo": "composto",
+      "padrao_movimento": "empurrar_horizontal",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "smith_machine_incline_press",
+      "nome_pt": "Supino inclinado no Smith",
+      "nome_en": "Smith Machine Incline Press",
+      "grupo": "peito",
+      "secundarios": [
+        "ombros",
+        "triceps"
+      ],
+      "equipamento": "smith",
+      "tipo": "composto",
+      "padrao_movimento": "empurrar_horizontal",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "landmine_press",
+      "nome_pt": "Landmine press",
+      "nome_en": "Landmine Press",
+      "grupo": "peito",
+      "secundarios": [
+        "ombros",
+        "triceps"
+      ],
+      "equipamento": "barra",
+      "tipo": "composto",
+      "padrao_movimento": "empurrar_horizontal",
+      "unilateral": true,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "dumbbell_squeeze_press",
+      "nome_pt": "Squeeze press com halteres",
+      "nome_en": "Dumbbell Squeeze Press",
+      "grupo": "peito",
+      "secundarios": [
+        "triceps"
+      ],
+      "equipamento": "halteres",
+      "tipo": "composto",
+      "padrao_movimento": "empurrar_horizontal",
+      "unilateral": false,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "dumbbell_fly",
+      "nome_pt": "Aberturas com halteres",
+      "nome_en": "Dumbbell Fly",
+      "grupo": "peito",
+      "secundarios": [
+        "ombros"
+      ],
+      "equipamento": "halteres",
+      "tipo": "isolado",
+      "padrao_movimento": "aducao_horizontal",
+      "unilateral": false,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "incline_dumbbell_fly",
+      "nome_pt": "Aberturas inclinadas com halteres",
+      "nome_en": "Incline Dumbbell Fly",
+      "grupo": "peito",
+      "secundarios": [
+        "ombros"
+      ],
+      "equipamento": "halteres",
+      "tipo": "isolado",
+      "padrao_movimento": "aducao_horizontal",
+      "unilateral": false,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "pec_deck_fly",
+      "nome_pt": "Peck deck (aberturas na máquina)",
+      "nome_en": "Pec Deck Fly",
+      "grupo": "peito",
+      "secundarios": [],
+      "equipamento": "maquina",
+      "tipo": "isolado",
+      "padrao_movimento": "aducao_horizontal",
+      "unilateral": false,
+      "tipo_carga": "maquina"
+    },
+    {
+      "id": "high_to_low_cable_crossover",
+      "nome_pt": "Crossover no cabo (alto para baixo)",
+      "nome_en": "High-to-Low Cable Crossover",
+      "grupo": "peito",
+      "secundarios": [],
+      "equipamento": "cabo",
+      "tipo": "isolado",
+      "padrao_movimento": "aducao_horizontal",
+      "unilateral": false,
+      "tipo_carga": "cabo"
+    },
+    {
+      "id": "low_to_high_cable_fly",
+      "nome_pt": "Crossover no cabo (baixo para cima)",
+      "nome_en": "Low-to-High Cable Fly",
+      "grupo": "peito",
+      "secundarios": [
+        "ombros"
+      ],
+      "equipamento": "cabo",
+      "tipo": "isolado",
+      "padrao_movimento": "aducao_horizontal",
+      "unilateral": false,
+      "tipo_carga": "cabo"
+    },
+    {
+      "id": "flat_cable_fly",
+      "nome_pt": "Aberturas no cabo em banco plano",
+      "nome_en": "Flat Cable Fly",
+      "grupo": "peito",
+      "secundarios": [],
+      "equipamento": "cabo",
+      "tipo": "isolado",
+      "padrao_movimento": "aducao_horizontal",
+      "unilateral": false,
+      "tipo_carga": "cabo"
+    },
+    {
+      "id": "dumbbell_pullover",
+      "nome_pt": "Pullover com halter",
+      "nome_en": "Dumbbell Pullover",
+      "grupo": "peito",
+      "secundarios": [
+        "costas",
+        "triceps"
+      ],
+      "equipamento": "halteres",
+      "tipo": "isolado",
+      "padrao_movimento": "extensao_ombro",
+      "unilateral": false,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "plate_press",
+      "nome_pt": "Svend press (disco)",
+      "nome_en": "Plate Press",
+      "grupo": "peito",
+      "secundarios": [
+        "ombros"
+      ],
+      "equipamento": "disco",
+      "tipo": "isolado",
+      "padrao_movimento": "aducao_horizontal",
+      "unilateral": false,
+      "tipo_carga": "maquina"
+    },
+    {
+      "id": "push_up",
+      "nome_pt": "Flexões",
+      "nome_en": "Push-up",
+      "grupo": "peito",
+      "secundarios": [
+        "triceps",
+        "ombros",
+        "core"
+      ],
+      "equipamento": "peso_corporal",
+      "tipo": "composto",
+      "padrao_movimento": "empurrar_horizontal",
+      "unilateral": false,
+      "tipo_carga": "peso_corporal"
+    },
+    {
+      "id": "incline_push_up",
+      "nome_pt": "Flexões inclinadas (mãos elevadas)",
+      "nome_en": "Incline Push-up",
+      "grupo": "peito",
+      "secundarios": [
+        "triceps"
+      ],
+      "equipamento": "peso_corporal",
+      "tipo": "composto",
+      "padrao_movimento": "empurrar_horizontal",
+      "unilateral": false,
+      "tipo_carga": "peso_corporal"
+    },
+    {
+      "id": "decline_push_up",
+      "nome_pt": "Flexões declinadas (pés elevados)",
+      "nome_en": "Decline Push-up",
+      "grupo": "peito",
+      "secundarios": [
+        "ombros",
+        "triceps"
+      ],
+      "equipamento": "peso_corporal",
+      "tipo": "composto",
+      "padrao_movimento": "empurrar_horizontal",
+      "unilateral": false,
+      "tipo_carga": "peso_corporal"
+    },
+    {
+      "id": "weighted_push_up",
+      "nome_pt": "Flexões com lastro",
+      "nome_en": "Weighted Push-up",
+      "grupo": "peito",
+      "secundarios": [
+        "triceps",
+        "ombros"
+      ],
+      "equipamento": "peso_corporal",
+      "tipo": "composto",
+      "padrao_movimento": "empurrar_horizontal",
+      "unilateral": false,
+      "tipo_carga": "lastro"
+    },
+    {
+      "id": "chest_dip",
+      "nome_pt": "Paralelas inclinado à frente",
+      "nome_en": "Chest Dip",
+      "grupo": "peito",
+      "secundarios": [
+        "triceps",
+        "ombros"
+      ],
+      "equipamento": "barra_paralela",
+      "tipo": "composto",
+      "padrao_movimento": "empurrar_vertical_baixo",
+      "unilateral": false,
+      "tipo_carga": "lastro"
+    },
+    {
+      "id": "pull_up",
+      "nome_pt": "Elevações pega pronada",
+      "nome_en": "Pull-up",
+      "grupo": "costas",
+      "secundarios": [
+        "biceps",
+        "antebraco"
+      ],
+      "equipamento": "barra_fixa",
+      "tipo": "composto",
+      "padrao_movimento": "puxar_vertical",
+      "unilateral": false,
+      "tipo_carga": "lastro"
+    },
+    {
+      "id": "chin_up",
+      "nome_pt": "Elevações pega supinada",
+      "nome_en": "Chin-up",
+      "grupo": "costas",
+      "secundarios": [
+        "biceps"
+      ],
+      "equipamento": "barra_fixa",
+      "tipo": "composto",
+      "padrao_movimento": "puxar_vertical",
+      "unilateral": false,
+      "tipo_carga": "lastro"
+    },
+    {
+      "id": "neutral_grip_pull_up",
+      "nome_pt": "Elevações pega neutra",
+      "nome_en": "Neutral-Grip Pull-up",
+      "grupo": "costas",
+      "secundarios": [
+        "biceps",
+        "antebraco"
+      ],
+      "equipamento": "barra_fixa",
+      "tipo": "composto",
+      "padrao_movimento": "puxar_vertical",
+      "unilateral": false,
+      "tipo_carga": "lastro"
+    },
+    {
+      "id": "assisted_pull_up",
+      "nome_pt": "Elevações assistidas",
+      "nome_en": "Assisted Pull-up",
+      "grupo": "costas",
+      "secundarios": [
+        "biceps"
+      ],
+      "equipamento": "maquina",
+      "tipo": "composto",
+      "padrao_movimento": "puxar_vertical",
+      "unilateral": false,
+      "tipo_carga": "assistencia"
+    },
+    {
+      "id": "wide_grip_lat_pulldown",
+      "nome_pt": "Puxada à frente pega larga",
+      "nome_en": "Wide-Grip Lat Pulldown",
+      "grupo": "costas",
+      "secundarios": [
+        "biceps"
+      ],
+      "equipamento": "cabo",
+      "tipo": "composto",
+      "padrao_movimento": "puxar_vertical",
+      "unilateral": false,
+      "tipo_carga": "cabo"
+    },
+    {
+      "id": "close_grip_lat_pulldown",
+      "nome_pt": "Puxada pega fechada (triângulo)",
+      "nome_en": "Close-Grip Lat Pulldown",
+      "grupo": "costas",
+      "secundarios": [
+        "biceps"
+      ],
+      "equipamento": "cabo",
+      "tipo": "composto",
+      "padrao_movimento": "puxar_vertical",
+      "unilateral": false,
+      "tipo_carga": "cabo"
+    },
+    {
+      "id": "reverse_grip_lat_pulldown",
+      "nome_pt": "Puxada pega supinada",
+      "nome_en": "Reverse-Grip Lat Pulldown",
+      "grupo": "costas",
+      "secundarios": [
+        "biceps"
+      ],
+      "equipamento": "cabo",
+      "tipo": "composto",
+      "padrao_movimento": "puxar_vertical",
+      "unilateral": false,
+      "tipo_carga": "cabo"
+    },
+    {
+      "id": "single_arm_lat_pulldown",
+      "nome_pt": "Puxada unilateral no cabo",
+      "nome_en": "Single-Arm Lat Pulldown",
+      "grupo": "costas",
+      "secundarios": [
+        "biceps"
+      ],
+      "equipamento": "cabo",
+      "tipo": "composto",
+      "padrao_movimento": "puxar_vertical",
+      "unilateral": true,
+      "tipo_carga": "cabo"
+    },
+    {
+      "id": "machine_lat_pulldown",
+      "nome_pt": "Puxada na máquina",
+      "nome_en": "Machine Lat Pulldown",
+      "grupo": "costas",
+      "secundarios": [
+        "biceps"
+      ],
+      "equipamento": "maquina",
+      "tipo": "composto",
+      "padrao_movimento": "puxar_vertical",
+      "unilateral": false,
+      "tipo_carga": "maquina"
+    },
+    {
+      "id": "straight_arm_pulldown",
+      "nome_pt": "Pullover no cabo braços esticados",
+      "nome_en": "Straight-Arm Pulldown",
+      "grupo": "costas",
+      "secundarios": [
+        "triceps"
+      ],
+      "equipamento": "cabo",
+      "tipo": "isolado",
+      "padrao_movimento": "extensao_ombro",
+      "unilateral": false,
+      "tipo_carga": "cabo"
+    },
+    {
+      "id": "barbell_bent_over_row",
+      "nome_pt": "Remada curvada com barra",
+      "nome_en": "Barbell Bent-Over Row",
+      "grupo": "costas",
+      "secundarios": [
+        "biceps",
+        "lombar"
+      ],
+      "equipamento": "barra",
+      "tipo": "composto",
+      "padrao_movimento": "puxar_horizontal",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "pendlay_row",
+      "nome_pt": "Remada Pendlay",
+      "nome_en": "Pendlay Row",
+      "grupo": "costas",
+      "secundarios": [
+        "biceps",
+        "lombar"
+      ],
+      "equipamento": "barra",
+      "tipo": "composto",
+      "padrao_movimento": "puxar_horizontal",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "underhand_barbell_row",
+      "nome_pt": "Remada curvada pega supinada (Yates)",
+      "nome_en": "Underhand Barbell Row",
+      "grupo": "costas",
+      "secundarios": [
+        "biceps"
+      ],
+      "equipamento": "barra",
+      "tipo": "composto",
+      "padrao_movimento": "puxar_horizontal",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "one_arm_dumbbell_row",
+      "nome_pt": "Remada unilateral com halter",
+      "nome_en": "One-Arm Dumbbell Row",
+      "grupo": "costas",
+      "secundarios": [
+        "biceps"
+      ],
+      "equipamento": "halteres",
+      "tipo": "composto",
+      "padrao_movimento": "puxar_horizontal",
+      "unilateral": true,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "chest_supported_dumbbell_row",
+      "nome_pt": "Remada com halteres apoiada no banco",
+      "nome_en": "Chest-Supported Dumbbell Row",
+      "grupo": "costas",
+      "secundarios": [
+        "biceps",
+        "ombros"
+      ],
+      "equipamento": "halteres",
+      "tipo": "composto",
+      "padrao_movimento": "puxar_horizontal",
+      "unilateral": false,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "seal_row",
+      "nome_pt": "Remada Seal",
+      "nome_en": "Seal Row",
+      "grupo": "costas",
+      "secundarios": [
+        "biceps"
+      ],
+      "equipamento": "barra",
+      "tipo": "composto",
+      "padrao_movimento": "puxar_horizontal",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "t_bar_row",
+      "nome_pt": "Remada T (T-bar)",
+      "nome_en": "T-Bar Row",
+      "grupo": "costas",
+      "secundarios": [
+        "biceps",
+        "lombar"
+      ],
+      "equipamento": "barra",
+      "tipo": "composto",
+      "padrao_movimento": "puxar_horizontal",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "meadows_row",
+      "nome_pt": "Remada Meadows",
+      "nome_en": "Meadows Row",
+      "grupo": "costas",
+      "secundarios": [
+        "biceps"
+      ],
+      "equipamento": "barra",
+      "tipo": "composto",
+      "padrao_movimento": "puxar_horizontal",
+      "unilateral": true,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "seated_cable_row",
+      "nome_pt": "Remada sentada no cabo",
+      "nome_en": "Seated Cable Row",
+      "grupo": "costas",
+      "secundarios": [
+        "biceps"
+      ],
+      "equipamento": "cabo",
+      "tipo": "composto",
+      "padrao_movimento": "puxar_horizontal",
+      "unilateral": false,
+      "tipo_carga": "cabo"
+    },
+    {
+      "id": "machine_row",
+      "nome_pt": "Remada na máquina",
+      "nome_en": "Machine Row",
+      "grupo": "costas",
+      "secundarios": [
+        "biceps"
+      ],
+      "equipamento": "maquina",
+      "tipo": "composto",
+      "padrao_movimento": "puxar_horizontal",
+      "unilateral": false,
+      "tipo_carga": "maquina"
+    },
+    {
+      "id": "inverted_row",
+      "nome_pt": "Remada invertida",
+      "nome_en": "Inverted Row",
+      "grupo": "costas",
+      "secundarios": [
+        "biceps",
+        "core"
+      ],
+      "equipamento": "peso_corporal",
+      "tipo": "composto",
+      "padrao_movimento": "puxar_horizontal",
+      "unilateral": false,
+      "tipo_carga": "peso_corporal"
+    },
+    {
+      "id": "conventional_deadlift",
+      "nome_pt": "Peso morto convencional",
+      "nome_en": "Conventional Deadlift",
+      "grupo": "costas",
+      "secundarios": [
+        "isquiotibiais",
+        "gluteos",
+        "lombar",
+        "antebraco"
+      ],
+      "equipamento": "barra",
+      "tipo": "composto",
+      "padrao_movimento": "dobradica_anca",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "sumo_deadlift",
+      "nome_pt": "Peso morto sumo",
+      "nome_en": "Sumo Deadlift",
+      "grupo": "costas",
+      "secundarios": [
+        "gluteos",
+        "quadriceps",
+        "adutores"
+      ],
+      "equipamento": "barra",
+      "tipo": "composto",
+      "padrao_movimento": "dobradica_anca",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "trap_bar_deadlift",
+      "nome_pt": "Peso morto com trap bar",
+      "nome_en": "Trap Bar Deadlift",
+      "grupo": "costas",
+      "secundarios": [
+        "quadriceps",
+        "gluteos"
+      ],
+      "equipamento": "barra",
+      "tipo": "composto",
+      "padrao_movimento": "dobradica_anca",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "rack_pull",
+      "nome_pt": "Rack pull",
+      "nome_en": "Rack Pull",
+      "grupo": "costas",
+      "secundarios": [
+        "gluteos",
+        "trapezio"
+      ],
+      "equipamento": "barra",
+      "tipo": "composto",
+      "padrao_movimento": "dobradica_anca",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "back_extension",
+      "nome_pt": "Hiperextensões lombares",
+      "nome_en": "Back Extension",
+      "grupo": "costas",
+      "secundarios": [
+        "gluteos",
+        "isquiotibiais"
+      ],
+      "equipamento": "banco",
+      "tipo": "isolado",
+      "padrao_movimento": "extensao_lombar",
+      "unilateral": false,
+      "tipo_carga": "lastro"
+    },
+    {
+      "id": "superman",
+      "nome_pt": "Superman",
+      "nome_en": "Superman",
+      "grupo": "costas",
+      "secundarios": [
+        "gluteos"
+      ],
+      "equipamento": "peso_corporal",
+      "tipo": "isolado",
+      "padrao_movimento": "extensao_lombar",
+      "unilateral": false,
+      "tipo_carga": "peso_corporal"
+    },
+    {
+      "id": "barbell_shrug",
+      "nome_pt": "Encolhimentos com barra",
+      "nome_en": "Barbell Shrug",
+      "grupo": "costas",
+      "secundarios": [
+        "trapezio"
+      ],
+      "equipamento": "barra",
+      "tipo": "isolado",
+      "padrao_movimento": "elevacao_escapula",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "dumbbell_shrug",
+      "nome_pt": "Encolhimentos com halteres",
+      "nome_en": "Dumbbell Shrug",
+      "grupo": "costas",
+      "secundarios": [
+        "trapezio"
+      ],
+      "equipamento": "halteres",
+      "tipo": "isolado",
+      "padrao_movimento": "elevacao_escapula",
+      "unilateral": false,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "smith_machine_shrug",
+      "nome_pt": "Encolhimentos no Smith",
+      "nome_en": "Smith Machine Shrug",
+      "grupo": "costas",
+      "secundarios": [
+        "trapezio"
+      ],
+      "equipamento": "smith",
+      "tipo": "isolado",
+      "padrao_movimento": "elevacao_escapula",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "overhead_press",
+      "nome_pt": "Press militar com barra de pé",
+      "nome_en": "Overhead Press",
+      "grupo": "ombros",
+      "secundarios": [
+        "triceps",
+        "core"
+      ],
+      "equipamento": "barra",
+      "tipo": "composto",
+      "padrao_movimento": "empurrar_vertical",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "seated_barbell_shoulder_press",
+      "nome_pt": "Press militar sentado com barra",
+      "nome_en": "Seated Barbell Shoulder Press",
+      "grupo": "ombros",
+      "secundarios": [
+        "triceps"
+      ],
+      "equipamento": "barra",
+      "tipo": "composto",
+      "padrao_movimento": "empurrar_vertical",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "seated_dumbbell_shoulder_press",
+      "nome_pt": "Press de ombros com halteres sentado",
+      "nome_en": "Seated Dumbbell Shoulder Press",
+      "grupo": "ombros",
+      "secundarios": [
+        "triceps"
+      ],
+      "equipamento": "halteres",
+      "tipo": "composto",
+      "padrao_movimento": "empurrar_vertical",
+      "unilateral": false,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "standing_dumbbell_shoulder_press",
+      "nome_pt": "Press de ombros com halteres de pé",
+      "nome_en": "Standing Dumbbell Shoulder Press",
+      "grupo": "ombros",
+      "secundarios": [
+        "triceps",
+        "core"
+      ],
+      "equipamento": "halteres",
+      "tipo": "composto",
+      "padrao_movimento": "empurrar_vertical",
+      "unilateral": false,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "single_arm_dumbbell_press",
+      "nome_pt": "Press unilateral com halter",
+      "nome_en": "Single-Arm Dumbbell Press",
+      "grupo": "ombros",
+      "secundarios": [
+        "triceps",
+        "core"
+      ],
+      "equipamento": "halteres",
+      "tipo": "composto",
+      "padrao_movimento": "empurrar_vertical",
+      "unilateral": true,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "arnold_press",
+      "nome_pt": "Press Arnold",
+      "nome_en": "Arnold Press",
+      "grupo": "ombros",
+      "secundarios": [
+        "triceps"
+      ],
+      "equipamento": "halteres",
+      "tipo": "composto",
+      "padrao_movimento": "empurrar_vertical",
+      "unilateral": false,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "machine_shoulder_press",
+      "nome_pt": "Press de ombros na máquina",
+      "nome_en": "Machine Shoulder Press",
+      "grupo": "ombros",
+      "secundarios": [
+        "triceps"
+      ],
+      "equipamento": "maquina",
+      "tipo": "composto",
+      "padrao_movimento": "empurrar_vertical",
+      "unilateral": false,
+      "tipo_carga": "maquina"
+    },
+    {
+      "id": "smith_machine_overhead_press",
+      "nome_pt": "Press de ombros no Smith",
+      "nome_en": "Smith Machine Overhead Press",
+      "grupo": "ombros",
+      "secundarios": [
+        "triceps"
+      ],
+      "equipamento": "smith",
+      "tipo": "composto",
+      "padrao_movimento": "empurrar_vertical",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "push_press",
+      "nome_pt": "Push press",
+      "nome_en": "Push Press",
+      "grupo": "ombros",
+      "secundarios": [
+        "triceps",
+        "quadriceps"
+      ],
+      "equipamento": "barra",
+      "tipo": "composto",
+      "padrao_movimento": "empurrar_vertical",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "pike_push_up",
+      "nome_pt": "Pike push-up",
+      "nome_en": "Pike Push-up",
+      "grupo": "ombros",
+      "secundarios": [
+        "triceps"
+      ],
+      "equipamento": "peso_corporal",
+      "tipo": "composto",
+      "padrao_movimento": "empurrar_vertical",
+      "unilateral": false,
+      "tipo_carga": "peso_corporal"
+    },
+    {
+      "id": "handstand_push_up",
+      "nome_pt": "Flexões em pino",
+      "nome_en": "Handstand Push-up",
+      "grupo": "ombros",
+      "secundarios": [
+        "triceps",
+        "core"
+      ],
+      "equipamento": "peso_corporal",
+      "tipo": "composto",
+      "padrao_movimento": "empurrar_vertical",
+      "unilateral": false,
+      "tipo_carga": "peso_corporal"
+    },
+    {
+      "id": "dumbbell_lateral_raise",
+      "nome_pt": "Elevação lateral com halteres",
+      "nome_en": "Dumbbell Lateral Raise",
+      "grupo": "ombros",
+      "secundarios": [
+        "trapezio"
+      ],
+      "equipamento": "halteres",
+      "tipo": "isolado",
+      "padrao_movimento": "abducao_ombro",
+      "unilateral": false,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "cable_lateral_raise",
+      "nome_pt": "Elevação lateral no cabo",
+      "nome_en": "Cable Lateral Raise",
+      "grupo": "ombros",
+      "secundarios": [],
+      "equipamento": "cabo",
+      "tipo": "isolado",
+      "padrao_movimento": "abducao_ombro",
+      "unilateral": true,
+      "tipo_carga": "cabo"
+    },
+    {
+      "id": "machine_lateral_raise",
+      "nome_pt": "Elevação lateral na máquina",
+      "nome_en": "Machine Lateral Raise",
+      "grupo": "ombros",
+      "secundarios": [],
+      "equipamento": "maquina",
+      "tipo": "isolado",
+      "padrao_movimento": "abducao_ombro",
+      "unilateral": false,
+      "tipo_carga": "maquina"
+    },
+    {
+      "id": "lean_away_lateral_raise",
+      "nome_pt": "Elevação lateral inclinada (apoiado)",
+      "nome_en": "Lean-Away Lateral Raise",
+      "grupo": "ombros",
+      "secundarios": [],
+      "equipamento": "halteres",
+      "tipo": "isolado",
+      "padrao_movimento": "abducao_ombro",
+      "unilateral": true,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "dumbbell_front_raise",
+      "nome_pt": "Elevação frontal com halteres",
+      "nome_en": "Dumbbell Front Raise",
+      "grupo": "ombros",
+      "secundarios": [
+        "peito"
+      ],
+      "equipamento": "halteres",
+      "tipo": "isolado",
+      "padrao_movimento": "flexao_ombro",
+      "unilateral": false,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "plate_front_raise",
+      "nome_pt": "Elevação frontal com disco",
+      "nome_en": "Plate Front Raise",
+      "grupo": "ombros",
+      "secundarios": [
+        "peito"
+      ],
+      "equipamento": "disco",
+      "tipo": "isolado",
+      "padrao_movimento": "flexao_ombro",
+      "unilateral": false,
+      "tipo_carga": "maquina"
+    },
+    {
+      "id": "cable_front_raise",
+      "nome_pt": "Elevação frontal no cabo",
+      "nome_en": "Cable Front Raise",
+      "grupo": "ombros",
+      "secundarios": [
+        "peito"
+      ],
+      "equipamento": "cabo",
+      "tipo": "isolado",
+      "padrao_movimento": "flexao_ombro",
+      "unilateral": false,
+      "tipo_carga": "cabo"
+    },
+    {
+      "id": "bent_over_reverse_fly",
+      "nome_pt": "Reverse fly com halteres (curvado)",
+      "nome_en": "Bent-Over Reverse Fly",
+      "grupo": "ombros",
+      "secundarios": [
+        "costas"
+      ],
+      "equipamento": "halteres",
+      "tipo": "isolado",
+      "padrao_movimento": "abducao_horizontal",
+      "unilateral": false,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "reverse_pec_deck",
+      "nome_pt": "Reverse peck deck",
+      "nome_en": "Reverse Pec Deck",
+      "grupo": "ombros",
+      "secundarios": [
+        "costas"
+      ],
+      "equipamento": "maquina",
+      "tipo": "isolado",
+      "padrao_movimento": "abducao_horizontal",
+      "unilateral": false,
+      "tipo_carga": "maquina"
+    },
+    {
+      "id": "cable_rear_delt_fly",
+      "nome_pt": "Reverse fly no cabo",
+      "nome_en": "Cable Rear Delt Fly",
+      "grupo": "ombros",
+      "secundarios": [
+        "costas"
+      ],
+      "equipamento": "cabo",
+      "tipo": "isolado",
+      "padrao_movimento": "abducao_horizontal",
+      "unilateral": false,
+      "tipo_carga": "cabo"
+    },
+    {
+      "id": "face_pull",
+      "nome_pt": "Face pull",
+      "nome_en": "Face Pull",
+      "grupo": "ombros",
+      "secundarios": [
+        "costas",
+        "trapezio"
+      ],
+      "equipamento": "cabo",
+      "tipo": "isolado",
+      "padrao_movimento": "abducao_horizontal",
+      "unilateral": false,
+      "tipo_carga": "cabo"
+    },
+    {
+      "id": "barbell_upright_row",
+      "nome_pt": "Remada alta com barra",
+      "nome_en": "Barbell Upright Row",
+      "grupo": "ombros",
+      "secundarios": [
+        "trapezio",
+        "biceps"
+      ],
+      "equipamento": "barra",
+      "tipo": "composto",
+      "padrao_movimento": "abducao_ombro",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "cable_upright_row",
+      "nome_pt": "Remada alta no cabo",
+      "nome_en": "Cable Upright Row",
+      "grupo": "ombros",
+      "secundarios": [
+        "trapezio"
+      ],
+      "equipamento": "cabo",
+      "tipo": "composto",
+      "padrao_movimento": "abducao_ombro",
+      "unilateral": false,
+      "tipo_carga": "cabo"
+    },
+    {
+      "id": "incline_y_raise",
+      "nome_pt": "Elevação em Y inclinado",
+      "nome_en": "Incline Y-Raise",
+      "grupo": "ombros",
+      "secundarios": [
+        "trapezio"
+      ],
+      "equipamento": "halteres",
+      "tipo": "isolado",
+      "padrao_movimento": "abducao_ombro",
+      "unilateral": false,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "cable_external_rotation",
+      "nome_pt": "Rotação externa no cabo",
+      "nome_en": "Cable External Rotation",
+      "grupo": "ombros",
+      "secundarios": [
+        "coifa_rotadores"
+      ],
+      "equipamento": "cabo",
+      "tipo": "isolado",
+      "padrao_movimento": "rotacao_ombro",
+      "unilateral": true,
+      "tipo_carga": "cabo"
+    },
+    {
+      "id": "barbell_curl",
+      "nome_pt": "Curl com barra",
+      "nome_en": "Barbell Curl",
+      "grupo": "biceps",
+      "secundarios": [
+        "antebraco"
+      ],
+      "equipamento": "barra",
+      "tipo": "isolado",
+      "padrao_movimento": "flexao_cotovelo",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "ez_bar_curl",
+      "nome_pt": "Curl com barra EZ",
+      "nome_en": "EZ-Bar Curl",
+      "grupo": "biceps",
+      "secundarios": [
+        "antebraco"
+      ],
+      "equipamento": "barra",
+      "tipo": "isolado",
+      "padrao_movimento": "flexao_cotovelo",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "alternating_dumbbell_curl",
+      "nome_pt": "Curl com halteres alternado",
+      "nome_en": "Alternating Dumbbell Curl",
+      "grupo": "biceps",
+      "secundarios": [
+        "antebraco"
+      ],
+      "equipamento": "halteres",
+      "tipo": "isolado",
+      "padrao_movimento": "flexao_cotovelo",
+      "unilateral": true,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "hammer_curl",
+      "nome_pt": "Curl martelo",
+      "nome_en": "Hammer Curl",
+      "grupo": "biceps",
+      "secundarios": [
+        "antebraco"
+      ],
+      "equipamento": "halteres",
+      "tipo": "isolado",
+      "padrao_movimento": "flexao_cotovelo",
+      "unilateral": false,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "incline_dumbbell_curl",
+      "nome_pt": "Curl inclinado com halteres",
+      "nome_en": "Incline Dumbbell Curl",
+      "grupo": "biceps",
+      "secundarios": [],
+      "equipamento": "halteres",
+      "tipo": "isolado",
+      "padrao_movimento": "flexao_cotovelo",
+      "unilateral": false,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "ez_bar_preacher_curl",
+      "nome_pt": "Curl Scott com barra EZ",
+      "nome_en": "EZ-Bar Preacher Curl",
+      "grupo": "biceps",
+      "secundarios": [],
+      "equipamento": "barra",
+      "tipo": "isolado",
+      "padrao_movimento": "flexao_cotovelo",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "machine_preacher_curl",
+      "nome_pt": "Curl Scott na máquina",
+      "nome_en": "Machine Preacher Curl",
+      "grupo": "biceps",
+      "secundarios": [],
+      "equipamento": "maquina",
+      "tipo": "isolado",
+      "padrao_movimento": "flexao_cotovelo",
+      "unilateral": false,
+      "tipo_carga": "maquina"
+    },
+    {
+      "id": "concentration_curl",
+      "nome_pt": "Curl concentrado",
+      "nome_en": "Concentration Curl",
+      "grupo": "biceps",
+      "secundarios": [],
+      "equipamento": "halteres",
+      "tipo": "isolado",
+      "padrao_movimento": "flexao_cotovelo",
+      "unilateral": true,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "cable_curl",
+      "nome_pt": "Curl no cabo",
+      "nome_en": "Cable Curl",
+      "grupo": "biceps",
+      "secundarios": [
+        "antebraco"
+      ],
+      "equipamento": "cabo",
+      "tipo": "isolado",
+      "padrao_movimento": "flexao_cotovelo",
+      "unilateral": false,
+      "tipo_carga": "cabo"
+    },
+    {
+      "id": "bayesian_cable_curl",
+      "nome_pt": "Curl bayesiano no cabo",
+      "nome_en": "Bayesian Cable Curl",
+      "grupo": "biceps",
+      "secundarios": [],
+      "equipamento": "cabo",
+      "tipo": "isolado",
+      "padrao_movimento": "flexao_cotovelo",
+      "unilateral": true,
+      "tipo_carga": "cabo"
+    },
+    {
+      "id": "rope_hammer_curl",
+      "nome_pt": "Curl martelo com corda",
+      "nome_en": "Rope Hammer Curl",
+      "grupo": "biceps",
+      "secundarios": [
+        "antebraco"
+      ],
+      "equipamento": "cabo",
+      "tipo": "isolado",
+      "padrao_movimento": "flexao_cotovelo",
+      "unilateral": false,
+      "tipo_carga": "cabo"
+    },
+    {
+      "id": "spider_curl",
+      "nome_pt": "Curl spider",
+      "nome_en": "Spider Curl",
+      "grupo": "biceps",
+      "secundarios": [],
+      "equipamento": "halteres",
+      "tipo": "isolado",
+      "padrao_movimento": "flexao_cotovelo",
+      "unilateral": false,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "21s_curl",
+      "nome_pt": "Curl 21",
+      "nome_en": "21s Curl",
+      "grupo": "biceps",
+      "secundarios": [],
+      "equipamento": "barra",
+      "tipo": "isolado",
+      "padrao_movimento": "flexao_cotovelo",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "zottman_curl",
+      "nome_pt": "Curl Zottman",
+      "nome_en": "Zottman Curl",
+      "grupo": "biceps",
+      "secundarios": [
+        "antebraco"
+      ],
+      "equipamento": "halteres",
+      "tipo": "isolado",
+      "padrao_movimento": "flexao_cotovelo",
+      "unilateral": false,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "drag_curl",
+      "nome_pt": "Curl drag",
+      "nome_en": "Drag Curl",
+      "grupo": "biceps",
+      "secundarios": [],
+      "equipamento": "barra",
+      "tipo": "isolado",
+      "padrao_movimento": "flexao_cotovelo",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "machine_bicep_curl",
+      "nome_pt": "Curl na máquina",
+      "nome_en": "Machine Bicep Curl",
+      "grupo": "biceps",
+      "secundarios": [],
+      "equipamento": "maquina",
+      "tipo": "isolado",
+      "padrao_movimento": "flexao_cotovelo",
+      "unilateral": false,
+      "tipo_carga": "maquina"
+    },
+    {
+      "id": "tricep_pushdown_bar",
+      "nome_pt": "Extensão na polia com barra",
+      "nome_en": "Tricep Pushdown (Bar)",
+      "grupo": "triceps",
+      "secundarios": [],
+      "equipamento": "cabo",
+      "tipo": "isolado",
+      "padrao_movimento": "extensao_cotovelo",
+      "unilateral": false,
+      "tipo_carga": "cabo"
+    },
+    {
+      "id": "rope_pushdown",
+      "nome_pt": "Extensão na polia com corda",
+      "nome_en": "Rope Pushdown",
+      "grupo": "triceps",
+      "secundarios": [],
+      "equipamento": "cabo",
+      "tipo": "isolado",
+      "padrao_movimento": "extensao_cotovelo",
+      "unilateral": false,
+      "tipo_carga": "cabo"
+    },
+    {
+      "id": "single_arm_cable_pushdown",
+      "nome_pt": "Extensão unilateral na polia",
+      "nome_en": "Single-Arm Cable Pushdown",
+      "grupo": "triceps",
+      "secundarios": [],
+      "equipamento": "cabo",
+      "tipo": "isolado",
+      "padrao_movimento": "extensao_cotovelo",
+      "unilateral": true,
+      "tipo_carga": "cabo"
+    },
+    {
+      "id": "reverse_grip_pushdown",
+      "nome_pt": "Extensão na polia pega inversa",
+      "nome_en": "Reverse-Grip Pushdown",
+      "grupo": "triceps",
+      "secundarios": [],
+      "equipamento": "cabo",
+      "tipo": "isolado",
+      "padrao_movimento": "extensao_cotovelo",
+      "unilateral": false,
+      "tipo_carga": "cabo"
+    },
+    {
+      "id": "ez_bar_skull_crusher",
+      "nome_pt": "Francês com barra EZ (skull crusher)",
+      "nome_en": "EZ-Bar Skull Crusher",
+      "grupo": "triceps",
+      "secundarios": [],
+      "equipamento": "barra",
+      "tipo": "isolado",
+      "padrao_movimento": "extensao_cotovelo",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "dumbbell_skull_crusher",
+      "nome_pt": "Francês com halteres",
+      "nome_en": "Dumbbell Skull Crusher",
+      "grupo": "triceps",
+      "secundarios": [],
+      "equipamento": "halteres",
+      "tipo": "isolado",
+      "padrao_movimento": "extensao_cotovelo",
+      "unilateral": false,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "overhead_dumbbell_extension",
+      "nome_pt": "Extensão acima da cabeça com halter",
+      "nome_en": "Overhead Dumbbell Extension",
+      "grupo": "triceps",
+      "secundarios": [],
+      "equipamento": "halteres",
+      "tipo": "isolado",
+      "padrao_movimento": "extensao_cotovelo",
+      "unilateral": false,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "overhead_cable_extension",
+      "nome_pt": "Extensão acima da cabeça no cabo",
+      "nome_en": "Overhead Cable Extension",
+      "grupo": "triceps",
+      "secundarios": [],
+      "equipamento": "cabo",
+      "tipo": "isolado",
+      "padrao_movimento": "extensao_cotovelo",
+      "unilateral": false,
+      "tipo_carga": "cabo"
+    },
+    {
+      "id": "seated_ez_bar_overhead_extension",
+      "nome_pt": "Extensão acima da cabeça com barra EZ",
+      "nome_en": "Seated EZ-Bar Overhead Extension",
+      "grupo": "triceps",
+      "secundarios": [],
+      "equipamento": "barra",
+      "tipo": "isolado",
+      "padrao_movimento": "extensao_cotovelo",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "machine_tricep_extension",
+      "nome_pt": "Extensão de tríceps na máquina",
+      "nome_en": "Machine Tricep Extension",
+      "grupo": "triceps",
+      "secundarios": [],
+      "equipamento": "maquina",
+      "tipo": "isolado",
+      "padrao_movimento": "extensao_cotovelo",
+      "unilateral": false,
+      "tipo_carga": "maquina"
+    },
+    {
+      "id": "dumbbell_kickback",
+      "nome_pt": "Kickback com halter",
+      "nome_en": "Dumbbell Kickback",
+      "grupo": "triceps",
+      "secundarios": [],
+      "equipamento": "halteres",
+      "tipo": "isolado",
+      "padrao_movimento": "extensao_cotovelo",
+      "unilateral": true,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "cable_kickback",
+      "nome_pt": "Kickback no cabo",
+      "nome_en": "Cable Kickback",
+      "grupo": "triceps",
+      "secundarios": [],
+      "equipamento": "cabo",
+      "tipo": "isolado",
+      "padrao_movimento": "extensao_cotovelo",
+      "unilateral": true,
+      "tipo_carga": "cabo"
+    },
+    {
+      "id": "close_grip_bench_press",
+      "nome_pt": "Supino pega fechada",
+      "nome_en": "Close-Grip Bench Press",
+      "grupo": "triceps",
+      "secundarios": [
+        "peito",
+        "ombros"
+      ],
+      "equipamento": "barra",
+      "tipo": "composto",
+      "padrao_movimento": "empurrar_horizontal",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "jm_press",
+      "nome_pt": "JM press",
+      "nome_en": "JM Press",
+      "grupo": "triceps",
+      "secundarios": [
+        "peito"
+      ],
+      "equipamento": "barra",
+      "tipo": "composto",
+      "padrao_movimento": "extensao_cotovelo",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "tate_press",
+      "nome_pt": "Tate press",
+      "nome_en": "Tate Press",
+      "grupo": "triceps",
+      "secundarios": [],
+      "equipamento": "halteres",
+      "tipo": "isolado",
+      "padrao_movimento": "extensao_cotovelo",
+      "unilateral": false,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "tricep_dip",
+      "nome_pt": "Paralelas tronco direito",
+      "nome_en": "Tricep Dip",
+      "grupo": "triceps",
+      "secundarios": [
+        "peito",
+        "ombros"
+      ],
+      "equipamento": "barra_paralela",
+      "tipo": "composto",
+      "padrao_movimento": "empurrar_vertical_baixo",
+      "unilateral": false,
+      "tipo_carga": "lastro"
+    },
+    {
+      "id": "bench_dip",
+      "nome_pt": "Dips no banco",
+      "nome_en": "Bench Dip",
+      "grupo": "triceps",
+      "secundarios": [
+        "ombros"
+      ],
+      "equipamento": "banco",
+      "tipo": "composto",
+      "padrao_movimento": "empurrar_vertical_baixo",
+      "unilateral": false,
+      "tipo_carga": "peso_corporal"
+    },
+    {
+      "id": "diamond_push_up",
+      "nome_pt": "Flexões diamante",
+      "nome_en": "Diamond Push-up",
+      "grupo": "triceps",
+      "secundarios": [
+        "peito"
+      ],
+      "equipamento": "peso_corporal",
+      "tipo": "composto",
+      "padrao_movimento": "empurrar_horizontal",
+      "unilateral": false,
+      "tipo_carga": "peso_corporal"
+    },
+    {
+      "id": "wrist_curl",
+      "nome_pt": "Curl de pulso",
+      "nome_en": "Wrist Curl",
+      "grupo": "antebraco",
+      "secundarios": [],
+      "equipamento": "barra",
+      "tipo": "isolado",
+      "padrao_movimento": "flexao_pulso",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "reverse_wrist_curl",
+      "nome_pt": "Curl de pulso inverso",
+      "nome_en": "Reverse Wrist Curl",
+      "grupo": "antebraco",
+      "secundarios": [],
+      "equipamento": "barra",
+      "tipo": "isolado",
+      "padrao_movimento": "extensao_pulso",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "reverse_barbell_curl",
+      "nome_pt": "Curl inverso com barra",
+      "nome_en": "Reverse Barbell Curl",
+      "grupo": "antebraco",
+      "secundarios": [
+        "biceps"
+      ],
+      "equipamento": "barra",
+      "tipo": "isolado",
+      "padrao_movimento": "flexao_cotovelo",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "wrist_roller",
+      "nome_pt": "Rolo de pulso",
+      "nome_en": "Wrist Roller",
+      "grupo": "antebraco",
+      "secundarios": [],
+      "equipamento": "outro",
+      "tipo": "isolado",
+      "padrao_movimento": "flexao_pulso",
+      "unilateral": false,
+      "tipo_carga": "maquina"
+    },
+    {
+      "id": "plate_pinch",
+      "nome_pt": "Pinça com discos",
+      "nome_en": "Plate Pinch",
+      "grupo": "antebraco",
+      "secundarios": [],
+      "equipamento": "disco",
+      "tipo": "isolado",
+      "padrao_movimento": "pega",
+      "unilateral": false,
+      "tipo_carga": "tempo"
+    },
+    {
+      "id": "dead_hang",
+      "nome_pt": "Suspensão na barra",
+      "nome_en": "Dead Hang",
+      "grupo": "antebraco",
+      "secundarios": [
+        "costas",
+        "ombros"
+      ],
+      "equipamento": "barra_fixa",
+      "tipo": "isolado",
+      "padrao_movimento": "pega",
+      "unilateral": false,
+      "tipo_carga": "tempo"
+    },
+    {
+      "id": "farmer_s_carry",
+      "nome_pt": "Farmer's walk",
+      "nome_en": "Farmer's Carry",
+      "grupo": "antebraco",
+      "secundarios": [
+        "trapezio",
+        "core"
+      ],
+      "equipamento": "halteres",
+      "tipo": "composto",
+      "padrao_movimento": "transporte",
+      "unilateral": false,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "back_squat",
+      "nome_pt": "Agachamento com barra (costas)",
+      "nome_en": "Back Squat",
+      "grupo": "quadriceps",
+      "secundarios": [
+        "gluteos",
+        "adutores",
+        "lombar"
+      ],
+      "equipamento": "barra",
+      "tipo": "composto",
+      "padrao_movimento": "agachar",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "front_squat",
+      "nome_pt": "Agachamento frontal",
+      "nome_en": "Front Squat",
+      "grupo": "quadriceps",
+      "secundarios": [
+        "gluteos",
+        "core"
+      ],
+      "equipamento": "barra",
+      "tipo": "composto",
+      "padrao_movimento": "agachar",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "box_squat",
+      "nome_pt": "Agachamento box",
+      "nome_en": "Box Squat",
+      "grupo": "quadriceps",
+      "secundarios": [
+        "gluteos"
+      ],
+      "equipamento": "barra",
+      "tipo": "composto",
+      "padrao_movimento": "agachar",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "smith_machine_squat",
+      "nome_pt": "Agachamento no Smith",
+      "nome_en": "Smith Machine Squat",
+      "grupo": "quadriceps",
+      "secundarios": [
+        "gluteos"
+      ],
+      "equipamento": "smith",
+      "tipo": "composto",
+      "padrao_movimento": "agachar",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "goblet_squat",
+      "nome_pt": "Agachamento goblet",
+      "nome_en": "Goblet Squat",
+      "grupo": "quadriceps",
+      "secundarios": [
+        "gluteos",
+        "core"
+      ],
+      "equipamento": "halteres",
+      "tipo": "composto",
+      "padrao_movimento": "agachar",
+      "unilateral": false,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "sumo_dumbbell_squat",
+      "nome_pt": "Agachamento sumo com halter",
+      "nome_en": "Sumo Dumbbell Squat",
+      "grupo": "quadriceps",
+      "secundarios": [
+        "adutores",
+        "gluteos"
+      ],
+      "equipamento": "halteres",
+      "tipo": "composto",
+      "padrao_movimento": "agachar",
+      "unilateral": false,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "hack_squat",
+      "nome_pt": "Hack squat (máquina)",
+      "nome_en": "Hack Squat",
+      "grupo": "quadriceps",
+      "secundarios": [
+        "gluteos"
+      ],
+      "equipamento": "maquina",
+      "tipo": "composto",
+      "padrao_movimento": "agachar",
+      "unilateral": false,
+      "tipo_carga": "maquina_discos"
+    },
+    {
+      "id": "pendulum_squat",
+      "nome_pt": "Pendulum squat",
+      "nome_en": "Pendulum Squat",
+      "grupo": "quadriceps",
+      "secundarios": [
+        "gluteos"
+      ],
+      "equipamento": "maquina",
+      "tipo": "composto",
+      "padrao_movimento": "agachar",
+      "unilateral": false,
+      "tipo_carga": "maquina_discos"
+    },
+    {
+      "id": "belt_squat",
+      "nome_pt": "Belt squat",
+      "nome_en": "Belt Squat",
+      "grupo": "quadriceps",
+      "secundarios": [
+        "gluteos"
+      ],
+      "equipamento": "maquina",
+      "tipo": "composto",
+      "padrao_movimento": "agachar",
+      "unilateral": false,
+      "tipo_carga": "maquina_discos"
+    },
+    {
+      "id": "leg_press_45",
+      "nome_pt": "Prensa de pernas 45º",
+      "nome_en": "Leg Press (45°)",
+      "grupo": "quadriceps",
+      "secundarios": [
+        "gluteos",
+        "adutores"
+      ],
+      "equipamento": "maquina",
+      "tipo": "composto",
+      "padrao_movimento": "agachar",
+      "unilateral": false,
+      "tipo_carga": "maquina_discos"
+    },
+    {
+      "id": "horizontal_leg_press",
+      "nome_pt": "Prensa horizontal",
+      "nome_en": "Horizontal Leg Press",
+      "grupo": "quadriceps",
+      "secundarios": [
+        "gluteos"
+      ],
+      "equipamento": "maquina",
+      "tipo": "composto",
+      "padrao_movimento": "agachar",
+      "unilateral": false,
+      "tipo_carga": "maquina"
+    },
+    {
+      "id": "single_leg_press",
+      "nome_pt": "Prensa unilateral",
+      "nome_en": "Single-Leg Press",
+      "grupo": "quadriceps",
+      "secundarios": [
+        "gluteos"
+      ],
+      "equipamento": "maquina",
+      "tipo": "composto",
+      "padrao_movimento": "agachar",
+      "unilateral": true,
+      "tipo_carga": "maquina_discos"
+    },
+    {
+      "id": "bulgarian_split_squat",
+      "nome_pt": "Agachamento búlgaro",
+      "nome_en": "Bulgarian Split Squat",
+      "grupo": "quadriceps",
+      "secundarios": [
+        "gluteos",
+        "adutores"
+      ],
+      "equipamento": "halteres",
+      "tipo": "composto",
+      "padrao_movimento": "afundo",
+      "unilateral": true,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "split_squat",
+      "nome_pt": "Split squat",
+      "nome_en": "Split Squat",
+      "grupo": "quadriceps",
+      "secundarios": [
+        "gluteos"
+      ],
+      "equipamento": "halteres",
+      "tipo": "composto",
+      "padrao_movimento": "afundo",
+      "unilateral": true,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "forward_lunge",
+      "nome_pt": "Afundos à frente",
+      "nome_en": "Forward Lunge",
+      "grupo": "quadriceps",
+      "secundarios": [
+        "gluteos"
+      ],
+      "equipamento": "halteres",
+      "tipo": "composto",
+      "padrao_movimento": "afundo",
+      "unilateral": true,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "reverse_lunge",
+      "nome_pt": "Afundos atrás",
+      "nome_en": "Reverse Lunge",
+      "grupo": "quadriceps",
+      "secundarios": [
+        "gluteos"
+      ],
+      "equipamento": "halteres",
+      "tipo": "composto",
+      "padrao_movimento": "afundo",
+      "unilateral": true,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "walking_lunge",
+      "nome_pt": "Afundos a andar",
+      "nome_en": "Walking Lunge",
+      "grupo": "quadriceps",
+      "secundarios": [
+        "gluteos"
+      ],
+      "equipamento": "halteres",
+      "tipo": "composto",
+      "padrao_movimento": "afundo",
+      "unilateral": true,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "step_up",
+      "nome_pt": "Step-up",
+      "nome_en": "Step-up",
+      "grupo": "quadriceps",
+      "secundarios": [
+        "gluteos"
+      ],
+      "equipamento": "halteres",
+      "tipo": "composto",
+      "padrao_movimento": "afundo",
+      "unilateral": true,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "cossack_squat",
+      "nome_pt": "Agachamento cossaco",
+      "nome_en": "Cossack Squat",
+      "grupo": "quadriceps",
+      "secundarios": [
+        "adutores",
+        "gluteos"
+      ],
+      "equipamento": "peso_corporal",
+      "tipo": "composto",
+      "padrao_movimento": "afundo",
+      "unilateral": true,
+      "tipo_carga": "peso_corporal"
+    },
+    {
+      "id": "pistol_squat",
+      "nome_pt": "Agachamento pistol",
+      "nome_en": "Pistol Squat",
+      "grupo": "quadriceps",
+      "secundarios": [
+        "gluteos",
+        "core"
+      ],
+      "equipamento": "peso_corporal",
+      "tipo": "composto",
+      "padrao_movimento": "agachar",
+      "unilateral": true,
+      "tipo_carga": "peso_corporal"
+    },
+    {
+      "id": "bodyweight_squat",
+      "nome_pt": "Agachamento com peso corporal",
+      "nome_en": "Bodyweight Squat",
+      "grupo": "quadriceps",
+      "secundarios": [
+        "gluteos"
+      ],
+      "equipamento": "peso_corporal",
+      "tipo": "composto",
+      "padrao_movimento": "agachar",
+      "unilateral": false,
+      "tipo_carga": "peso_corporal"
+    },
+    {
+      "id": "sissy_squat",
+      "nome_pt": "Agachamento sissy",
+      "nome_en": "Sissy Squat",
+      "grupo": "quadriceps",
+      "secundarios": [],
+      "equipamento": "peso_corporal",
+      "tipo": "isolado",
+      "padrao_movimento": "extensao_joelho",
+      "unilateral": false,
+      "tipo_carga": "peso_corporal"
+    },
+    {
+      "id": "leg_extension",
+      "nome_pt": "Extensão de pernas",
+      "nome_en": "Leg Extension",
+      "grupo": "quadriceps",
+      "secundarios": [],
+      "equipamento": "maquina",
+      "tipo": "isolado",
+      "padrao_movimento": "extensao_joelho",
+      "unilateral": false,
+      "tipo_carga": "maquina"
+    },
+    {
+      "id": "wall_sit",
+      "nome_pt": "Wall sit (cadeira na parede)",
+      "nome_en": "Wall Sit",
+      "grupo": "quadriceps",
+      "secundarios": [
+        "gluteos"
+      ],
+      "equipamento": "peso_corporal",
+      "tipo": "isolado",
+      "padrao_movimento": "isometrico",
+      "unilateral": false,
+      "tipo_carga": "tempo"
+    },
+    {
+      "id": "romanian_deadlift",
+      "nome_pt": "Peso morto romeno com barra",
+      "nome_en": "Romanian Deadlift",
+      "grupo": "isquiotibiais",
+      "secundarios": [
+        "gluteos",
+        "lombar"
+      ],
+      "equipamento": "barra",
+      "tipo": "composto",
+      "padrao_movimento": "dobradica_anca",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "dumbbell_romanian_deadlift",
+      "nome_pt": "Peso morto romeno com halteres",
+      "nome_en": "Dumbbell Romanian Deadlift",
+      "grupo": "isquiotibiais",
+      "secundarios": [
+        "gluteos",
+        "lombar"
+      ],
+      "equipamento": "halteres",
+      "tipo": "composto",
+      "padrao_movimento": "dobradica_anca",
+      "unilateral": false,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "single_leg_romanian_deadlift",
+      "nome_pt": "Peso morto romeno unilateral",
+      "nome_en": "Single-Leg Romanian Deadlift",
+      "grupo": "isquiotibiais",
+      "secundarios": [
+        "gluteos",
+        "core"
+      ],
+      "equipamento": "halteres",
+      "tipo": "composto",
+      "padrao_movimento": "dobradica_anca",
+      "unilateral": true,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "stiff_leg_deadlift",
+      "nome_pt": "Peso morto pernas esticadas",
+      "nome_en": "Stiff-Leg Deadlift",
+      "grupo": "isquiotibiais",
+      "secundarios": [
+        "lombar",
+        "gluteos"
+      ],
+      "equipamento": "barra",
+      "tipo": "composto",
+      "padrao_movimento": "dobradica_anca",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "good_morning",
+      "nome_pt": "Good morning",
+      "nome_en": "Good Morning",
+      "grupo": "isquiotibiais",
+      "secundarios": [
+        "lombar",
+        "gluteos"
+      ],
+      "equipamento": "barra",
+      "tipo": "composto",
+      "padrao_movimento": "dobradica_anca",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "kettlebell_swing",
+      "nome_pt": "Kettlebell swing",
+      "nome_en": "Kettlebell Swing",
+      "grupo": "isquiotibiais",
+      "secundarios": [
+        "gluteos",
+        "core"
+      ],
+      "equipamento": "kettlebell",
+      "tipo": "composto",
+      "padrao_movimento": "dobradica_anca",
+      "unilateral": false,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "lying_leg_curl",
+      "nome_pt": "Leg curl deitado",
+      "nome_en": "Lying Leg Curl",
+      "grupo": "isquiotibiais",
+      "secundarios": [
+        "gemeos"
+      ],
+      "equipamento": "maquina",
+      "tipo": "isolado",
+      "padrao_movimento": "flexao_joelho",
+      "unilateral": false,
+      "tipo_carga": "maquina"
+    },
+    {
+      "id": "seated_leg_curl",
+      "nome_pt": "Leg curl sentado",
+      "nome_en": "Seated Leg Curl",
+      "grupo": "isquiotibiais",
+      "secundarios": [],
+      "equipamento": "maquina",
+      "tipo": "isolado",
+      "padrao_movimento": "flexao_joelho",
+      "unilateral": false,
+      "tipo_carga": "maquina"
+    },
+    {
+      "id": "standing_leg_curl",
+      "nome_pt": "Leg curl em pé unilateral",
+      "nome_en": "Standing Leg Curl",
+      "grupo": "isquiotibiais",
+      "secundarios": [],
+      "equipamento": "maquina",
+      "tipo": "isolado",
+      "padrao_movimento": "flexao_joelho",
+      "unilateral": true,
+      "tipo_carga": "maquina"
+    },
+    {
+      "id": "nordic_hamstring_curl",
+      "nome_pt": "Nordic curl",
+      "nome_en": "Nordic Hamstring Curl",
+      "grupo": "isquiotibiais",
+      "secundarios": [],
+      "equipamento": "peso_corporal",
+      "tipo": "isolado",
+      "padrao_movimento": "flexao_joelho",
+      "unilateral": false,
+      "tipo_carga": "peso_corporal"
+    },
+    {
+      "id": "glute_ham_raise",
+      "nome_pt": "Glute-ham raise",
+      "nome_en": "Glute-Ham Raise",
+      "grupo": "isquiotibiais",
+      "secundarios": [
+        "gluteos"
+      ],
+      "equipamento": "maquina",
+      "tipo": "composto",
+      "padrao_movimento": "flexao_joelho",
+      "unilateral": false,
+      "tipo_carga": "peso_corporal"
+    },
+    {
+      "id": "stability_ball_leg_curl",
+      "nome_pt": "Leg curl na bola suíça",
+      "nome_en": "Stability Ball Leg Curl",
+      "grupo": "isquiotibiais",
+      "secundarios": [
+        "gluteos",
+        "core"
+      ],
+      "equipamento": "outro",
+      "tipo": "isolado",
+      "padrao_movimento": "flexao_joelho",
+      "unilateral": false,
+      "tipo_carga": "peso_corporal"
+    },
+    {
+      "id": "barbell_hip_thrust",
+      "nome_pt": "Hip thrust com barra",
+      "nome_en": "Barbell Hip Thrust",
+      "grupo": "gluteos",
+      "secundarios": [
+        "isquiotibiais"
+      ],
+      "equipamento": "barra",
+      "tipo": "composto",
+      "padrao_movimento": "extensao_anca",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "machine_hip_thrust",
+      "nome_pt": "Hip thrust na máquina",
+      "nome_en": "Machine Hip Thrust",
+      "grupo": "gluteos",
+      "secundarios": [
+        "isquiotibiais"
+      ],
+      "equipamento": "maquina",
+      "tipo": "composto",
+      "padrao_movimento": "extensao_anca",
+      "unilateral": false,
+      "tipo_carga": "maquina"
+    },
+    {
+      "id": "single_leg_hip_thrust",
+      "nome_pt": "Hip thrust unilateral",
+      "nome_en": "Single-Leg Hip Thrust",
+      "grupo": "gluteos",
+      "secundarios": [
+        "isquiotibiais"
+      ],
+      "equipamento": "peso_corporal",
+      "tipo": "composto",
+      "padrao_movimento": "extensao_anca",
+      "unilateral": true,
+      "tipo_carga": "lastro"
+    },
+    {
+      "id": "glute_bridge",
+      "nome_pt": "Ponte de glúteos",
+      "nome_en": "Glute Bridge",
+      "grupo": "gluteos",
+      "secundarios": [
+        "isquiotibiais"
+      ],
+      "equipamento": "peso_corporal",
+      "tipo": "composto",
+      "padrao_movimento": "extensao_anca",
+      "unilateral": false,
+      "tipo_carga": "peso_corporal"
+    },
+    {
+      "id": "barbell_glute_bridge",
+      "nome_pt": "Ponte de glúteos com barra",
+      "nome_en": "Barbell Glute Bridge",
+      "grupo": "gluteos",
+      "secundarios": [
+        "isquiotibiais"
+      ],
+      "equipamento": "barra",
+      "tipo": "composto",
+      "padrao_movimento": "extensao_anca",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "cable_pull_through",
+      "nome_pt": "Pull-through no cabo",
+      "nome_en": "Cable Pull-Through",
+      "grupo": "gluteos",
+      "secundarios": [
+        "isquiotibiais"
+      ],
+      "equipamento": "cabo",
+      "tipo": "composto",
+      "padrao_movimento": "dobradica_anca",
+      "unilateral": false,
+      "tipo_carga": "cabo"
+    },
+    {
+      "id": "45_glute_focused_back_extension",
+      "nome_pt": "Hiperextensão a 45º foco glúteo",
+      "nome_en": "45° Glute-Focused Back Extension",
+      "grupo": "gluteos",
+      "secundarios": [
+        "isquiotibiais"
+      ],
+      "equipamento": "banco",
+      "tipo": "isolado",
+      "padrao_movimento": "extensao_anca",
+      "unilateral": false,
+      "tipo_carga": "lastro"
+    },
+    {
+      "id": "cable_glute_kickback",
+      "nome_pt": "Kickback de glúteo no cabo",
+      "nome_en": "Cable Glute Kickback",
+      "grupo": "gluteos",
+      "secundarios": [
+        "isquiotibiais"
+      ],
+      "equipamento": "cabo",
+      "tipo": "isolado",
+      "padrao_movimento": "extensao_anca",
+      "unilateral": true,
+      "tipo_carga": "cabo"
+    },
+    {
+      "id": "machine_glute_kickback",
+      "nome_pt": "Kickback de glúteo na máquina",
+      "nome_en": "Machine Glute Kickback",
+      "grupo": "gluteos",
+      "secundarios": [
+        "isquiotibiais"
+      ],
+      "equipamento": "maquina",
+      "tipo": "isolado",
+      "padrao_movimento": "extensao_anca",
+      "unilateral": true,
+      "tipo_carga": "maquina"
+    },
+    {
+      "id": "hip_abduction_machine",
+      "nome_pt": "Abdução de anca na máquina",
+      "nome_en": "Hip Abduction Machine",
+      "grupo": "gluteos",
+      "secundarios": [],
+      "equipamento": "maquina",
+      "tipo": "isolado",
+      "padrao_movimento": "abducao_anca",
+      "unilateral": false,
+      "tipo_carga": "maquina"
+    },
+    {
+      "id": "cable_hip_abduction",
+      "nome_pt": "Abdução de anca no cabo",
+      "nome_en": "Cable Hip Abduction",
+      "grupo": "gluteos",
+      "secundarios": [],
+      "equipamento": "cabo",
+      "tipo": "isolado",
+      "padrao_movimento": "abducao_anca",
+      "unilateral": true,
+      "tipo_carga": "cabo"
+    },
+    {
+      "id": "frog_pump",
+      "nome_pt": "Frog pump",
+      "nome_en": "Frog Pump",
+      "grupo": "gluteos",
+      "secundarios": [],
+      "equipamento": "peso_corporal",
+      "tipo": "isolado",
+      "padrao_movimento": "extensao_anca",
+      "unilateral": false,
+      "tipo_carga": "peso_corporal"
+    },
+    {
+      "id": "banded_clamshell",
+      "nome_pt": "Clamshell com elástico",
+      "nome_en": "Banded Clamshell",
+      "grupo": "gluteos",
+      "secundarios": [],
+      "equipamento": "elastico",
+      "tipo": "isolado",
+      "padrao_movimento": "rotacao_anca",
+      "unilateral": true,
+      "tipo_carga": "peso_corporal"
+    },
+    {
+      "id": "hip_adduction_machine",
+      "nome_pt": "Adução de anca na máquina",
+      "nome_en": "Hip Adduction Machine",
+      "grupo": "adutores",
+      "secundarios": [],
+      "equipamento": "maquina",
+      "tipo": "isolado",
+      "padrao_movimento": "aducao_anca",
+      "unilateral": false,
+      "tipo_carga": "maquina"
+    },
+    {
+      "id": "cable_hip_adduction",
+      "nome_pt": "Adução de anca no cabo",
+      "nome_en": "Cable Hip Adduction",
+      "grupo": "adutores",
+      "secundarios": [],
+      "equipamento": "cabo",
+      "tipo": "isolado",
+      "padrao_movimento": "aducao_anca",
+      "unilateral": true,
+      "tipo_carga": "cabo"
+    },
+    {
+      "id": "copenhagen_plank",
+      "nome_pt": "Prancha Copenhagen",
+      "nome_en": "Copenhagen Plank",
+      "grupo": "adutores",
+      "secundarios": [
+        "core"
+      ],
+      "equipamento": "peso_corporal",
+      "tipo": "isolado",
+      "padrao_movimento": "isometrico",
+      "unilateral": true,
+      "tipo_carga": "tempo"
+    },
+    {
+      "id": "standing_calf_raise",
+      "nome_pt": "Elevação de gémeos de pé (máquina)",
+      "nome_en": "Standing Calf Raise",
+      "grupo": "gemeos",
+      "secundarios": [],
+      "equipamento": "maquina",
+      "tipo": "isolado",
+      "padrao_movimento": "flexao_plantar",
+      "unilateral": false,
+      "tipo_carga": "maquina"
+    },
+    {
+      "id": "seated_calf_raise",
+      "nome_pt": "Elevação de gémeos sentado",
+      "nome_en": "Seated Calf Raise",
+      "grupo": "gemeos",
+      "secundarios": [],
+      "equipamento": "maquina",
+      "tipo": "isolado",
+      "padrao_movimento": "flexao_plantar",
+      "unilateral": false,
+      "tipo_carga": "maquina"
+    },
+    {
+      "id": "leg_press_calf_raise",
+      "nome_pt": "Gémeos na prensa",
+      "nome_en": "Leg Press Calf Raise",
+      "grupo": "gemeos",
+      "secundarios": [],
+      "equipamento": "maquina",
+      "tipo": "isolado",
+      "padrao_movimento": "flexao_plantar",
+      "unilateral": false,
+      "tipo_carga": "maquina_discos"
+    },
+    {
+      "id": "smith_machine_calf_raise",
+      "nome_pt": "Gémeos no Smith",
+      "nome_en": "Smith Machine Calf Raise",
+      "grupo": "gemeos",
+      "secundarios": [],
+      "equipamento": "smith",
+      "tipo": "isolado",
+      "padrao_movimento": "flexao_plantar",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "single_leg_dumbbell_calf_raise",
+      "nome_pt": "Gémeos unilateral com halter",
+      "nome_en": "Single-Leg Dumbbell Calf Raise",
+      "grupo": "gemeos",
+      "secundarios": [],
+      "equipamento": "halteres",
+      "tipo": "isolado",
+      "padrao_movimento": "flexao_plantar",
+      "unilateral": true,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "donkey_calf_raise",
+      "nome_pt": "Gémeos donkey",
+      "nome_en": "Donkey Calf Raise",
+      "grupo": "gemeos",
+      "secundarios": [],
+      "equipamento": "maquina",
+      "tipo": "isolado",
+      "padrao_movimento": "flexao_plantar",
+      "unilateral": false,
+      "tipo_carga": "maquina"
+    },
+    {
+      "id": "tibialis_raise",
+      "nome_pt": "Elevação de tibial",
+      "nome_en": "Tibialis Raise",
+      "grupo": "gemeos",
+      "secundarios": [
+        "tibial_anterior"
+      ],
+      "equipamento": "outro",
+      "tipo": "isolado",
+      "padrao_movimento": "dorsiflexao",
+      "unilateral": false,
+      "tipo_carga": "peso_corporal"
+    },
+    {
+      "id": "plank",
+      "nome_pt": "Prancha",
+      "nome_en": "Plank",
+      "grupo": "core",
+      "secundarios": [
+        "ombros"
+      ],
+      "equipamento": "peso_corporal",
+      "tipo": "isolado",
+      "padrao_movimento": "anti_extensao",
+      "unilateral": false,
+      "tipo_carga": "tempo"
+    },
+    {
+      "id": "side_plank",
+      "nome_pt": "Prancha lateral",
+      "nome_en": "Side Plank",
+      "grupo": "core",
+      "secundarios": [
+        "gluteos"
+      ],
+      "equipamento": "peso_corporal",
+      "tipo": "isolado",
+      "padrao_movimento": "anti_flexao_lateral",
+      "unilateral": true,
+      "tipo_carga": "tempo"
+    },
+    {
+      "id": "hollow_body_hold",
+      "nome_pt": "Hollow hold",
+      "nome_en": "Hollow Body Hold",
+      "grupo": "core",
+      "secundarios": [],
+      "equipamento": "peso_corporal",
+      "tipo": "isolado",
+      "padrao_movimento": "anti_extensao",
+      "unilateral": false,
+      "tipo_carga": "tempo"
+    },
+    {
+      "id": "dead_bug",
+      "nome_pt": "Dead bug",
+      "nome_en": "Dead Bug",
+      "grupo": "core",
+      "secundarios": [],
+      "equipamento": "peso_corporal",
+      "tipo": "isolado",
+      "padrao_movimento": "anti_extensao",
+      "unilateral": false,
+      "tipo_carga": "peso_corporal"
+    },
+    {
+      "id": "bird_dog",
+      "nome_pt": "Bird dog",
+      "nome_en": "Bird Dog",
+      "grupo": "core",
+      "secundarios": [
+        "lombar",
+        "gluteos"
+      ],
+      "equipamento": "peso_corporal",
+      "tipo": "isolado",
+      "padrao_movimento": "anti_rotacao",
+      "unilateral": false,
+      "tipo_carga": "peso_corporal"
+    },
+    {
+      "id": "ab_wheel_rollout",
+      "nome_pt": "Roda abdominal",
+      "nome_en": "Ab Wheel Rollout",
+      "grupo": "core",
+      "secundarios": [
+        "costas",
+        "ombros"
+      ],
+      "equipamento": "outro",
+      "tipo": "composto",
+      "padrao_movimento": "anti_extensao",
+      "unilateral": false,
+      "tipo_carga": "peso_corporal"
+    },
+    {
+      "id": "pallof_press",
+      "nome_pt": "Pallof press",
+      "nome_en": "Pallof Press",
+      "grupo": "core",
+      "secundarios": [],
+      "equipamento": "cabo",
+      "tipo": "isolado",
+      "padrao_movimento": "anti_rotacao",
+      "unilateral": true,
+      "tipo_carga": "cabo"
+    },
+    {
+      "id": "crunch",
+      "nome_pt": "Crunch abdominal",
+      "nome_en": "Crunch",
+      "grupo": "core",
+      "secundarios": [],
+      "equipamento": "peso_corporal",
+      "tipo": "isolado",
+      "padrao_movimento": "flexao_tronco",
+      "unilateral": false,
+      "tipo_carga": "peso_corporal"
+    },
+    {
+      "id": "cable_crunch",
+      "nome_pt": "Crunch no cabo",
+      "nome_en": "Cable Crunch",
+      "grupo": "core",
+      "secundarios": [],
+      "equipamento": "cabo",
+      "tipo": "isolado",
+      "padrao_movimento": "flexao_tronco",
+      "unilateral": false,
+      "tipo_carga": "cabo"
+    },
+    {
+      "id": "machine_crunch",
+      "nome_pt": "Crunch na máquina",
+      "nome_en": "Machine Crunch",
+      "grupo": "core",
+      "secundarios": [],
+      "equipamento": "maquina",
+      "tipo": "isolado",
+      "padrao_movimento": "flexao_tronco",
+      "unilateral": false,
+      "tipo_carga": "maquina"
+    },
+    {
+      "id": "decline_sit_up",
+      "nome_pt": "Sit-up declinado",
+      "nome_en": "Decline Sit-up",
+      "grupo": "core",
+      "secundarios": [
+        "flexores_anca"
+      ],
+      "equipamento": "banco",
+      "tipo": "isolado",
+      "padrao_movimento": "flexao_tronco",
+      "unilateral": false,
+      "tipo_carga": "lastro"
+    },
+    {
+      "id": "v_up",
+      "nome_pt": "V-up",
+      "nome_en": "V-up",
+      "grupo": "core",
+      "secundarios": [
+        "flexores_anca"
+      ],
+      "equipamento": "peso_corporal",
+      "tipo": "isolado",
+      "padrao_movimento": "flexao_tronco",
+      "unilateral": false,
+      "tipo_carga": "peso_corporal"
+    },
+    {
+      "id": "hanging_leg_raise",
+      "nome_pt": "Elevação de pernas suspenso",
+      "nome_en": "Hanging Leg Raise",
+      "grupo": "core",
+      "secundarios": [
+        "flexores_anca",
+        "antebraco"
+      ],
+      "equipamento": "barra_fixa",
+      "tipo": "isolado",
+      "padrao_movimento": "flexao_anca",
+      "unilateral": false,
+      "tipo_carga": "peso_corporal"
+    },
+    {
+      "id": "hanging_knee_raise",
+      "nome_pt": "Elevação de joelhos suspenso",
+      "nome_en": "Hanging Knee Raise",
+      "grupo": "core",
+      "secundarios": [
+        "flexores_anca"
+      ],
+      "equipamento": "barra_fixa",
+      "tipo": "isolado",
+      "padrao_movimento": "flexao_anca",
+      "unilateral": false,
+      "tipo_carga": "peso_corporal"
+    },
+    {
+      "id": "toes_to_bar",
+      "nome_pt": "Toes to bar",
+      "nome_en": "Toes-to-Bar",
+      "grupo": "core",
+      "secundarios": [
+        "costas",
+        "antebraco"
+      ],
+      "equipamento": "barra_fixa",
+      "tipo": "composto",
+      "padrao_movimento": "flexao_anca",
+      "unilateral": false,
+      "tipo_carga": "peso_corporal"
+    },
+    {
+      "id": "lying_leg_raise",
+      "nome_pt": "Elevação de pernas deitado",
+      "nome_en": "Lying Leg Raise",
+      "grupo": "core",
+      "secundarios": [
+        "flexores_anca"
+      ],
+      "equipamento": "peso_corporal",
+      "tipo": "isolado",
+      "padrao_movimento": "flexao_anca",
+      "unilateral": false,
+      "tipo_carga": "peso_corporal"
+    },
+    {
+      "id": "russian_twist",
+      "nome_pt": "Russian twist",
+      "nome_en": "Russian Twist",
+      "grupo": "core",
+      "secundarios": [],
+      "equipamento": "peso_corporal",
+      "tipo": "isolado",
+      "padrao_movimento": "rotacao",
+      "unilateral": false,
+      "tipo_carga": "lastro"
+    },
+    {
+      "id": "cable_woodchopper",
+      "nome_pt": "Woodchopper no cabo",
+      "nome_en": "Cable Woodchopper",
+      "grupo": "core",
+      "secundarios": [
+        "ombros"
+      ],
+      "equipamento": "cabo",
+      "tipo": "isolado",
+      "padrao_movimento": "rotacao",
+      "unilateral": true,
+      "tipo_carga": "cabo"
+    },
+    {
+      "id": "mountain_climbers",
+      "nome_pt": "Mountain climbers",
+      "nome_en": "Mountain Climbers",
+      "grupo": "core",
+      "secundarios": [
+        "ombros",
+        "quadriceps"
+      ],
+      "equipamento": "peso_corporal",
+      "tipo": "composto",
+      "padrao_movimento": "dinamico",
+      "unilateral": false,
+      "tipo_carga": "tempo"
+    },
+    {
+      "id": "power_clean",
+      "nome_pt": "Power clean",
+      "nome_en": "Power Clean",
+      "grupo": "corpo_inteiro",
+      "secundarios": [
+        "costas",
+        "quadriceps",
+        "gluteos",
+        "trapezio"
+      ],
+      "equipamento": "barra",
+      "tipo": "composto",
+      "padrao_movimento": "olimpico",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "snatch",
+      "nome_pt": "Arranco (snatch)",
+      "nome_en": "Snatch",
+      "grupo": "corpo_inteiro",
+      "secundarios": [
+        "costas",
+        "ombros",
+        "quadriceps",
+        "gluteos"
+      ],
+      "equipamento": "barra",
+      "tipo": "composto",
+      "padrao_movimento": "olimpico",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "clean_and_jerk",
+      "nome_pt": "Arremesso (clean and jerk)",
+      "nome_en": "Clean and Jerk",
+      "grupo": "corpo_inteiro",
+      "secundarios": [
+        "ombros",
+        "quadriceps",
+        "gluteos"
+      ],
+      "equipamento": "barra",
+      "tipo": "composto",
+      "padrao_movimento": "olimpico",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "thruster",
+      "nome_pt": "Thruster",
+      "nome_en": "Thruster",
+      "grupo": "corpo_inteiro",
+      "secundarios": [
+        "quadriceps",
+        "ombros",
+        "triceps"
+      ],
+      "equipamento": "barra",
+      "tipo": "composto",
+      "padrao_movimento": "agachar_empurrar",
+      "unilateral": false,
+      "tipo_carga": "barra_total"
+    },
+    {
+      "id": "turkish_get_up",
+      "nome_pt": "Turkish get-up",
+      "nome_en": "Turkish Get-up",
+      "grupo": "corpo_inteiro",
+      "secundarios": [
+        "ombros",
+        "core",
+        "gluteos"
+      ],
+      "equipamento": "kettlebell",
+      "tipo": "composto",
+      "padrao_movimento": "dinamico",
+      "unilateral": true,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "burpee",
+      "nome_pt": "Burpee",
+      "nome_en": "Burpee",
+      "grupo": "corpo_inteiro",
+      "secundarios": [
+        "peito",
+        "quadriceps",
+        "core"
+      ],
+      "equipamento": "peso_corporal",
+      "tipo": "composto",
+      "padrao_movimento": "dinamico",
+      "unilateral": false,
+      "tipo_carga": "peso_corporal"
+    },
+    {
+      "id": "wall_ball",
+      "nome_pt": "Wall ball",
+      "nome_en": "Wall Ball",
+      "grupo": "corpo_inteiro",
+      "secundarios": [
+        "quadriceps",
+        "ombros"
+      ],
+      "equipamento": "outro",
+      "tipo": "composto",
+      "padrao_movimento": "agachar_empurrar",
+      "unilateral": false,
+      "tipo_carga": "por_halter"
+    },
+    {
+      "id": "sled_push",
+      "nome_pt": "Empurrar trenó",
+      "nome_en": "Sled Push",
+      "grupo": "corpo_inteiro",
+      "secundarios": [
+        "quadriceps",
+        "gluteos",
+        "gemeos"
+      ],
+      "equipamento": "outro",
+      "tipo": "composto",
+      "padrao_movimento": "transporte",
+      "unilateral": false,
+      "tipo_carga": "maquina"
+    },
+    {
+      "id": "treadmill_run",
+      "nome_pt": "Corrida na passadeira",
+      "nome_en": "Treadmill Run",
+      "grupo": "cardio",
+      "secundarios": [],
+      "equipamento": "cardio",
+      "tipo": "cardio",
+      "padrao_movimento": "corrida",
+      "unilateral": false,
+      "tipo_carga": "tempo"
+    },
+    {
+      "id": "incline_treadmill_walk",
+      "nome_pt": "Caminhada inclinada na passadeira",
+      "nome_en": "Incline Treadmill Walk",
+      "grupo": "cardio",
+      "secundarios": [
+        "gluteos",
+        "gemeos"
+      ],
+      "equipamento": "cardio",
+      "tipo": "cardio",
+      "padrao_movimento": "caminhada",
+      "unilateral": false,
+      "tipo_carga": "tempo"
+    },
+    {
+      "id": "outdoor_run",
+      "nome_pt": "Corrida exterior",
+      "nome_en": "Outdoor Run",
+      "grupo": "cardio",
+      "secundarios": [],
+      "equipamento": "cardio",
+      "tipo": "cardio",
+      "padrao_movimento": "corrida",
+      "unilateral": false,
+      "tipo_carga": "distancia"
+    },
+    {
+      "id": "stationary_bike",
+      "nome_pt": "Bicicleta estática",
+      "nome_en": "Stationary Bike",
+      "grupo": "cardio",
+      "secundarios": [
+        "quadriceps"
+      ],
+      "equipamento": "cardio",
+      "tipo": "cardio",
+      "padrao_movimento": "ciclismo",
+      "unilateral": false,
+      "tipo_carga": "tempo"
+    },
+    {
+      "id": "air_bike",
+      "nome_pt": "Air bike (assault bike)",
+      "nome_en": "Air Bike",
+      "grupo": "cardio",
+      "secundarios": [
+        "ombros",
+        "quadriceps"
+      ],
+      "equipamento": "cardio",
+      "tipo": "cardio",
+      "padrao_movimento": "ciclismo",
+      "unilateral": false,
+      "tipo_carga": "tempo"
+    },
+    {
+      "id": "elliptical",
+      "nome_pt": "Elíptica",
+      "nome_en": "Elliptical",
+      "grupo": "cardio",
+      "secundarios": [],
+      "equipamento": "cardio",
+      "tipo": "cardio",
+      "padrao_movimento": "eliptica",
+      "unilateral": false,
+      "tipo_carga": "tempo"
+    },
+    {
+      "id": "rowing_machine",
+      "nome_pt": "Remo ergómetro",
+      "nome_en": "Rowing Machine",
+      "grupo": "cardio",
+      "secundarios": [
+        "costas",
+        "quadriceps"
+      ],
+      "equipamento": "cardio",
+      "tipo": "cardio",
+      "padrao_movimento": "remo",
+      "unilateral": false,
+      "tipo_carga": "distancia"
+    },
+    {
+      "id": "stair_climber",
+      "nome_pt": "Máquina de escadas",
+      "nome_en": "Stair Climber",
+      "grupo": "cardio",
+      "secundarios": [
+        "gluteos",
+        "gemeos"
+      ],
+      "equipamento": "cardio",
+      "tipo": "cardio",
+      "padrao_movimento": "escadas",
+      "unilateral": false,
+      "tipo_carga": "tempo"
+    },
+    {
+      "id": "skierg",
+      "nome_pt": "SkiErg",
+      "nome_en": "SkiErg",
+      "grupo": "cardio",
+      "secundarios": [
+        "costas",
+        "triceps"
+      ],
+      "equipamento": "cardio",
+      "tipo": "cardio",
+      "padrao_movimento": "ski",
+      "unilateral": false,
+      "tipo_carga": "distancia"
+    },
+    {
+      "id": "jump_rope",
+      "nome_pt": "Saltar à corda",
+      "nome_en": "Jump Rope",
+      "grupo": "cardio",
+      "secundarios": [
+        "gemeos"
+      ],
+      "equipamento": "cardio",
+      "tipo": "cardio",
+      "padrao_movimento": "saltos",
+      "unilateral": false,
+      "tipo_carga": "tempo"
+    },
+    {
+      "id": "swimming",
+      "nome_pt": "Natação",
+      "nome_en": "Swimming",
+      "grupo": "cardio",
+      "secundarios": [
+        "costas",
+        "ombros"
+      ],
+      "equipamento": "cardio",
+      "tipo": "cardio",
+      "padrao_movimento": "natacao",
+      "unilateral": false,
+      "tipo_carga": "distancia"
+    },
+    {
+      "id": "hiit_intervals",
+      "nome_pt": "Treino intervalado HIIT",
+      "nome_en": "HIIT Intervals",
+      "grupo": "cardio",
+      "secundarios": [],
+      "equipamento": "cardio",
+      "tipo": "cardio",
+      "padrao_movimento": "intervalado",
+      "unilateral": false,
+      "tipo_carga": "tempo"
+    }
+  ],
+  "padroes_forca": [
+    {
+      "exercicio_id": "back_squat",
+      "metrica": "rácio",
+      "homem": {
+        "iniciante": 0.75,
+        "novato": 1.0,
+        "intermedio": 1.5,
+        "avancado": 2.0,
+        "elite": 2.5
+      },
+      "mulher": {
+        "iniciante": 0.5,
+        "novato": 0.75,
+        "intermedio": 1.0,
+        "avancado": 1.5,
+        "elite": 1.9
+      }
+    },
+    {
+      "exercicio_id": "barbell_bench_press",
+      "metrica": "rácio",
+      "homem": {
+        "iniciante": 0.5,
+        "novato": 0.75,
+        "intermedio": 1.0,
+        "avancado": 1.5,
+        "elite": 2.0
+      },
+      "mulher": {
+        "iniciante": 0.25,
+        "novato": 0.5,
+        "intermedio": 0.65,
+        "avancado": 1.0,
+        "elite": 1.35
+      }
+    },
+    {
+      "exercicio_id": "conventional_deadlift",
+      "metrica": "rácio",
+      "homem": {
+        "iniciante": 1.0,
+        "novato": 1.5,
+        "intermedio": 2.0,
+        "avancado": 2.5,
+        "elite": 3.0
+      },
+      "mulher": {
+        "iniciante": 0.5,
+        "novato": 1.0,
+        "intermedio": 1.25,
+        "avancado": 1.75,
+        "elite": 2.5
+      }
+    },
+    {
+      "exercicio_id": "overhead_press",
+      "metrica": "rácio",
+      "homem": {
+        "iniciante": 0.35,
+        "novato": 0.5,
+        "intermedio": 0.65,
+        "avancado": 0.9,
+        "elite": 1.15
+      },
+      "mulher": {
+        "iniciante": 0.2,
+        "novato": 0.35,
+        "intermedio": 0.5,
+        "avancado": 0.65,
+        "elite": 0.85
+      }
+    },
+    {
+      "exercicio_id": "barbell_bent_over_row",
+      "metrica": "rácio",
+      "homem": {
+        "iniciante": 0.5,
+        "novato": 0.65,
+        "intermedio": 0.9,
+        "avancado": 1.2,
+        "elite": 1.5
+      },
+      "mulher": {
+        "iniciante": 0.25,
+        "novato": 0.4,
+        "intermedio": 0.6,
+        "avancado": 0.85,
+        "elite": 1.1
+      }
+    },
+    {
+      "exercicio_id": "leg_press_45",
+      "metrica": "rácio",
+      "homem": {
+        "iniciante": 1.0,
+        "novato": 1.75,
+        "intermedio": 2.5,
+        "avancado": 3.5,
+        "elite": 4.5
+      },
+      "mulher": {
+        "iniciante": 0.75,
+        "novato": 1.25,
+        "intermedio": 2.0,
+        "avancado": 2.75,
+        "elite": 3.5
+      }
+    },
+    {
+      "exercicio_id": "wide_grip_lat_pulldown",
+      "metrica": "rácio",
+      "homem": {
+        "iniciante": 0.5,
+        "novato": 0.65,
+        "intermedio": 0.85,
+        "avancado": 1.1,
+        "elite": 1.4
+      },
+      "mulher": {
+        "iniciante": 0.3,
+        "novato": 0.45,
+        "intermedio": 0.6,
+        "avancado": 0.8,
+        "elite": 1.0
+      }
+    },
+    {
+      "exercicio_id": "barbell_hip_thrust",
+      "metrica": "rácio",
+      "homem": {
+        "iniciante": 0.75,
+        "novato": 1.25,
+        "intermedio": 1.75,
+        "avancado": 2.5,
+        "elite": 3.25
+      },
+      "mulher": {
+        "iniciante": 0.5,
+        "novato": 1.0,
+        "intermedio": 1.5,
+        "avancado": 2.0,
+        "elite": 2.75
+      }
+    },
+    {
+      "exercicio_id": "romanian_deadlift",
+      "metrica": "rácio",
+      "homem": {
+        "iniciante": 0.75,
+        "novato": 1.0,
+        "intermedio": 1.5,
+        "avancado": 2.0,
+        "elite": 2.5
+      },
+      "mulher": {
+        "iniciante": 0.4,
+        "novato": 0.75,
+        "intermedio": 1.0,
+        "avancado": 1.4,
+        "elite": 1.8
+      }
+    },
+    {
+      "exercicio_id": "barbell_curl",
+      "metrica": "rácio",
+      "homem": {
+        "iniciante": 0.2,
+        "novato": 0.4,
+        "intermedio": 0.6,
+        "avancado": 0.85,
+        "elite": 1.15
+      },
+      "mulher": {
+        "iniciante": 0.1,
+        "novato": 0.2,
+        "intermedio": 0.35,
+        "avancado": 0.5,
+        "elite": 0.7
+      }
+    },
+    {
+      "exercicio_id": "pull_up",
+      "metrica": "reps",
+      "homem": {
+        "iniciante": 0,
+        "novato": 3,
+        "intermedio": 8,
+        "avancado": 15,
+        "elite": 25
+      },
+      "mulher": {
+        "iniciante": 0,
+        "novato": 1,
+        "intermedio": 4,
+        "avancado": 10,
+        "elite": 18
+      }
+    },
+    {
+      "exercicio_id": "tricep_dip",
+      "metrica": "reps",
+      "homem": {
+        "iniciante": 0,
+        "novato": 5,
+        "intermedio": 12,
+        "avancado": 20,
+        "elite": 30
+      },
+      "mulher": {
+        "iniciante": 0,
+        "novato": 2,
+        "intermedio": 6,
+        "avancado": 12,
+        "elite": 20
+      }
+    },
+    {
+      "exercicio_id": "push_up",
+      "metrica": "reps",
+      "homem": {
+        "iniciante": 5,
+        "novato": 15,
+        "intermedio": 30,
+        "avancado": 45,
+        "elite": 60
+      },
+      "mulher": {
+        "iniciante": 1,
+        "novato": 8,
+        "intermedio": 18,
+        "avancado": 30,
+        "elite": 40
+      }
+    }
+  ],
+  "equilibrio": [
+    {
+      "exercicio_id": "back_squat",
+      "relativo_a": "back_squat",
+      "min": 1.0,
+      "max": 1.0
+    },
+    {
+      "exercicio_id": "conventional_deadlift",
+      "relativo_a": "back_squat",
+      "min": 1.15,
+      "max": 1.25
+    },
+    {
+      "exercicio_id": "barbell_bench_press",
+      "relativo_a": "back_squat",
+      "min": 0.7,
+      "max": 0.8
+    },
+    {
+      "exercicio_id": "overhead_press",
+      "relativo_a": "barbell_bench_press",
+      "min": 0.6,
+      "max": 0.7
+    },
+    {
+      "exercicio_id": "barbell_bent_over_row",
+      "relativo_a": "barbell_bench_press",
+      "min": 0.8,
+      "max": 1.0
+    },
+    {
+      "exercicio_id": "front_squat",
+      "relativo_a": "back_squat",
+      "min": 0.8,
+      "max": 0.9
+    },
+    {
+      "exercicio_id": "romanian_deadlift",
+      "relativo_a": "conventional_deadlift",
+      "min": 0.65,
+      "max": 0.75
+    },
+    {
+      "exercicio_id": "close_grip_bench_press",
+      "relativo_a": "barbell_bench_press",
+      "min": 0.85,
+      "max": 0.92
+    }
+  ]
+}

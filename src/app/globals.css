@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --font-display: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --font-body: "Barlow", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+body {
+  background: #111315;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #c6f432;
+  outline-offset: 2px;
+}
+
+@layer components {
+  .h-display {
+    @apply font-display uppercase tracking-wide leading-none;
+  }
+  .card {
+    @apply rounded-2xl bg-surface;
+  }
+  .field {
+    @apply min-h-[44px] w-full rounded-xl border border-line bg-ground px-3 text-sm text-chalk outline-none focus:border-lime;
+  }
+  .label {
+    @apply font-mono text-[11px] text-muted;
+  }
+  .btn-primary {
+    @apply inline-flex min-h-[44px] items-center justify-center rounded-xl bg-lime px-5 font-semibold text-ground transition hover:bg-lime-soft disabled:opacity-50;
+  }
+  .btn-ghost {
+    @apply inline-flex min-h-[44px] items-center justify-center rounded-xl border border-line px-4 text-chalk transition hover:border-lime;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.01ms !important;
+  }
+}
