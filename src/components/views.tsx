@@ -94,6 +94,13 @@ export function StrengthView({ a, lang }: { a: AthleteData; lang: Lang }) {
       </div>
 
       {!a.bodyweight && <p className="text-sm text-warn">Regista o peso corporal para calcular os níveis de força.</p>}
+      {a.levels.length > 0 && (
+        <p className="font-mono text-[11px] text-muted">
+          {a.levelSource === "teste"
+            ? `Fonte: teste de RM de ${a.lastTestDate?.toLocaleDateString("pt-PT")} (${a.testCount} teste${a.testCount === 1 ? "" : "s"} no total)`
+            : "Fonte: estimativa a partir dos treinos — faz um teste de RM para valores comparáveis"}
+        </p>
+      )}
       {a.levels.length === 0 ? (
         <p className="text-sm text-muted">
           Os níveis aparecem quando houver sessões com exercícios de referência (agachamento, supino, peso morto, press militar, remada, prensa, elevações…).

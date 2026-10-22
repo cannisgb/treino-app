@@ -1,5 +1,6 @@
 import type { TrainingPlan } from "@prisma/client";
 import { exName, type Lang } from "@/lib/catalog";
+import ExerciseDemo from "@/components/ExerciseDemo";
 import { GOALS, type PlanData } from "@/lib/plan";
 import { fmt } from "@/lib/metrics";
 
@@ -18,8 +19,11 @@ export function PlanView({ plan, lang }: { plan: TrainingPlan; lang: Lang }) {
             <div className="font-mono text-xs text-muted">Dia {i + 1}</div>
           </div>
           {d.items.map((it, j) => (
-            <div key={j} className="flex justify-between gap-3 border-t border-line/60 py-1.5 text-sm">
-              <span>{exName(it.exerciseId, lang)}</span>
+            <div key={j} className="flex items-center justify-between gap-3 border-t border-line/60 py-1.5 text-sm">
+              <span className="flex items-center gap-2.5">
+                <ExerciseDemo exerciseId={it.exerciseId} lang={lang} size={40} />
+                {exName(it.exerciseId, lang)}
+              </span>
               <span className={`whitespace-nowrap font-mono text-xs ${it.priority ? "text-warn" : "text-[#C9CDD1]"}`}>
                 {it.sets}×{it.reps}
                 {it.kg ? ` @ ${fmt(it.kg)} kg` : ""}

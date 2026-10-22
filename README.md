@@ -16,6 +16,14 @@ PWA em Next.js 14 + Prisma/PostgreSQL + NextAuth. Foi criada a partir da base t�
 - **Catálogo PT/EN**: botão PT | EN no registo de sessão, no gerador de plano e no catálogo. Muda os nomes no momento e fica guardado como preferência.
 - Gerador de plano: objetivo, dias (2–6), duração; cargas a partir do histórico; grupos em atraso reforçados; editável antes de publicar.
 
+## Novidades (v1.1)
+
+- **Medidas com guia visual:** cada medida tem uma figura com o sítio exato da fita e a instrução de como medir.
+- **Correção de medidas:** o treinador pode corrigir ou apagar qualquer medição (Clientes › Medidas › Histórico).
+- **Teste de RM com protocolo fixo:** botão "Teste de RM" na ficha do cliente; exercícios e regras sempre iguais (5RM → 1RM estimado). Os níveis de força passam a usar os testes quando existem.
+- **Campo de exercício com pesquisa (PT/EN):** escreve-se para procurar; se não existir, usa-se o nome escrito e fica registado em Catálogo › "por rever".
+- **Animação de cada exercício:** 196 dos 221 exercícios têm demonstração (toca na miniatura). Fonte: [free-exercise-db](https://github.com/yuhonas/free-exercise-db), domínio público (Unlicense).
+
 ## Estrutura
 
 ```

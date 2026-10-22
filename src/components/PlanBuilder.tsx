@@ -2,7 +2,9 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { EXERCISES, GROUPS, exName, getExercise, type Lang } from "@/lib/catalog";
+import { GROUPS, type Lang } from "@/lib/catalog";
+import ExercisePicker from "@/components/ExercisePicker";
+import ExerciseDemo from "@/components/ExerciseDemo";
 import { GOALS, type Goal, type PlanData } from "@/lib/plan";
 import LangToggle from "@/components/LangToggle";
 
@@ -129,16 +131,12 @@ export default function PlanBuilder({
                   </div>
                   {day.items.map((it, i) => (
                     <div key={i} className="flex flex-col gap-1.5 border-t border-line/60 pt-2">
-                      <select
-                        aria-label="Exercício"
-                        value={it.exerciseId}
-                        onChange={(e) => editItem(d, i, { exerciseId: e.target.value })}
-                        className={`field ${it.priority ? "text-warn" : ""}`}
-                      >
-                        {EXERCISES.filter((e) => e.grupo === getExercise(it.exerciseId)?.grupo).map((e) => (
-                          <option key={e.id} value={e.id}>{exName(e.id, lang)}</option>
-                        ))}
-                      </select>
+                      <div className="flex items-center gap-2">
+                        <ExerciseDemo exerciseId={it.exerciseId} lang={lang} size={40} />
+                        <div className={`min-w-0 flex-1 ${it.priority ? "[&_input]:text-warn" : ""}`}>
+                          <ExercisePicker value={it.exerciseId} lang={lang} onChange={(id) => editItem(d, i, { exerciseId: id })} />
+                        </div>
+                      </div>
                       <div className="grid grid-cols-3 gap-2">
                         <input aria-label="Séries" inputMode="numeric" value={it.sets} onChange={(e) => editItem(d, i, { sets: Number(e.target.value) || 0 })} className="field" />
                         <input aria-label="Repetições" value={it.reps} onChange={(e) => editItem(d, i, { reps: e.target.value })} className="field" />

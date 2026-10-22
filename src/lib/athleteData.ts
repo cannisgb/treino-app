@@ -25,10 +25,22 @@ export async function loadAthlete(athleteId: string) {
   );
   const best = bestByExercise(entries, bodyweight);
 
+  // Níveis de força: se houver testes de RM (protocolo fixo), usam-se só os testes,
+  // para que os números sejam comparáveis. Sem testes, estima-se a partir dos treinos.
+  const tests = sessions.filter((s) => s.kind === "teste");
+  const levelSource: "teste" | "treinos" = tests.length ? "teste" : "treinos";
+  const bestForLevels = tests.length
+    ? bestByExercise(
+        tests.flatMap((t) => t.entries.map((e) => ({ exerciseId: e.exerciseId, sets: e.sets, reps: e.reps, kg: e.kg, date: t.date }))),
+        bodyweight
+      )
+    : best;
+  const lastTestDate = tests.length ? tests[tests.length - 1].date : null;
+
   const now = proportions(latest, user?.sex);
   const then = measurements.length > 1 ? proportions(first, user?.sex) : null;
-  const levels = strengthLevels(best, bodyweight, user?.sex);
-  const balance = balanceChecks(best);
+  const levels = strengthLevels(bestForLevels, bodyweight, user?.sex);
+  const balance = balanceChecks(bestForLevels);
 
   // Grupos a reforçar: eixos abaixo de 85% e equilíbrios abaixo do mínimo.
   const priorityGroups = new Set<string>();
@@ -55,6 +67,9 @@ export async function loadAthlete(athleteId: string) {
     then,
     levels,
     balance,
+    levelSource,
+    lastTestDate,
+    testCount: tests.length,
     priorityGroups: [...priorityGroups],
   };
 }

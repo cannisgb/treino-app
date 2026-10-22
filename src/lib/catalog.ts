@@ -1,4 +1,5 @@
 import raw from "@/data/catalog.json";
+import media from "@/data/media.json";
 
 export type Lang = "pt" | "en";
 
@@ -39,10 +40,57 @@ export function getExercise(id: string): Exercise | undefined {
   return byId.get(id);
 }
 
+// ---------- Exercícios escritos à mão (fora do catálogo) ----------
+// Guardam-se como "custom:<nome tal como foi escrito>", por isso o nome viaja no próprio id.
+export const CUSTOM_PREFIX = "custom:";
+export function isCustom(id: string) {
+  return id.startsWith(CUSTOM_PREFIX);
+}
+export function customId(name: string) {
+  return CUSTOM_PREFIX + name.trim().replace(/\s+/g, " ").slice(0, 80);
+}
+export function isValidExerciseId(id: string) {
+  return byId.has(id) || (isCustom(id) && id.length > CUSTOM_PREFIX.length + 1);
+}
+
 export function exName(id: string, lang: Lang): string {
+  if (isCustom(id)) return id.slice(CUSTOM_PREFIX.length);
   const e = byId.get(id);
   if (!e) return id;
   return lang === "en" ? e.nome_en : e.nome_pt;
+}
+
+/** Normaliza para pesquisa: minúsculas, sem acentos nem pontuação. */
+export function normalize(s: string) {
+  return s
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+}
+
+/** Pesquisa em PT e EN ao mesmo tempo; todas as palavras escritas têm de aparecer. */
+export function searchExercises(q: string, lang: Lang, limit = 12): Exercise[] {
+  const words = normalize(q).split(" ").filter(Boolean);
+  if (!words.length) return [];
+  const scored: { e: Exercise; score: number }[] = [];
+  for (const e of EXERCISES) {
+    const main = normalize(lang === "en" ? e.nome_en : e.nome_pt);
+    const other = normalize(lang === "en" ? e.nome_pt : e.nome_en);
+    const hay = main + " " + other;
+    if (!words.every((w) => hay.includes(w))) continue;
+    const score = (main.startsWith(words[0]) ? 0 : 1) + (main.includes(words.join(" ")) ? 0 : 1) + main.length / 200;
+    scored.push({ e, score });
+  }
+  return scored.sort((a, b) => a.score - b.score).slice(0, limit).map((x) => x.e);
+}
+
+// ---------- Animações dos exercícios ----------
+// GIFs em public/exercises/<id>.gif, gerados a partir do free-exercise-db (domínio público).
+const MEDIA = new Set<string>(media as string[]);
+export function mediaUrl(id: string): string | null {
+  return MEDIA.has(id) ? `/exercises/${id}.gif` : null;
 }
 
 export const GROUPS: { id: string; pt: string; en: string }[] = [

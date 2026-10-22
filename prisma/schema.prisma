@@ -62,6 +62,7 @@ model WorkoutSession {
   trainerId String?
   date      DateTime       @default(now())
   title     String?
+  kind      String         @default("treino") // "treino" | "teste" (teste de RM com o protocolo fixo)
   notes     String?
   entries   WorkoutEntry[]
   createdAt DateTime       @default(now())
@@ -71,6 +72,7 @@ model WorkoutSession {
 
 // Uma linha por exercício na sessão. exerciseId refere o catálogo
 // (src/data/catalog.json), por isso o nome aparece em PT ou EN conforme a escolha.
+// Exercícios escritos à mão que não estão no catálogo ficam como "custom:<nome>".
 model WorkoutEntry {
   id         String         @id @default(cuid())
   session    WorkoutSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
@@ -107,4 +109,16 @@ model PasswordResetToken {
   tokenHash String   @unique
   expiresAt DateTime
   createdAt DateTime @default(now())
+}
+
+// Exercícios escritos à mão (fora do catálogo), para rever e acrescentar mais tarde.
+model UnknownExercise {
+  id            String   @id @default(cuid())
+  key           String   @unique // nome normalizado (minúsculas, sem acentos)
+  name          String   // como foi escrito da primeira vez
+  count         Int      @default(1)
+  lastTrainerId String?
+  status        String   @default("pending") // pending | added | ignored
+  firstSeen     DateTime @default(now())
+  lastSeen      DateTime @default(now())
 }

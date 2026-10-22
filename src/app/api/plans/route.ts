@@ -2,12 +2,13 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { prisma } from "@/lib/prisma";
 import { currentUser, trainerAthlete } from "@/lib/guards";
-import { getExercise } from "@/lib/catalog";
+import { isValidExerciseId } from "@/lib/catalog";
+import { logUnknownExercises } from "@/lib/unknownExercises";
 import { sendEmail } from "@/lib/email";
 import { APP_NAME } from "@/lib/brand";
 
 const Item = z.object({
-  exerciseId: z.string(),
+  exerciseId: z.string().max(100),
   sets: z.number().int().min(0).max(20),
   reps: z.string().max(20),
   kg: z.number().min(0).max(1000).nullable(),
@@ -33,7 +34,7 @@ export async function POST(req: Request) {
   const { athleteId, goal, days, minutes, publish, data } = parsed.data;
   const athlete = await trainerAthlete(user.id, athleteId);
   if (!athlete) return NextResponse.json({ error: "Cliente não encontrado" }, { status: 404 });
-  if (data.days.some((d) => d.items.some((i) => !getExercise(i.exerciseId)))) {
+  if (data.days.some((d) => d.items.some((i) => !isValidExerciseId(i.exerciseId)))) {
     return NextResponse.json({ error: "Exercício desconhecido no plano" }, { status: 400 });
   }
 
@@ -55,6 +56,8 @@ export async function POST(req: Request) {
       },
     });
   });
+
+  await logUnknownExercises(data.days.flatMap((d) => d.items.map((i) => i.exerciseId)), user.id).catch(() => {});
 
   if (publish) {
     await sendEmail({
