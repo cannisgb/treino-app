@@ -14,6 +14,7 @@ export async function currentUser() {
 export async function requirePageUser(role?: "TRAINER" | "ATHLETE") {
   const user = await currentUser();
   if (!user) redirect("/");
+  if (user.mustChangePassword) redirect("/change-password");
   if (role && user.role !== role) redirect(user.role === "TRAINER" ? "/treinador" : "/app");
   return user;
 }

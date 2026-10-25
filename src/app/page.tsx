@@ -1,15 +1,21 @@
 import { redirect } from "next/navigation";
+import AuthButtons from "@/components/AuthButtons";
 import { currentUser } from "@/lib/guards";
-import ChangePasswordForm from "@/components/ChangePasswordForm";
+import { APP_NAME } from "@/lib/brand";
 
-export default async function ChangePasswordPage() {
+export default async function Home() {
   const user = await currentUser();
-  if (!user) redirect("/");
+  if (user) redirect(user.role === "TRAINER" ? "/treinador" : "/app");
+
   return (
-    <main className="mx-auto max-w-md px-5 py-10">
-      <h1 className="h-display mb-3 text-4xl">{user.mustChangePassword ? "Define uma password nova" : "Mudar password"}</h1>
-      {user.mustChangePassword && <p className="mb-6 text-sm text-muted">A tua conta foi criada com uma password temporária. Escolhe uma nova para continuar.</p>}
-      <ChangePasswordForm />
+    <main className="mx-auto flex min-h-screen max-w-xl flex-col justify-center gap-8 px-5 py-12">
+      <div className="h-display text-2xl text-lime">{APP_NAME}</div>
+      <h1 className="h-display text-5xl sm:text-6xl">Mede o corpo. Segue a força. Treina com plano.</h1>
+      <p className="text-lg text-muted">
+        Proporções comparadas com uma referência ideal, níveis de força por exercício, a evolução semana a semana, e um plano feito pelo teu treinador a partir do teu histórico.
+      </p>
+      <AuthButtons />
+      <p className="font-mono text-xs text-muted">No Android: abre no Chrome › menu › “Instalar app”. No iPhone: Safari › Partilhar › “Adicionar ao ecrã principal”.</p>
     </main>
   );
 }
