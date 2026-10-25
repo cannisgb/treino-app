@@ -1,6 +1,7 @@
 import { prisma } from "@/lib/prisma";
 import { BALANCE, getExercise } from "@/lib/catalog";
-import { AXES, balanceChecks, bestByExercise, proportions, strengthLevels, type EntryLike, type Measures } from "@/lib/metrics";
+import { AXES, balanceChecks, proportions, strengthLevels, type Measures } from "@/lib/metrics";
+import { bestFromEntries, type DatedEntry } from "@/lib/measure";
 
 /** Junta tudo o que os ecrãs precisam de um cliente: medidas, histórico, força. */
 export async function loadAthlete(athleteId: string) {
@@ -20,20 +21,25 @@ export async function loadAthlete(athleteId: string) {
   if (!first.hips && user?.sex === "F") first.hips = latest.hips;
 
   const bodyweight = latest.weightKg ?? null;
-  const entries: EntryLike[] = sessions.flatMap((s) =>
-    s.entries.map((e) => ({ exerciseId: e.exerciseId, sets: e.sets, reps: e.reps, kg: e.kg, date: s.date }))
-  );
-  const best = bestByExercise(entries, bodyweight);
+  const toEntry = (date: Date) => (e: (typeof sessions)[number]["entries"][number]): DatedEntry => ({
+    exerciseId: e.exerciseId,
+    mode: e.mode,
+    sets: e.sets,
+    reps: e.reps,
+    kg: e.kg,
+    durationSec: e.durationSec,
+    distanceM: e.distanceM,
+    date,
+  });
+  const entries: DatedEntry[] = sessions.flatMap((s) => s.entries.map(toEntry(s.date)));
+  const best = bestFromEntries(entries, bodyweight);
 
   // Níveis de força: se houver testes de RM (protocolo fixo), usam-se só os testes,
   // para que os números sejam comparáveis. Sem testes, estima-se a partir dos treinos.
   const tests = sessions.filter((s) => s.kind === "teste");
   const levelSource: "teste" | "treinos" = tests.length ? "teste" : "treinos";
   const bestForLevels = tests.length
-    ? bestByExercise(
-        tests.flatMap((t) => t.entries.map((e) => ({ exerciseId: e.exerciseId, sets: e.sets, reps: e.reps, kg: e.kg, date: t.date }))),
-        bodyweight
-      )
+    ? bestFromEntries(tests.flatMap((t) => t.entries.map(toEntry(t.date))), bodyweight)
     : best;
   const lastTestDate = tests.length ? tests[tests.length - 1].date : null;
 

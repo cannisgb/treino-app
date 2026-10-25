@@ -3,6 +3,7 @@ import { exName, type Lang } from "@/lib/catalog";
 import ExerciseDemo from "@/components/ExerciseDemo";
 import { GOALS, type PlanData } from "@/lib/plan";
 import { fmt } from "@/lib/metrics";
+import { modeOf } from "@/lib/measure";
 
 export function PlanView({ plan, lang }: { plan: TrainingPlan; lang: Lang }) {
   const data = plan.data as unknown as PlanData;
@@ -25,8 +26,12 @@ export function PlanView({ plan, lang }: { plan: TrainingPlan; lang: Lang }) {
                 {exName(it.exerciseId, lang)}
               </span>
               <span className={`whitespace-nowrap font-mono text-xs ${it.priority ? "text-warn" : "text-[#C9CDD1]"}`}>
-                {it.sets}×{it.reps}
-                {it.kg ? ` @ ${fmt(it.kg)} kg` : ""}
+                {(() => {
+                  const mode = modeOf(it.exerciseId);
+                  if (mode === "cardio" || mode === "distancia") return it.reps;
+                  const kg = it.kg ? (mode === "lastro" ? ` · +${fmt(it.kg)} kg` : mode === "assistencia" ? ` · −${fmt(it.kg)} kg` : ` @ ${fmt(it.kg)} kg`) : "";
+                  return `${it.sets}×${it.reps}${kg}`;
+                })()}
               </span>
             </div>
           ))}

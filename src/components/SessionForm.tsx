@@ -3,14 +3,43 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { exName, getExercise, groupName, isCustom, type Lang } from "@/lib/catalog";
-import { effectiveLoad, epley, fmt } from "@/lib/metrics";
+import { fmt } from "@/lib/metrics";
+import { FIELD_LABEL, MODES, durationText, formatEntry, modeOf, parseDuration, performance, type Field, type Mode } from "@/lib/measure";
 import { RM_TEST, RM_TEST_RULES } from "@/lib/rmTest";
 import LangToggle from "@/components/LangToggle";
 import ExercisePicker from "@/components/ExercisePicker";
 import ExerciseDemo from "@/components/ExerciseDemo";
 
-type Row = { key: number; exerciseId: string; sets: string; reps: string; kg: string; note?: string };
-type Last = Record<string, { sets: number; reps: number; kg: number }>;
+type Row = { key: number; exerciseId: string; mode?: Mode; sets: string; reps: string; kg: string; dur: string; dist: string; note?: string };
+type LastEntry = { sets: number; reps: number; kg: number; durationSec: number | null; distanceM: number | null; mode: string | null };
+type Last = Record<string, LastEntry>;
+
+const num = (t: string) => Number((t || "0").replace(",", "."));
+
+/** Linha preenchida com a última vez que o exercício foi feito (ou valores típicos do modo). */
+function rowFor(exerciseId: string, l?: LastEntry): Omit<Row, "key"> {
+  const mode = modeOf(exerciseId, l?.mode);
+  if (l)
+    return {
+      exerciseId,
+      sets: String(l.sets || 1),
+      reps: l.reps ? String(l.reps) : "",
+      kg: l.kg ? String(l.kg) : "",
+      dur: durationText(l.durationSec, mode),
+      dist: l.distanceM ? String(l.distanceM) : "",
+    };
+  const defaults: Record<Mode, Partial<Row>> = {
+    carga: { sets: "3", reps: "10" },
+    lastro: { sets: "3", reps: "8" },
+    assistencia: { sets: "3", reps: "8" },
+    reps: { sets: "3", reps: "12" },
+    tempo: { sets: "3", dur: "30" },
+    cardio: { dur: "20" },
+    distancia: {},
+    carga_distancia: { sets: "3", dist: "30" },
+  };
+  return { exerciseId, sets: "1", reps: "", kg: "", dur: "", dist: "", ...defaults[mode] };
+}
 export type Suggestion = { title: string; detail: string; exerciseIds: string[] };
 type Kind = "treino" | "teste";
 
@@ -22,7 +51,9 @@ function testRows(last: Last): Row[] {
     exerciseId: t.exerciseId,
     sets: "1",
     reps: t.reps ? String(t.reps) : "",
-    kg: t.reps ? (last[t.exerciseId] ? String(last[t.exerciseId].kg) : "") : "0",
+    kg: t.reps && last[t.exerciseId]?.kg ? String(last[t.exerciseId].kg) : "",
+    dur: "",
+    dist: "",
     note: t.note,
   }));
 }
@@ -48,7 +79,7 @@ export default function SessionForm({
   const [date, setDate] = useState(() => new Date().toISOString().slice(0, 10));
   const [title, setTitle] = useState(initialKind === "teste" ? "Teste de RM" : "");
   const [rows, setRows] = useState<Row[]>(() =>
-    initialKind === "teste" ? testRows(last) : [{ key: seq++, exerciseId: "", sets: "3", reps: "10", kg: "" }]
+    initialKind === "teste" ? testRows(last) : [{ key: seq++, ...rowFor("") }]
   );
   const [error, setError] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
@@ -60,7 +91,7 @@ export default function SessionForm({
       setRows(testRows(last));
       setTitle("Teste de RM");
     } else {
-      setRows([{ key: seq++, exerciseId: "", sets: "3", reps: "10", kg: "" }]);
+      setRows([{ key: seq++, ...rowFor("") }]);
       setTitle("");
     }
   }
@@ -70,30 +101,38 @@ export default function SessionForm({
   }
 
   function chooseExercise(key: number, exerciseId: string) {
-    const l = last[exerciseId];
-    update(key, l && kind === "treino" ? { exerciseId, sets: String(l.sets), reps: String(l.reps), kg: String(l.kg) } : { exerciseId });
+    update(key, { ...rowFor(exerciseId, kind === "treino" ? last[exerciseId] : undefined), mode: undefined });
   }
 
   function addRow(exerciseId?: string) {
-    const l = exerciseId ? last[exerciseId] : undefined;
-    setRows((rs) => [
-      ...rs,
-      { key: seq++, exerciseId: exerciseId ?? "", sets: l ? String(l.sets) : "3", reps: l ? String(l.reps) : "10", kg: l ? String(l.kg) : "" },
-    ]);
+    setRows((rs) => [...rs, { key: seq++, ...rowFor(exerciseId ?? "", exerciseId ? last[exerciseId] : undefined) }]);
+  }
+
+  function entryOf(r: Row) {
+    const mode = modeOf(r.exerciseId, r.mode);
+    const dur = r.dur ? (mode === "tempo" ? Math.round(num(r.dur)) : parseDuration(r.dur)) : null;
+    return {
+      exerciseId: r.exerciseId,
+      mode,
+      sets: Math.round(num(r.sets)) || 1,
+      reps: Math.round(num(r.reps)),
+      kg: num(r.kg),
+      durationSec: dur,
+      distanceM: r.dist ? Math.round(num(r.dist)) : null,
+    };
   }
 
   async function submit() {
     setError(null);
-    const filled = rows.filter((r) => r.exerciseId && r.reps !== "");
-    const entries = filled.map((r, i) => ({
-      exerciseId: r.exerciseId,
-      sets: Number(r.sets),
-      reps: Number(r.reps),
-      kg: Number((r.kg || "0").replace(",", ".")),
-      order: i,
-    }));
-    if (!entries.length) return setError("Escolhe pelo menos um exercício e preenche as repetições.");
-    if (entries.some((e) => !e.sets || !e.reps || e.kg < 0 || Number.isNaN(e.kg))) return setError("Confirma séries, repetições e carga.");
+    const entries = rows.filter((r) => r.exerciseId).map((r, i) => ({ ...entryOf(r), order: i }));
+    if (!entries.length) return setError("Escolhe pelo menos um exercício.");
+    for (const e of entries) {
+      const m = MODES[e.mode];
+      const bad =
+        Object.values(e).some((v) => typeof v === "number" && (Number.isNaN(v) || v < 0)) ||
+        m.required.some((f) => (f === "reps" ? !e.reps : f === "durationSec" || f === "durationMin" ? !e.durationSec : f === "distanceM" ? !e.distanceM : false));
+      if (bad) return setError(`Confirma os valores de “${exName(e.exerciseId, lang)}”: ${m.hint.toLowerCase()}.`);
+    }
     setSaving(true);
     const res = await fetch("/api/sessions", {
       method: "POST",
@@ -106,7 +145,7 @@ export default function SessionForm({
     router.refresh();
   }
 
-  const cols = "grid grid-cols-[48px_minmax(0,1fr)_64px_64px_88px_88px_100px_36px] gap-2.5";
+  const cols = "grid grid-cols-[48px_minmax(0,1fr)_minmax(0,300px)_96px_110px_36px] gap-2.5";
   const customCount = rows.filter((r) => r.exerciseId && isCustom(r.exerciseId)).length;
 
   return (
@@ -160,40 +199,80 @@ export default function SessionForm({
             <div className={`${cols} border-b border-line py-2.5 font-mono text-[11px] text-muted`}>
               <div>Como</div>
               <div>Exercício · escreve para procurar (PT ou EN)</div>
-              <div>Séries</div>
-              <div>Reps</div>
-              <div>Carga kg</div>
-              <div>1RM est.</div>
+              <div>Registo</div>
+              <div>Resultado</div>
               <div>Última vez</div>
               <div />
             </div>
             {rows.map((r) => {
-              const ex = r.exerciseId ? getExercise(r.exerciseId) : undefined;
-              const kg = Number((r.kg || "0").replace(",", "."));
-              const orm = r.exerciseId && r.reps ? epley(effectiveLoad(r.exerciseId, kg, bodyweight), Number(r.reps)) : 0;
+              const mode = modeOf(r.exerciseId, r.mode);
+              const m = MODES[mode];
+              const perf = r.exerciseId ? performance(entryOf(r), bodyweight) : null;
               const l = last[r.exerciseId];
               const locked = kind === "teste" && RM_TEST.some((t) => t.exerciseId === r.exerciseId) && !!r.note;
+              const ex = r.exerciseId ? getExercise(r.exerciseId) : undefined;
+              const value = (f: Field) => (f === "sets" ? r.sets : f === "reps" ? r.reps : f === "kg" ? r.kg : f === "distanceM" ? r.dist : r.dur);
+              const set = (f: Field, v: string) =>
+                update(r.key, f === "sets" ? { sets: v } : f === "reps" ? { reps: v } : f === "kg" ? { kg: v } : f === "distanceM" ? { dist: v } : { dur: v });
+              const label = (f: Field) =>
+                f === "kg" ? (ex?.tipo_carga === "por_halter" ? "kg / halter" : m.kgLabel ?? FIELD_LABEL.kg) : f === "durationMin" ? "Tempo (min ou m:ss)" : FIELD_LABEL[f];
               return (
                 <div key={r.key} className="border-b border-line/60 py-2.5">
-                  <div className={`${cols} items-center`}>
-                    <ExerciseDemo exerciseId={r.exerciseId} lang={lang} />
-                    <div className="min-w-0">
+                  <div className={`${cols} items-start`}>
+                    <div className="pt-4"><ExerciseDemo exerciseId={r.exerciseId} lang={lang} /></div>
+                    <div className="flex min-w-0 flex-col gap-1">
+                      <span className="font-mono text-[10px] text-muted">{r.exerciseId ? m.label : " "}</span>
                       {locked ? (
                         <div className="field flex items-center bg-surface">{exName(r.exerciseId, lang)}</div>
                       ) : (
                         <ExercisePicker value={r.exerciseId} lang={lang} onChange={(id) => chooseExercise(r.key, id)} />
                       )}
+                      {r.exerciseId && isCustom(r.exerciseId) && (
+                        <label className="flex items-center gap-2 font-mono text-[11px] text-muted">
+                          Medir por
+                          <select value={mode} onChange={(e) => update(r.key, { mode: e.target.value as Mode })} className="field min-h-[34px] w-auto py-0 text-xs">
+                            {(Object.keys(MODES) as Mode[]).map((k) => (
+                              <option key={k} value={k}>{MODES[k].label}</option>
+                            ))}
+                          </select>
+                        </label>
+                      )}
                     </div>
-                    <input aria-label="Séries" inputMode="numeric" value={r.sets} onChange={(e) => update(r.key, { sets: e.target.value })} className="field" />
-                    <input aria-label="Repetições" inputMode="numeric" value={r.reps} placeholder={r.exerciseId === "pull_up" ? "máx." : ""} onChange={(e) => update(r.key, { reps: e.target.value })} className="field" />
-                    <input aria-label="Carga em kg" inputMode="decimal" value={r.kg} onChange={(e) => update(r.key, { kg: e.target.value })} className="field" placeholder={ex?.tipo_carga === "por_halter" ? "por halter" : ""} />
-                    <div className="font-mono text-sm text-lime">{orm ? `${fmt(orm)} kg` : "—"}</div>
-                    <div className="font-mono text-xs text-muted">{l ? `${fmt(l.kg)} × ${l.reps}` : "—"}</div>
+                    <div className="flex flex-wrap gap-2">
+                      {r.exerciseId &&
+                        m.fields.map((f) => (
+                          <label key={f} className="flex w-[88px] flex-col gap-1">
+                            <span className="truncate font-mono text-[10px] text-muted">
+                              {label(f)}
+                              {m.required.includes(f) || (f === "kg" && m.kgLabel === "Carga kg") || label(f).includes("opc") ? "" : " ·opc."}
+                            </span>
+                            <input
+                              aria-label={label(f)}
+                              inputMode={f === "durationMin" ? "text" : "decimal"}
+                              value={value(f)}
+                              placeholder={r.exerciseId === "pull_up" && f === "reps" ? "máx." : ""}
+                              onChange={(e) => set(f, e.target.value)}
+                              className="field"
+                            />
+                          </label>
+                        ))}
+                    </div>
+                    <div className="pt-6 font-mono text-sm text-lime">
+                      {perf && perf.value ? (
+                        <>
+                          {fmt(perf.value, perf.unit === "kg" || perf.unit === "m/min" ? 1 : 0)} {perf.unit}
+                          <div className="text-[10px] text-muted">{perf.label}</div>
+                        </>
+                      ) : (
+                        "—"
+                      )}
+                    </div>
+                    <div className="pt-6 font-mono text-xs text-muted">{l ? formatEntry({ exerciseId: r.exerciseId, ...l }) : "—"}</div>
                     <button
                       type="button"
                       aria-label="Remover linha"
                       onClick={() => setRows((rs) => rs.filter((x) => x.key !== r.key))}
-                      className="min-h-[40px] min-w-[36px] rounded-lg text-muted hover:text-warn"
+                      className="mt-4 min-h-[40px] min-w-[36px] rounded-lg text-muted hover:text-warn"
                     >
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
                     </button>
@@ -219,7 +298,7 @@ export default function SessionForm({
           {error && <p className="mt-3 text-sm text-warn">{error}</p>}
         </div>
         <p className="font-mono text-xs text-muted">
-          A carga vem preenchida com a última vez. Halteres: peso de cada halter. Elevações assistidas: contrapeso da máquina. 1RM estimado pela fórmula de Epley. Toca na imagem para ver como se faz.
+          Cada exercício pede só o que faz sentido: carga, só repetições, tempo, distância ou lastro. Os valores vêm preenchidos com a última vez. Halteres: peso de cada halter. 1RM estimado pela fórmula de Epley. Toca na imagem para ver como se faz.
         </p>
       </div>
 

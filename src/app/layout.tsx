@@ -1,41 +1,22 @@
-import type { Metadata, Viewport } from "next";
-// Tipos de letra servidos a partir do próprio projeto (pacotes @fontsource):
-// sem dependência do Google Fonts no build nem no telemóvel.
-import "@fontsource/barlow/400.css";
-import "@fontsource/barlow/500.css";
-import "@fontsource/barlow/600.css";
-import "@fontsource/barlow-condensed/600.css";
-import "@fontsource/barlow-condensed/700.css";
-import "@fontsource/jetbrains-mono/400.css";
-import "@fontsource/jetbrains-mono/500.css";
-import "./globals.css";
-import Providers from "@/components/Providers";
-import RegisterSW from "@/components/RegisterSW";
-import { APP_NAME } from "@/lib/brand";
+import Link from "next/link";
+import BottomNav from "@/components/BottomNav";
+import { requirePageUser } from "@/lib/guards";
 
-
-export const metadata: Metadata = {
-  title: APP_NAME,
-  description: "Acompanhamento de treino, proporções e força.",
-  manifest: "/manifest.webmanifest",
-  appleWebApp: { capable: true, title: APP_NAME, statusBarStyle: "black-translucent" },
-  icons: { icon: "/icons/icon-192.png", apple: "/icons/apple-touch-icon.png" },
-};
-
-export const viewport: Viewport = {
-  themeColor: "#111315",
-  width: "device-width",
-  initialScale: 1,
-  viewportFit: "cover",
-};
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function AthleteLayout({ children }: { children: React.ReactNode }) {
+  const user = await requirePageUser("ATHLETE");
   return (
-    <html lang="pt">
-      <body className="bg-ground font-body text-chalk antialiased">
-        <Providers>{children}</Providers>
-        <RegisterSW />
-      </body>
-    </html>
+    <div className="mx-auto min-h-screen max-w-md pb-28">
+      <header className="flex items-center justify-between px-5 pt-5">
+        <div className="font-mono text-xs text-muted">Olá, {user.name.split(" ")[0]}</div>
+        <Link href="/app/perfil" aria-label="Perfil" className="flex min-h-[44px] min-w-[44px] items-center justify-center rounded-full text-muted hover:text-chalk">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+            <circle cx="12" cy="8" r="4" />
+            <path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6" />
+          </svg>
+        </Link>
+      </header>
+      <main className="px-5 pt-2">{children}</main>
+      <BottomNav />
+    </div>
   );
 }

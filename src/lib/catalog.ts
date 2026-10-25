@@ -13,6 +13,7 @@ export type Exercise = {
   tipo: string; // composto | isolado | cardio
   padrao_movimento: string;
   unilateral: boolean;
+  medida: "carga" | "lastro" | "assistencia" | "reps" | "tempo" | "cardio" | "distancia" | "carga_distancia";
   tipo_carga: string; // barra_total | por_halter | maquina | maquina_discos | cabo | lastro | assistencia | peso_corporal | tempo | distancia
 };
 

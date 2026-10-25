@@ -3,6 +3,7 @@
 // estimado do cliente, e reforça os grupos musculares em atraso.
 import { getExercise } from "@/lib/catalog";
 import { round } from "@/lib/metrics";
+import { modeOf, type Mode } from "@/lib/measure";
 
 export type Goal = "hipertrofia" | "forca" | "gordura" | "misto";
 export const GOALS: { id: Goal; label: string }[] = [
@@ -117,13 +118,24 @@ export function generatePlan(opts: {
       const [sets, reps, pct] = slot.main ? rx.main : rx.acc;
       const g = getExercise(id)?.grupo ?? "";
       const isPrio = prio.has(g);
-      // Só se prescreve carga em exercícios com carga externa (não em elevações, peso corporal, etc.).
-      const loadable = ["barra_total", "por_halter", "maquina", "maquina_discos", "cabo"].includes(getExercise(id)?.tipo_carga ?? "");
-      const orm = loadable ? oneRm.get(id) : undefined;
-      return { exerciseId: id, sets: sets + (isPrio ? 1 : 0), reps, kg: orm ? round(orm * pct, 2.5) : null, priority: isPrio };
+      // A prescrição segue a forma como o exercício se mede: carga só onde há carga externa.
+      const mode = modeOf(id);
+      const extra = isPrio ? 1 : 0;
+      const orm = mode === "carga" ? oneRm.get(id) : undefined;
+      const byMode: Record<Mode, Omit<PlanItem, "exerciseId" | "priority">> = {
+        carga: { sets: sets + extra, reps, kg: orm ? round(orm * pct, 2.5) : null },
+        lastro: { sets: sets + extra, reps, kg: null },
+        assistencia: { sets: sets + extra, reps, kg: null },
+        reps: { sets: sets + extra, reps: goal === "forca" ? "8–12" : "12–20", kg: null },
+        tempo: { sets: sets + extra, reps: "30–45 s", kg: null },
+        cardio: { sets: 1, reps: "15–20 min", kg: null },
+        distancia: { sets: 1, reps: "2000 m", kg: null },
+        carga_distancia: { sets: 3, reps: "30–40 m", kg: null },
+      };
+      return { exerciseId: id, ...byMode[mode], priority: isPrio };
     });
 
-    if (goal === "gordura") items.push({ exerciseId: "rowing_machine", sets: 1, reps: "15 min", kg: null, priority: false });
+    if (goal === "gordura") items.push({ exerciseId: "rowing_machine", sets: 1, reps: "2000 m", kg: null, priority: false });
     return { name: tpl.name + (suffix ?? ""), items };
   });
 

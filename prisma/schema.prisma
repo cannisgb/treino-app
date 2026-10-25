@@ -79,8 +79,11 @@ model WorkoutEntry {
   sessionId  String
   exerciseId String
   sets       Int
-  reps       Int
-  kg         Float          @default(0)
+  reps        Int     @default(0)
+  kg          Float   @default(0)
+  durationSec Int? // tempo (isometrias, cardio)
+  distanceM   Int? // distância (cardio, carries)
+  mode        String? // como foi medido: carga | lastro | assistencia | reps | tempo | cardio | distancia | carga_distancia
   order      Int            @default(0)
 
   @@index([exerciseId])

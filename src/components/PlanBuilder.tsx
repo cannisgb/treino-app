@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { GROUPS, type Lang } from "@/lib/catalog";
 import ExercisePicker from "@/components/ExercisePicker";
 import ExerciseDemo from "@/components/ExerciseDemo";
+import { MODES, modeOf } from "@/lib/measure";
 import { GOALS, type Goal, type PlanData } from "@/lib/plan";
 import LangToggle from "@/components/LangToggle";
 
@@ -137,18 +138,39 @@ export default function PlanBuilder({
                           <ExercisePicker value={it.exerciseId} lang={lang} onChange={(id) => editItem(d, i, { exerciseId: id })} />
                         </div>
                       </div>
-                      <div className="grid grid-cols-3 gap-2">
-                        <input aria-label="Séries" inputMode="numeric" value={it.sets} onChange={(e) => editItem(d, i, { sets: Number(e.target.value) || 0 })} className="field" />
-                        <input aria-label="Repetições" value={it.reps} onChange={(e) => editItem(d, i, { reps: e.target.value })} className="field" />
-                        <input
-                          aria-label="Carga em kg"
-                          inputMode="decimal"
-                          value={it.kg ?? ""}
-                          placeholder="kg"
-                          onChange={(e) => editItem(d, i, { kg: e.target.value === "" ? null : Number(e.target.value.replace(",", ".")) })}
-                          className="field"
-                        />
-                      </div>
+                      {(() => {
+                        const mode = modeOf(it.exerciseId);
+                        const f = MODES[mode].fields;
+                        const target =
+                          mode === "tempo" ? "Tempo" : mode === "cardio" ? "Duração" : mode === "distancia" ? "Distância" : mode === "carga_distancia" ? "Distância" : "Reps";
+                        return (
+                          <div className="flex gap-2">
+                            {f.includes("sets") && (
+                              <label className="flex w-16 flex-col gap-1">
+                                <span className="font-mono text-[10px] text-muted">Séries</span>
+                                <input aria-label="Séries" inputMode="numeric" value={it.sets} onChange={(e) => editItem(d, i, { sets: Number(e.target.value) || 0 })} className="field" />
+                              </label>
+                            )}
+                            <label className="flex min-w-0 flex-1 flex-col gap-1">
+                              <span className="font-mono text-[10px] text-muted">{target}</span>
+                              <input aria-label={target} value={it.reps} onChange={(e) => editItem(d, i, { reps: e.target.value })} className="field" />
+                            </label>
+                            {f.includes("kg") && mode !== "tempo" && (
+                              <label className="flex w-20 flex-col gap-1">
+                                <span className="truncate font-mono text-[10px] text-muted">{mode === "lastro" ? "+kg" : mode === "assistencia" ? "Contrap." : "kg"}</span>
+                                <input
+                                  aria-label="Carga em kg"
+                                  inputMode="decimal"
+                                  value={it.kg ?? ""}
+                                  placeholder={mode === "lastro" ? "corpo" : "kg"}
+                                  onChange={(e) => editItem(d, i, { kg: e.target.value === "" ? null : Number(e.target.value.replace(",", ".")) })}
+                                  className="field"
+                                />
+                              </label>
+                            )}
+                          </div>
+                        );
+                      })()}
                     </div>
                   ))}
                 </div>
@@ -158,7 +180,7 @@ export default function PlanBuilder({
               {plan.notes.map((n, i) => (
                 <li key={i}>{n}</li>
               ))}
-              <li>A laranja: exercícios de grupos prioritários. Carga vazia = ainda sem histórico nesse exercício.</li>
+              <li>A laranja: exercícios de grupos prioritários. Carga vazia = ainda sem histórico nesse exercício. Cada exercício mostra só o que se mede nele (reps, tempo, distância ou carga).</li>
             </ul>
           </>
         )}

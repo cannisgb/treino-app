@@ -22,7 +22,8 @@
       "tipo": "composto",
       "padrao_movimento": "empurrar_horizontal",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "incline_barbell_bench_press",
@@ -37,7 +38,8 @@
       "tipo": "composto",
       "padrao_movimento": "empurrar_horizontal",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "decline_barbell_bench_press",
@@ -51,7 +53,8 @@
       "tipo": "composto",
       "padrao_movimento": "empurrar_horizontal",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "dumbbell_bench_press",
@@ -66,7 +69,8 @@
       "tipo": "composto",
       "padrao_movimento": "empurrar_horizontal",
       "unilateral": false,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "incline_dumbbell_press",
@@ -81,7 +85,8 @@
       "tipo": "composto",
       "padrao_movimento": "empurrar_horizontal",
       "unilateral": false,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "decline_dumbbell_press",
@@ -95,7 +100,8 @@
       "tipo": "composto",
       "padrao_movimento": "empurrar_horizontal",
       "unilateral": false,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "neutral_grip_dumbbell_press",
@@ -109,7 +115,8 @@
       "tipo": "composto",
       "padrao_movimento": "empurrar_horizontal",
       "unilateral": false,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "machine_chest_press",
@@ -124,7 +131,8 @@
       "tipo": "composto",
       "padrao_movimento": "empurrar_horizontal",
       "unilateral": false,
-      "tipo_carga": "maquina"
+      "tipo_carga": "maquina",
+      "medida": "carga"
     },
     {
       "id": "incline_machine_press",
@@ -139,7 +147,8 @@
       "tipo": "composto",
       "padrao_movimento": "empurrar_horizontal",
       "unilateral": false,
-      "tipo_carga": "maquina"
+      "tipo_carga": "maquina",
+      "medida": "carga"
     },
     {
       "id": "smith_machine_bench_press",
@@ -154,7 +163,8 @@
       "tipo": "composto",
       "padrao_movimento": "empurrar_horizontal",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "smith_machine_incline_press",
@@ -169,7 +179,8 @@
       "tipo": "composto",
       "padrao_movimento": "empurrar_horizontal",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "landmine_press",
@@ -184,7 +195,8 @@
       "tipo": "composto",
       "padrao_movimento": "empurrar_horizontal",
       "unilateral": true,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "dumbbell_squeeze_press",
@@ -198,7 +210,8 @@
       "tipo": "composto",
       "padrao_movimento": "empurrar_horizontal",
       "unilateral": false,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "dumbbell_fly",
@@ -212,7 +225,8 @@
       "tipo": "isolado",
       "padrao_movimento": "aducao_horizontal",
       "unilateral": false,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "incline_dumbbell_fly",
@@ -226,7 +240,8 @@
       "tipo": "isolado",
       "padrao_movimento": "aducao_horizontal",
       "unilateral": false,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "pec_deck_fly",
@@ -238,7 +253,8 @@
       "tipo": "isolado",
       "padrao_movimento": "aducao_horizontal",
       "unilateral": false,
-      "tipo_carga": "maquina"
+      "tipo_carga": "maquina",
+      "medida": "carga"
     },
     {
       "id": "high_to_low_cable_crossover",
@@ -250,7 +266,8 @@
       "tipo": "isolado",
       "padrao_movimento": "aducao_horizontal",
       "unilateral": false,
-      "tipo_carga": "cabo"
+      "tipo_carga": "cabo",
+      "medida": "carga"
     },
     {
       "id": "low_to_high_cable_fly",
@@ -264,7 +281,8 @@
       "tipo": "isolado",
       "padrao_movimento": "aducao_horizontal",
       "unilateral": false,
-      "tipo_carga": "cabo"
+      "tipo_carga": "cabo",
+      "medida": "carga"
     },
     {
       "id": "flat_cable_fly",
@@ -276,7 +294,8 @@
       "tipo": "isolado",
       "padrao_movimento": "aducao_horizontal",
       "unilateral": false,
-      "tipo_carga": "cabo"
+      "tipo_carga": "cabo",
+      "medida": "carga"
     },
     {
       "id": "dumbbell_pullover",
@@ -291,7 +310,8 @@
       "tipo": "isolado",
       "padrao_movimento": "extensao_ombro",
       "unilateral": false,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "plate_press",
@@ -305,7 +325,8 @@
       "tipo": "isolado",
       "padrao_movimento": "aducao_horizontal",
       "unilateral": false,
-      "tipo_carga": "maquina"
+      "tipo_carga": "maquina",
+      "medida": "carga"
     },
     {
       "id": "push_up",
@@ -321,7 +342,8 @@
       "tipo": "composto",
       "padrao_movimento": "empurrar_horizontal",
       "unilateral": false,
-      "tipo_carga": "peso_corporal"
+      "tipo_carga": "peso_corporal",
+      "medida": "reps"
     },
     {
       "id": "incline_push_up",
@@ -335,7 +357,8 @@
       "tipo": "composto",
       "padrao_movimento": "empurrar_horizontal",
       "unilateral": false,
-      "tipo_carga": "peso_corporal"
+      "tipo_carga": "peso_corporal",
+      "medida": "reps"
     },
     {
       "id": "decline_push_up",
@@ -350,7 +373,8 @@
       "tipo": "composto",
       "padrao_movimento": "empurrar_horizontal",
       "unilateral": false,
-      "tipo_carga": "peso_corporal"
+      "tipo_carga": "peso_corporal",
+      "medida": "reps"
     },
     {
       "id": "weighted_push_up",
@@ -365,7 +389,8 @@
       "tipo": "composto",
       "padrao_movimento": "empurrar_horizontal",
       "unilateral": false,
-      "tipo_carga": "lastro"
+      "tipo_carga": "lastro",
+      "medida": "lastro"
     },
     {
       "id": "chest_dip",
@@ -380,7 +405,8 @@
       "tipo": "composto",
       "padrao_movimento": "empurrar_vertical_baixo",
       "unilateral": false,
-      "tipo_carga": "lastro"
+      "tipo_carga": "lastro",
+      "medida": "lastro"
     },
     {
       "id": "pull_up",
@@ -395,7 +421,8 @@
       "tipo": "composto",
       "padrao_movimento": "puxar_vertical",
       "unilateral": false,
-      "tipo_carga": "lastro"
+      "tipo_carga": "lastro",
+      "medida": "lastro"
     },
     {
       "id": "chin_up",
@@ -409,7 +436,8 @@
       "tipo": "composto",
       "padrao_movimento": "puxar_vertical",
       "unilateral": false,
-      "tipo_carga": "lastro"
+      "tipo_carga": "lastro",
+      "medida": "lastro"
     },
     {
       "id": "neutral_grip_pull_up",
@@ -424,7 +452,8 @@
       "tipo": "composto",
       "padrao_movimento": "puxar_vertical",
       "unilateral": false,
-      "tipo_carga": "lastro"
+      "tipo_carga": "lastro",
+      "medida": "lastro"
     },
     {
       "id": "assisted_pull_up",
@@ -438,7 +467,8 @@
       "tipo": "composto",
       "padrao_movimento": "puxar_vertical",
       "unilateral": false,
-      "tipo_carga": "assistencia"
+      "tipo_carga": "assistencia",
+      "medida": "assistencia"
     },
     {
       "id": "wide_grip_lat_pulldown",
@@ -452,7 +482,8 @@
       "tipo": "composto",
       "padrao_movimento": "puxar_vertical",
       "unilateral": false,
-      "tipo_carga": "cabo"
+      "tipo_carga": "cabo",
+      "medida": "carga"
     },
     {
       "id": "close_grip_lat_pulldown",
@@ -466,7 +497,8 @@
       "tipo": "composto",
       "padrao_movimento": "puxar_vertical",
       "unilateral": false,
-      "tipo_carga": "cabo"
+      "tipo_carga": "cabo",
+      "medida": "carga"
     },
     {
       "id": "reverse_grip_lat_pulldown",
@@ -480,7 +512,8 @@
       "tipo": "composto",
       "padrao_movimento": "puxar_vertical",
       "unilateral": false,
-      "tipo_carga": "cabo"
+      "tipo_carga": "cabo",
+      "medida": "carga"
     },
     {
       "id": "single_arm_lat_pulldown",
@@ -494,7 +527,8 @@
       "tipo": "composto",
       "padrao_movimento": "puxar_vertical",
       "unilateral": true,
-      "tipo_carga": "cabo"
+      "tipo_carga": "cabo",
+      "medida": "carga"
     },
     {
       "id": "machine_lat_pulldown",
@@ -508,7 +542,8 @@
       "tipo": "composto",
       "padrao_movimento": "puxar_vertical",
       "unilateral": false,
-      "tipo_carga": "maquina"
+      "tipo_carga": "maquina",
+      "medida": "carga"
     },
     {
       "id": "straight_arm_pulldown",
@@ -522,7 +557,8 @@
       "tipo": "isolado",
       "padrao_movimento": "extensao_ombro",
       "unilateral": false,
-      "tipo_carga": "cabo"
+      "tipo_carga": "cabo",
+      "medida": "carga"
     },
     {
       "id": "barbell_bent_over_row",
@@ -537,7 +573,8 @@
       "tipo": "composto",
       "padrao_movimento": "puxar_horizontal",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "pendlay_row",
@@ -552,7 +589,8 @@
       "tipo": "composto",
       "padrao_movimento": "puxar_horizontal",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "underhand_barbell_row",
@@ -566,7 +604,8 @@
       "tipo": "composto",
       "padrao_movimento": "puxar_horizontal",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "one_arm_dumbbell_row",
@@ -580,7 +619,8 @@
       "tipo": "composto",
       "padrao_movimento": "puxar_horizontal",
       "unilateral": true,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "chest_supported_dumbbell_row",
@@ -595,7 +635,8 @@
       "tipo": "composto",
       "padrao_movimento": "puxar_horizontal",
       "unilateral": false,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "seal_row",
@@ -609,7 +650,8 @@
       "tipo": "composto",
       "padrao_movimento": "puxar_horizontal",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "t_bar_row",
@@ -624,7 +666,8 @@
       "tipo": "composto",
       "padrao_movimento": "puxar_horizontal",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "meadows_row",
@@ -638,7 +681,8 @@
       "tipo": "composto",
       "padrao_movimento": "puxar_horizontal",
       "unilateral": true,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "seated_cable_row",
@@ -652,7 +696,8 @@
       "tipo": "composto",
       "padrao_movimento": "puxar_horizontal",
       "unilateral": false,
-      "tipo_carga": "cabo"
+      "tipo_carga": "cabo",
+      "medida": "carga"
     },
     {
       "id": "machine_row",
@@ -666,7 +711,8 @@
       "tipo": "composto",
       "padrao_movimento": "puxar_horizontal",
       "unilateral": false,
-      "tipo_carga": "maquina"
+      "tipo_carga": "maquina",
+      "medida": "carga"
     },
     {
       "id": "inverted_row",
@@ -681,7 +727,8 @@
       "tipo": "composto",
       "padrao_movimento": "puxar_horizontal",
       "unilateral": false,
-      "tipo_carga": "peso_corporal"
+      "tipo_carga": "peso_corporal",
+      "medida": "reps"
     },
     {
       "id": "conventional_deadlift",
@@ -698,7 +745,8 @@
       "tipo": "composto",
       "padrao_movimento": "dobradica_anca",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "sumo_deadlift",
@@ -714,7 +762,8 @@
       "tipo": "composto",
       "padrao_movimento": "dobradica_anca",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "trap_bar_deadlift",
@@ -729,7 +778,8 @@
       "tipo": "composto",
       "padrao_movimento": "dobradica_anca",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "rack_pull",
@@ -744,7 +794,8 @@
       "tipo": "composto",
       "padrao_movimento": "dobradica_anca",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "back_extension",
@@ -759,7 +810,8 @@
       "tipo": "isolado",
       "padrao_movimento": "extensao_lombar",
       "unilateral": false,
-      "tipo_carga": "lastro"
+      "tipo_carga": "lastro",
+      "medida": "lastro"
     },
     {
       "id": "superman",
@@ -773,7 +825,8 @@
       "tipo": "isolado",
       "padrao_movimento": "extensao_lombar",
       "unilateral": false,
-      "tipo_carga": "peso_corporal"
+      "tipo_carga": "peso_corporal",
+      "medida": "reps"
     },
     {
       "id": "barbell_shrug",
@@ -787,7 +840,8 @@
       "tipo": "isolado",
       "padrao_movimento": "elevacao_escapula",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "dumbbell_shrug",
@@ -801,7 +855,8 @@
       "tipo": "isolado",
       "padrao_movimento": "elevacao_escapula",
       "unilateral": false,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "smith_machine_shrug",
@@ -815,7 +870,8 @@
       "tipo": "isolado",
       "padrao_movimento": "elevacao_escapula",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "overhead_press",
@@ -830,7 +886,8 @@
       "tipo": "composto",
       "padrao_movimento": "empurrar_vertical",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "seated_barbell_shoulder_press",
@@ -844,7 +901,8 @@
       "tipo": "composto",
       "padrao_movimento": "empurrar_vertical",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "seated_dumbbell_shoulder_press",
@@ -858,7 +916,8 @@
       "tipo": "composto",
       "padrao_movimento": "empurrar_vertical",
       "unilateral": false,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "standing_dumbbell_shoulder_press",
@@ -873,7 +932,8 @@
       "tipo": "composto",
       "padrao_movimento": "empurrar_vertical",
       "unilateral": false,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "single_arm_dumbbell_press",
@@ -888,7 +948,8 @@
       "tipo": "composto",
       "padrao_movimento": "empurrar_vertical",
       "unilateral": true,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "arnold_press",
@@ -902,7 +963,8 @@
       "tipo": "composto",
       "padrao_movimento": "empurrar_vertical",
       "unilateral": false,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "machine_shoulder_press",
@@ -916,7 +978,8 @@
       "tipo": "composto",
       "padrao_movimento": "empurrar_vertical",
       "unilateral": false,
-      "tipo_carga": "maquina"
+      "tipo_carga": "maquina",
+      "medida": "carga"
     },
     {
       "id": "smith_machine_overhead_press",
@@ -930,7 +993,8 @@
       "tipo": "composto",
       "padrao_movimento": "empurrar_vertical",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "push_press",
@@ -945,7 +1009,8 @@
       "tipo": "composto",
       "padrao_movimento": "empurrar_vertical",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "pike_push_up",
@@ -959,7 +1024,8 @@
       "tipo": "composto",
       "padrao_movimento": "empurrar_vertical",
       "unilateral": false,
-      "tipo_carga": "peso_corporal"
+      "tipo_carga": "peso_corporal",
+      "medida": "reps"
     },
     {
       "id": "handstand_push_up",
@@ -974,7 +1040,8 @@
       "tipo": "composto",
       "padrao_movimento": "empurrar_vertical",
       "unilateral": false,
-      "tipo_carga": "peso_corporal"
+      "tipo_carga": "peso_corporal",
+      "medida": "reps"
     },
     {
       "id": "dumbbell_lateral_raise",
@@ -988,7 +1055,8 @@
       "tipo": "isolado",
       "padrao_movimento": "abducao_ombro",
       "unilateral": false,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "cable_lateral_raise",
@@ -1000,7 +1068,8 @@
       "tipo": "isolado",
       "padrao_movimento": "abducao_ombro",
       "unilateral": true,
-      "tipo_carga": "cabo"
+      "tipo_carga": "cabo",
+      "medida": "carga"
     },
     {
       "id": "machine_lateral_raise",
@@ -1012,7 +1081,8 @@
       "tipo": "isolado",
       "padrao_movimento": "abducao_ombro",
       "unilateral": false,
-      "tipo_carga": "maquina"
+      "tipo_carga": "maquina",
+      "medida": "carga"
     },
     {
       "id": "lean_away_lateral_raise",
@@ -1024,7 +1094,8 @@
       "tipo": "isolado",
       "padrao_movimento": "abducao_ombro",
       "unilateral": true,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "dumbbell_front_raise",
@@ -1038,7 +1109,8 @@
       "tipo": "isolado",
       "padrao_movimento": "flexao_ombro",
       "unilateral": false,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "plate_front_raise",
@@ -1052,7 +1124,8 @@
       "tipo": "isolado",
       "padrao_movimento": "flexao_ombro",
       "unilateral": false,
-      "tipo_carga": "maquina"
+      "tipo_carga": "maquina",
+      "medida": "carga"
     },
     {
       "id": "cable_front_raise",
@@ -1066,7 +1139,8 @@
       "tipo": "isolado",
       "padrao_movimento": "flexao_ombro",
       "unilateral": false,
-      "tipo_carga": "cabo"
+      "tipo_carga": "cabo",
+      "medida": "carga"
     },
     {
       "id": "bent_over_reverse_fly",
@@ -1080,7 +1154,8 @@
       "tipo": "isolado",
       "padrao_movimento": "abducao_horizontal",
       "unilateral": false,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "reverse_pec_deck",
@@ -1094,7 +1169,8 @@
       "tipo": "isolado",
       "padrao_movimento": "abducao_horizontal",
       "unilateral": false,
-      "tipo_carga": "maquina"
+      "tipo_carga": "maquina",
+      "medida": "carga"
     },
     {
       "id": "cable_rear_delt_fly",
@@ -1108,7 +1184,8 @@
       "tipo": "isolado",
       "padrao_movimento": "abducao_horizontal",
       "unilateral": false,
-      "tipo_carga": "cabo"
+      "tipo_carga": "cabo",
+      "medida": "carga"
     },
     {
       "id": "face_pull",
@@ -1123,7 +1200,8 @@
       "tipo": "isolado",
       "padrao_movimento": "abducao_horizontal",
       "unilateral": false,
-      "tipo_carga": "cabo"
+      "tipo_carga": "cabo",
+      "medida": "carga"
     },
     {
       "id": "barbell_upright_row",
@@ -1138,7 +1216,8 @@
       "tipo": "composto",
       "padrao_movimento": "abducao_ombro",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "cable_upright_row",
@@ -1152,7 +1231,8 @@
       "tipo": "composto",
       "padrao_movimento": "abducao_ombro",
       "unilateral": false,
-      "tipo_carga": "cabo"
+      "tipo_carga": "cabo",
+      "medida": "carga"
     },
     {
       "id": "incline_y_raise",
@@ -1166,7 +1246,8 @@
       "tipo": "isolado",
       "padrao_movimento": "abducao_ombro",
       "unilateral": false,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "cable_external_rotation",
@@ -1180,7 +1261,8 @@
       "tipo": "isolado",
       "padrao_movimento": "rotacao_ombro",
       "unilateral": true,
-      "tipo_carga": "cabo"
+      "tipo_carga": "cabo",
+      "medida": "carga"
     },
     {
       "id": "barbell_curl",
@@ -1194,7 +1276,8 @@
       "tipo": "isolado",
       "padrao_movimento": "flexao_cotovelo",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "ez_bar_curl",
@@ -1208,7 +1291,8 @@
       "tipo": "isolado",
       "padrao_movimento": "flexao_cotovelo",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "alternating_dumbbell_curl",
@@ -1222,7 +1306,8 @@
       "tipo": "isolado",
       "padrao_movimento": "flexao_cotovelo",
       "unilateral": true,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "hammer_curl",
@@ -1236,7 +1321,8 @@
       "tipo": "isolado",
       "padrao_movimento": "flexao_cotovelo",
       "unilateral": false,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "incline_dumbbell_curl",
@@ -1248,7 +1334,8 @@
       "tipo": "isolado",
       "padrao_movimento": "flexao_cotovelo",
       "unilateral": false,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "ez_bar_preacher_curl",
@@ -1260,7 +1347,8 @@
       "tipo": "isolado",
       "padrao_movimento": "flexao_cotovelo",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "machine_preacher_curl",
@@ -1272,7 +1360,8 @@
       "tipo": "isolado",
       "padrao_movimento": "flexao_cotovelo",
       "unilateral": false,
-      "tipo_carga": "maquina"
+      "tipo_carga": "maquina",
+      "medida": "carga"
     },
     {
       "id": "concentration_curl",
@@ -1284,7 +1373,8 @@
       "tipo": "isolado",
       "padrao_movimento": "flexao_cotovelo",
       "unilateral": true,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "cable_curl",
@@ -1298,7 +1388,8 @@
       "tipo": "isolado",
       "padrao_movimento": "flexao_cotovelo",
       "unilateral": false,
-      "tipo_carga": "cabo"
+      "tipo_carga": "cabo",
+      "medida": "carga"
     },
     {
       "id": "bayesian_cable_curl",
@@ -1310,7 +1401,8 @@
       "tipo": "isolado",
       "padrao_movimento": "flexao_cotovelo",
       "unilateral": true,
-      "tipo_carga": "cabo"
+      "tipo_carga": "cabo",
+      "medida": "carga"
     },
     {
       "id": "rope_hammer_curl",
@@ -1324,7 +1416,8 @@
       "tipo": "isolado",
       "padrao_movimento": "flexao_cotovelo",
       "unilateral": false,
-      "tipo_carga": "cabo"
+      "tipo_carga": "cabo",
+      "medida": "carga"
     },
     {
       "id": "spider_curl",
@@ -1336,7 +1429,8 @@
       "tipo": "isolado",
       "padrao_movimento": "flexao_cotovelo",
       "unilateral": false,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "21s_curl",
@@ -1348,7 +1442,8 @@
       "tipo": "isolado",
       "padrao_movimento": "flexao_cotovelo",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "zottman_curl",
@@ -1362,7 +1457,8 @@
       "tipo": "isolado",
       "padrao_movimento": "flexao_cotovelo",
       "unilateral": false,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "drag_curl",
@@ -1374,7 +1470,8 @@
       "tipo": "isolado",
       "padrao_movimento": "flexao_cotovelo",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "machine_bicep_curl",
@@ -1386,7 +1483,8 @@
       "tipo": "isolado",
       "padrao_movimento": "flexao_cotovelo",
       "unilateral": false,
-      "tipo_carga": "maquina"
+      "tipo_carga": "maquina",
+      "medida": "carga"
     },
     {
       "id": "tricep_pushdown_bar",
@@ -1398,7 +1496,8 @@
       "tipo": "isolado",
       "padrao_movimento": "extensao_cotovelo",
       "unilateral": false,
-      "tipo_carga": "cabo"
+      "tipo_carga": "cabo",
+      "medida": "carga"
     },
     {
       "id": "rope_pushdown",
@@ -1410,7 +1509,8 @@
       "tipo": "isolado",
       "padrao_movimento": "extensao_cotovelo",
       "unilateral": false,
-      "tipo_carga": "cabo"
+      "tipo_carga": "cabo",
+      "medida": "carga"
     },
     {
       "id": "single_arm_cable_pushdown",
@@ -1422,7 +1522,8 @@
       "tipo": "isolado",
       "padrao_movimento": "extensao_cotovelo",
       "unilateral": true,
-      "tipo_carga": "cabo"
+      "tipo_carga": "cabo",
+      "medida": "carga"
     },
     {
       "id": "reverse_grip_pushdown",
@@ -1434,7 +1535,8 @@
       "tipo": "isolado",
       "padrao_movimento": "extensao_cotovelo",
       "unilateral": false,
-      "tipo_carga": "cabo"
+      "tipo_carga": "cabo",
+      "medida": "carga"
     },
     {
       "id": "ez_bar_skull_crusher",
@@ -1446,7 +1548,8 @@
       "tipo": "isolado",
       "padrao_movimento": "extensao_cotovelo",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "dumbbell_skull_crusher",
@@ -1458,7 +1561,8 @@
       "tipo": "isolado",
       "padrao_movimento": "extensao_cotovelo",
       "unilateral": false,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "overhead_dumbbell_extension",
@@ -1470,7 +1574,8 @@
       "tipo": "isolado",
       "padrao_movimento": "extensao_cotovelo",
       "unilateral": false,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "overhead_cable_extension",
@@ -1482,7 +1587,8 @@
       "tipo": "isolado",
       "padrao_movimento": "extensao_cotovelo",
       "unilateral": false,
-      "tipo_carga": "cabo"
+      "tipo_carga": "cabo",
+      "medida": "carga"
     },
     {
       "id": "seated_ez_bar_overhead_extension",
@@ -1494,7 +1600,8 @@
       "tipo": "isolado",
       "padrao_movimento": "extensao_cotovelo",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "machine_tricep_extension",
@@ -1506,7 +1613,8 @@
       "tipo": "isolado",
       "padrao_movimento": "extensao_cotovelo",
       "unilateral": false,
-      "tipo_carga": "maquina"
+      "tipo_carga": "maquina",
+      "medida": "carga"
     },
     {
       "id": "dumbbell_kickback",
@@ -1518,7 +1626,8 @@
       "tipo": "isolado",
       "padrao_movimento": "extensao_cotovelo",
       "unilateral": true,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "cable_kickback",
@@ -1530,7 +1639,8 @@
       "tipo": "isolado",
       "padrao_movimento": "extensao_cotovelo",
       "unilateral": true,
-      "tipo_carga": "cabo"
+      "tipo_carga": "cabo",
+      "medida": "carga"
     },
     {
       "id": "close_grip_bench_press",
@@ -1545,7 +1655,8 @@
       "tipo": "composto",
       "padrao_movimento": "empurrar_horizontal",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "jm_press",
@@ -1559,7 +1670,8 @@
       "tipo": "composto",
       "padrao_movimento": "extensao_cotovelo",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "tate_press",
@@ -1571,7 +1683,8 @@
       "tipo": "isolado",
       "padrao_movimento": "extensao_cotovelo",
       "unilateral": false,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "tricep_dip",
@@ -1586,7 +1699,8 @@
       "tipo": "composto",
       "padrao_movimento": "empurrar_vertical_baixo",
       "unilateral": false,
-      "tipo_carga": "lastro"
+      "tipo_carga": "lastro",
+      "medida": "lastro"
     },
     {
       "id": "bench_dip",
@@ -1600,7 +1714,8 @@
       "tipo": "composto",
       "padrao_movimento": "empurrar_vertical_baixo",
       "unilateral": false,
-      "tipo_carga": "peso_corporal"
+      "tipo_carga": "peso_corporal",
+      "medida": "reps"
     },
     {
       "id": "diamond_push_up",
@@ -1614,7 +1729,8 @@
       "tipo": "composto",
       "padrao_movimento": "empurrar_horizontal",
       "unilateral": false,
-      "tipo_carga": "peso_corporal"
+      "tipo_carga": "peso_corporal",
+      "medida": "reps"
     },
     {
       "id": "wrist_curl",
@@ -1626,7 +1742,8 @@
       "tipo": "isolado",
       "padrao_movimento": "flexao_pulso",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "reverse_wrist_curl",
@@ -1638,7 +1755,8 @@
       "tipo": "isolado",
       "padrao_movimento": "extensao_pulso",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "reverse_barbell_curl",
@@ -1652,7 +1770,8 @@
       "tipo": "isolado",
       "padrao_movimento": "flexao_cotovelo",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "wrist_roller",
@@ -1664,7 +1783,8 @@
       "tipo": "isolado",
       "padrao_movimento": "flexao_pulso",
       "unilateral": false,
-      "tipo_carga": "maquina"
+      "tipo_carga": "maquina",
+      "medida": "carga"
     },
     {
       "id": "plate_pinch",
@@ -1676,7 +1796,8 @@
       "tipo": "isolado",
       "padrao_movimento": "pega",
       "unilateral": false,
-      "tipo_carga": "tempo"
+      "tipo_carga": "tempo",
+      "medida": "tempo"
     },
     {
       "id": "dead_hang",
@@ -1691,7 +1812,8 @@
       "tipo": "isolado",
       "padrao_movimento": "pega",
       "unilateral": false,
-      "tipo_carga": "tempo"
+      "tipo_carga": "tempo",
+      "medida": "tempo"
     },
     {
       "id": "farmer_s_carry",
@@ -1706,7 +1828,8 @@
       "tipo": "composto",
       "padrao_movimento": "transporte",
       "unilateral": false,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga_distancia"
     },
     {
       "id": "back_squat",
@@ -1722,7 +1845,8 @@
       "tipo": "composto",
       "padrao_movimento": "agachar",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "front_squat",
@@ -1737,7 +1861,8 @@
       "tipo": "composto",
       "padrao_movimento": "agachar",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "box_squat",
@@ -1751,7 +1876,8 @@
       "tipo": "composto",
       "padrao_movimento": "agachar",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "smith_machine_squat",
@@ -1765,7 +1891,8 @@
       "tipo": "composto",
       "padrao_movimento": "agachar",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "goblet_squat",
@@ -1780,7 +1907,8 @@
       "tipo": "composto",
       "padrao_movimento": "agachar",
       "unilateral": false,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "sumo_dumbbell_squat",
@@ -1795,7 +1923,8 @@
       "tipo": "composto",
       "padrao_movimento": "agachar",
       "unilateral": false,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "hack_squat",
@@ -1809,7 +1938,8 @@
       "tipo": "composto",
       "padrao_movimento": "agachar",
       "unilateral": false,
-      "tipo_carga": "maquina_discos"
+      "tipo_carga": "maquina_discos",
+      "medida": "carga"
     },
     {
       "id": "pendulum_squat",
@@ -1823,7 +1953,8 @@
       "tipo": "composto",
       "padrao_movimento": "agachar",
       "unilateral": false,
-      "tipo_carga": "maquina_discos"
+      "tipo_carga": "maquina_discos",
+      "medida": "carga"
     },
     {
       "id": "belt_squat",
@@ -1837,7 +1968,8 @@
       "tipo": "composto",
       "padrao_movimento": "agachar",
       "unilateral": false,
-      "tipo_carga": "maquina_discos"
+      "tipo_carga": "maquina_discos",
+      "medida": "carga"
     },
     {
       "id": "leg_press_45",
@@ -1852,7 +1984,8 @@
       "tipo": "composto",
       "padrao_movimento": "agachar",
       "unilateral": false,
-      "tipo_carga": "maquina_discos"
+      "tipo_carga": "maquina_discos",
+      "medida": "carga"
     },
     {
       "id": "horizontal_leg_press",
@@ -1866,7 +1999,8 @@
       "tipo": "composto",
       "padrao_movimento": "agachar",
       "unilateral": false,
-      "tipo_carga": "maquina"
+      "tipo_carga": "maquina",
+      "medida": "carga"
     },
     {
       "id": "single_leg_press",
@@ -1880,7 +2014,8 @@
       "tipo": "composto",
       "padrao_movimento": "agachar",
       "unilateral": true,
-      "tipo_carga": "maquina_discos"
+      "tipo_carga": "maquina_discos",
+      "medida": "carga"
     },
     {
       "id": "bulgarian_split_squat",
@@ -1895,7 +2030,8 @@
       "tipo": "composto",
       "padrao_movimento": "afundo",
       "unilateral": true,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "split_squat",
@@ -1909,7 +2045,8 @@
       "tipo": "composto",
       "padrao_movimento": "afundo",
       "unilateral": true,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "forward_lunge",
@@ -1923,7 +2060,8 @@
       "tipo": "composto",
       "padrao_movimento": "afundo",
       "unilateral": true,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "reverse_lunge",
@@ -1937,7 +2075,8 @@
       "tipo": "composto",
       "padrao_movimento": "afundo",
       "unilateral": true,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "walking_lunge",
@@ -1951,7 +2090,8 @@
       "tipo": "composto",
       "padrao_movimento": "afundo",
       "unilateral": true,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "step_up",
@@ -1965,7 +2105,8 @@
       "tipo": "composto",
       "padrao_movimento": "afundo",
       "unilateral": true,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "cossack_squat",
@@ -1980,7 +2121,8 @@
       "tipo": "composto",
       "padrao_movimento": "afundo",
       "unilateral": true,
-      "tipo_carga": "peso_corporal"
+      "tipo_carga": "peso_corporal",
+      "medida": "reps"
     },
     {
       "id": "pistol_squat",
@@ -1995,7 +2137,8 @@
       "tipo": "composto",
       "padrao_movimento": "agachar",
       "unilateral": true,
-      "tipo_carga": "peso_corporal"
+      "tipo_carga": "peso_corporal",
+      "medida": "reps"
     },
     {
       "id": "bodyweight_squat",
@@ -2009,7 +2152,8 @@
       "tipo": "composto",
       "padrao_movimento": "agachar",
       "unilateral": false,
-      "tipo_carga": "peso_corporal"
+      "tipo_carga": "peso_corporal",
+      "medida": "reps"
     },
     {
       "id": "sissy_squat",
@@ -2021,7 +2165,8 @@
       "tipo": "isolado",
       "padrao_movimento": "extensao_joelho",
       "unilateral": false,
-      "tipo_carga": "peso_corporal"
+      "tipo_carga": "peso_corporal",
+      "medida": "reps"
     },
     {
       "id": "leg_extension",
@@ -2033,7 +2178,8 @@
       "tipo": "isolado",
       "padrao_movimento": "extensao_joelho",
       "unilateral": false,
-      "tipo_carga": "maquina"
+      "tipo_carga": "maquina",
+      "medida": "carga"
     },
     {
       "id": "wall_sit",
@@ -2047,7 +2193,8 @@
       "tipo": "isolado",
       "padrao_movimento": "isometrico",
       "unilateral": false,
-      "tipo_carga": "tempo"
+      "tipo_carga": "tempo",
+      "medida": "tempo"
     },
     {
       "id": "romanian_deadlift",
@@ -2062,7 +2209,8 @@
       "tipo": "composto",
       "padrao_movimento": "dobradica_anca",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "dumbbell_romanian_deadlift",
@@ -2077,7 +2225,8 @@
       "tipo": "composto",
       "padrao_movimento": "dobradica_anca",
       "unilateral": false,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "single_leg_romanian_deadlift",
@@ -2092,7 +2241,8 @@
       "tipo": "composto",
       "padrao_movimento": "dobradica_anca",
       "unilateral": true,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "stiff_leg_deadlift",
@@ -2107,7 +2257,8 @@
       "tipo": "composto",
       "padrao_movimento": "dobradica_anca",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "good_morning",
@@ -2122,7 +2273,8 @@
       "tipo": "composto",
       "padrao_movimento": "dobradica_anca",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "kettlebell_swing",
@@ -2137,7 +2289,8 @@
       "tipo": "composto",
       "padrao_movimento": "dobradica_anca",
       "unilateral": false,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "lying_leg_curl",
@@ -2151,7 +2304,8 @@
       "tipo": "isolado",
       "padrao_movimento": "flexao_joelho",
       "unilateral": false,
-      "tipo_carga": "maquina"
+      "tipo_carga": "maquina",
+      "medida": "carga"
     },
     {
       "id": "seated_leg_curl",
@@ -2163,7 +2317,8 @@
       "tipo": "isolado",
       "padrao_movimento": "flexao_joelho",
       "unilateral": false,
-      "tipo_carga": "maquina"
+      "tipo_carga": "maquina",
+      "medida": "carga"
     },
     {
       "id": "standing_leg_curl",
@@ -2175,7 +2330,8 @@
       "tipo": "isolado",
       "padrao_movimento": "flexao_joelho",
       "unilateral": true,
-      "tipo_carga": "maquina"
+      "tipo_carga": "maquina",
+      "medida": "carga"
     },
     {
       "id": "nordic_hamstring_curl",
@@ -2187,7 +2343,8 @@
       "tipo": "isolado",
       "padrao_movimento": "flexao_joelho",
       "unilateral": false,
-      "tipo_carga": "peso_corporal"
+      "tipo_carga": "peso_corporal",
+      "medida": "reps"
     },
     {
       "id": "glute_ham_raise",
@@ -2201,7 +2358,8 @@
       "tipo": "composto",
       "padrao_movimento": "flexao_joelho",
       "unilateral": false,
-      "tipo_carga": "peso_corporal"
+      "tipo_carga": "peso_corporal",
+      "medida": "reps"
     },
     {
       "id": "stability_ball_leg_curl",
@@ -2216,7 +2374,8 @@
       "tipo": "isolado",
       "padrao_movimento": "flexao_joelho",
       "unilateral": false,
-      "tipo_carga": "peso_corporal"
+      "tipo_carga": "peso_corporal",
+      "medida": "reps"
     },
     {
       "id": "barbell_hip_thrust",
@@ -2230,7 +2389,8 @@
       "tipo": "composto",
       "padrao_movimento": "extensao_anca",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "machine_hip_thrust",
@@ -2244,7 +2404,8 @@
       "tipo": "composto",
       "padrao_movimento": "extensao_anca",
       "unilateral": false,
-      "tipo_carga": "maquina"
+      "tipo_carga": "maquina",
+      "medida": "carga"
     },
     {
       "id": "single_leg_hip_thrust",
@@ -2258,7 +2419,8 @@
       "tipo": "composto",
       "padrao_movimento": "extensao_anca",
       "unilateral": true,
-      "tipo_carga": "lastro"
+      "tipo_carga": "lastro",
+      "medida": "lastro"
     },
     {
       "id": "glute_bridge",
@@ -2272,7 +2434,8 @@
       "tipo": "composto",
       "padrao_movimento": "extensao_anca",
       "unilateral": false,
-      "tipo_carga": "peso_corporal"
+      "tipo_carga": "peso_corporal",
+      "medida": "reps"
     },
     {
       "id": "barbell_glute_bridge",
@@ -2286,7 +2449,8 @@
       "tipo": "composto",
       "padrao_movimento": "extensao_anca",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "cable_pull_through",
@@ -2300,7 +2464,8 @@
       "tipo": "composto",
       "padrao_movimento": "dobradica_anca",
       "unilateral": false,
-      "tipo_carga": "cabo"
+      "tipo_carga": "cabo",
+      "medida": "carga"
     },
     {
       "id": "45_glute_focused_back_extension",
@@ -2314,7 +2479,8 @@
       "tipo": "isolado",
       "padrao_movimento": "extensao_anca",
       "unilateral": false,
-      "tipo_carga": "lastro"
+      "tipo_carga": "lastro",
+      "medida": "lastro"
     },
     {
       "id": "cable_glute_kickback",
@@ -2328,7 +2494,8 @@
       "tipo": "isolado",
       "padrao_movimento": "extensao_anca",
       "unilateral": true,
-      "tipo_carga": "cabo"
+      "tipo_carga": "cabo",
+      "medida": "carga"
     },
     {
       "id": "machine_glute_kickback",
@@ -2342,7 +2509,8 @@
       "tipo": "isolado",
       "padrao_movimento": "extensao_anca",
       "unilateral": true,
-      "tipo_carga": "maquina"
+      "tipo_carga": "maquina",
+      "medida": "carga"
     },
     {
       "id": "hip_abduction_machine",
@@ -2354,7 +2522,8 @@
       "tipo": "isolado",
       "padrao_movimento": "abducao_anca",
       "unilateral": false,
-      "tipo_carga": "maquina"
+      "tipo_carga": "maquina",
+      "medida": "carga"
     },
     {
       "id": "cable_hip_abduction",
@@ -2366,7 +2535,8 @@
       "tipo": "isolado",
       "padrao_movimento": "abducao_anca",
       "unilateral": true,
-      "tipo_carga": "cabo"
+      "tipo_carga": "cabo",
+      "medida": "carga"
     },
     {
       "id": "frog_pump",
@@ -2378,7 +2548,8 @@
       "tipo": "isolado",
       "padrao_movimento": "extensao_anca",
       "unilateral": false,
-      "tipo_carga": "peso_corporal"
+      "tipo_carga": "peso_corporal",
+      "medida": "reps"
     },
     {
       "id": "banded_clamshell",
@@ -2390,7 +2561,8 @@
       "tipo": "isolado",
       "padrao_movimento": "rotacao_anca",
       "unilateral": true,
-      "tipo_carga": "peso_corporal"
+      "tipo_carga": "peso_corporal",
+      "medida": "reps"
     },
     {
       "id": "hip_adduction_machine",
@@ -2402,7 +2574,8 @@
       "tipo": "isolado",
       "padrao_movimento": "aducao_anca",
       "unilateral": false,
-      "tipo_carga": "maquina"
+      "tipo_carga": "maquina",
+      "medida": "carga"
     },
     {
       "id": "cable_hip_adduction",
@@ -2414,7 +2587,8 @@
       "tipo": "isolado",
       "padrao_movimento": "aducao_anca",
       "unilateral": true,
-      "tipo_carga": "cabo"
+      "tipo_carga": "cabo",
+      "medida": "carga"
     },
     {
       "id": "copenhagen_plank",
@@ -2428,7 +2602,8 @@
       "tipo": "isolado",
       "padrao_movimento": "isometrico",
       "unilateral": true,
-      "tipo_carga": "tempo"
+      "tipo_carga": "tempo",
+      "medida": "tempo"
     },
     {
       "id": "standing_calf_raise",
@@ -2440,7 +2615,8 @@
       "tipo": "isolado",
       "padrao_movimento": "flexao_plantar",
       "unilateral": false,
-      "tipo_carga": "maquina"
+      "tipo_carga": "maquina",
+      "medida": "carga"
     },
     {
       "id": "seated_calf_raise",
@@ -2452,7 +2628,8 @@
       "tipo": "isolado",
       "padrao_movimento": "flexao_plantar",
       "unilateral": false,
-      "tipo_carga": "maquina"
+      "tipo_carga": "maquina",
+      "medida": "carga"
     },
     {
       "id": "leg_press_calf_raise",
@@ -2464,7 +2641,8 @@
       "tipo": "isolado",
       "padrao_movimento": "flexao_plantar",
       "unilateral": false,
-      "tipo_carga": "maquina_discos"
+      "tipo_carga": "maquina_discos",
+      "medida": "carga"
     },
     {
       "id": "smith_machine_calf_raise",
@@ -2476,7 +2654,8 @@
       "tipo": "isolado",
       "padrao_movimento": "flexao_plantar",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "single_leg_dumbbell_calf_raise",
@@ -2488,7 +2667,8 @@
       "tipo": "isolado",
       "padrao_movimento": "flexao_plantar",
       "unilateral": true,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "donkey_calf_raise",
@@ -2500,7 +2680,8 @@
       "tipo": "isolado",
       "padrao_movimento": "flexao_plantar",
       "unilateral": false,
-      "tipo_carga": "maquina"
+      "tipo_carga": "maquina",
+      "medida": "carga"
     },
     {
       "id": "tibialis_raise",
@@ -2514,7 +2695,8 @@
       "tipo": "isolado",
       "padrao_movimento": "dorsiflexao",
       "unilateral": false,
-      "tipo_carga": "peso_corporal"
+      "tipo_carga": "peso_corporal",
+      "medida": "reps"
     },
     {
       "id": "plank",
@@ -2528,7 +2710,8 @@
       "tipo": "isolado",
       "padrao_movimento": "anti_extensao",
       "unilateral": false,
-      "tipo_carga": "tempo"
+      "tipo_carga": "tempo",
+      "medida": "tempo"
     },
     {
       "id": "side_plank",
@@ -2542,7 +2725,8 @@
       "tipo": "isolado",
       "padrao_movimento": "anti_flexao_lateral",
       "unilateral": true,
-      "tipo_carga": "tempo"
+      "tipo_carga": "tempo",
+      "medida": "tempo"
     },
     {
       "id": "hollow_body_hold",
@@ -2554,7 +2738,8 @@
       "tipo": "isolado",
       "padrao_movimento": "anti_extensao",
       "unilateral": false,
-      "tipo_carga": "tempo"
+      "tipo_carga": "tempo",
+      "medida": "tempo"
     },
     {
       "id": "dead_bug",
@@ -2566,7 +2751,8 @@
       "tipo": "isolado",
       "padrao_movimento": "anti_extensao",
       "unilateral": false,
-      "tipo_carga": "peso_corporal"
+      "tipo_carga": "peso_corporal",
+      "medida": "reps"
     },
     {
       "id": "bird_dog",
@@ -2581,7 +2767,8 @@
       "tipo": "isolado",
       "padrao_movimento": "anti_rotacao",
       "unilateral": false,
-      "tipo_carga": "peso_corporal"
+      "tipo_carga": "peso_corporal",
+      "medida": "reps"
     },
     {
       "id": "ab_wheel_rollout",
@@ -2596,7 +2783,8 @@
       "tipo": "composto",
       "padrao_movimento": "anti_extensao",
       "unilateral": false,
-      "tipo_carga": "peso_corporal"
+      "tipo_carga": "peso_corporal",
+      "medida": "reps"
     },
     {
       "id": "pallof_press",
@@ -2608,7 +2796,8 @@
       "tipo": "isolado",
       "padrao_movimento": "anti_rotacao",
       "unilateral": true,
-      "tipo_carga": "cabo"
+      "tipo_carga": "cabo",
+      "medida": "carga"
     },
     {
       "id": "crunch",
@@ -2620,7 +2809,8 @@
       "tipo": "isolado",
       "padrao_movimento": "flexao_tronco",
       "unilateral": false,
-      "tipo_carga": "peso_corporal"
+      "tipo_carga": "peso_corporal",
+      "medida": "reps"
     },
     {
       "id": "cable_crunch",
@@ -2632,7 +2822,8 @@
       "tipo": "isolado",
       "padrao_movimento": "flexao_tronco",
       "unilateral": false,
-      "tipo_carga": "cabo"
+      "tipo_carga": "cabo",
+      "medida": "carga"
     },
     {
       "id": "machine_crunch",
@@ -2644,7 +2835,8 @@
       "tipo": "isolado",
       "padrao_movimento": "flexao_tronco",
       "unilateral": false,
-      "tipo_carga": "maquina"
+      "tipo_carga": "maquina",
+      "medida": "carga"
     },
     {
       "id": "decline_sit_up",
@@ -2658,7 +2850,8 @@
       "tipo": "isolado",
       "padrao_movimento": "flexao_tronco",
       "unilateral": false,
-      "tipo_carga": "lastro"
+      "tipo_carga": "lastro",
+      "medida": "lastro"
     },
     {
       "id": "v_up",
@@ -2672,7 +2865,8 @@
       "tipo": "isolado",
       "padrao_movimento": "flexao_tronco",
       "unilateral": false,
-      "tipo_carga": "peso_corporal"
+      "tipo_carga": "peso_corporal",
+      "medida": "reps"
     },
     {
       "id": "hanging_leg_raise",
@@ -2687,7 +2881,8 @@
       "tipo": "isolado",
       "padrao_movimento": "flexao_anca",
       "unilateral": false,
-      "tipo_carga": "peso_corporal"
+      "tipo_carga": "peso_corporal",
+      "medida": "reps"
     },
     {
       "id": "hanging_knee_raise",
@@ -2701,7 +2896,8 @@
       "tipo": "isolado",
       "padrao_movimento": "flexao_anca",
       "unilateral": false,
-      "tipo_carga": "peso_corporal"
+      "tipo_carga": "peso_corporal",
+      "medida": "reps"
     },
     {
       "id": "toes_to_bar",
@@ -2716,7 +2912,8 @@
       "tipo": "composto",
       "padrao_movimento": "flexao_anca",
       "unilateral": false,
-      "tipo_carga": "peso_corporal"
+      "tipo_carga": "peso_corporal",
+      "medida": "reps"
     },
     {
       "id": "lying_leg_raise",
@@ -2730,7 +2927,8 @@
       "tipo": "isolado",
       "padrao_movimento": "flexao_anca",
       "unilateral": false,
-      "tipo_carga": "peso_corporal"
+      "tipo_carga": "peso_corporal",
+      "medida": "reps"
     },
     {
       "id": "russian_twist",
@@ -2742,7 +2940,8 @@
       "tipo": "isolado",
       "padrao_movimento": "rotacao",
       "unilateral": false,
-      "tipo_carga": "lastro"
+      "tipo_carga": "lastro",
+      "medida": "lastro"
     },
     {
       "id": "cable_woodchopper",
@@ -2756,7 +2955,8 @@
       "tipo": "isolado",
       "padrao_movimento": "rotacao",
       "unilateral": true,
-      "tipo_carga": "cabo"
+      "tipo_carga": "cabo",
+      "medida": "carga"
     },
     {
       "id": "mountain_climbers",
@@ -2771,7 +2971,8 @@
       "tipo": "composto",
       "padrao_movimento": "dinamico",
       "unilateral": false,
-      "tipo_carga": "tempo"
+      "tipo_carga": "tempo",
+      "medida": "tempo"
     },
     {
       "id": "power_clean",
@@ -2788,7 +2989,8 @@
       "tipo": "composto",
       "padrao_movimento": "olimpico",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "snatch",
@@ -2805,7 +3007,8 @@
       "tipo": "composto",
       "padrao_movimento": "olimpico",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "clean_and_jerk",
@@ -2821,7 +3024,8 @@
       "tipo": "composto",
       "padrao_movimento": "olimpico",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "thruster",
@@ -2837,7 +3041,8 @@
       "tipo": "composto",
       "padrao_movimento": "agachar_empurrar",
       "unilateral": false,
-      "tipo_carga": "barra_total"
+      "tipo_carga": "barra_total",
+      "medida": "carga"
     },
     {
       "id": "turkish_get_up",
@@ -2853,7 +3058,8 @@
       "tipo": "composto",
       "padrao_movimento": "dinamico",
       "unilateral": true,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "burpee",
@@ -2869,7 +3075,8 @@
       "tipo": "composto",
       "padrao_movimento": "dinamico",
       "unilateral": false,
-      "tipo_carga": "peso_corporal"
+      "tipo_carga": "peso_corporal",
+      "medida": "reps"
     },
     {
       "id": "wall_ball",
@@ -2884,7 +3091,8 @@
       "tipo": "composto",
       "padrao_movimento": "agachar_empurrar",
       "unilateral": false,
-      "tipo_carga": "por_halter"
+      "tipo_carga": "por_halter",
+      "medida": "carga"
     },
     {
       "id": "sled_push",
@@ -2900,7 +3108,8 @@
       "tipo": "composto",
       "padrao_movimento": "transporte",
       "unilateral": false,
-      "tipo_carga": "maquina"
+      "tipo_carga": "maquina",
+      "medida": "carga_distancia"
     },
     {
       "id": "treadmill_run",
@@ -2912,7 +3121,8 @@
       "tipo": "cardio",
       "padrao_movimento": "corrida",
       "unilateral": false,
-      "tipo_carga": "tempo"
+      "tipo_carga": "tempo",
+      "medida": "cardio"
     },
     {
       "id": "incline_treadmill_walk",
@@ -2927,7 +3137,8 @@
       "tipo": "cardio",
       "padrao_movimento": "caminhada",
       "unilateral": false,
-      "tipo_carga": "tempo"
+      "tipo_carga": "tempo",
+      "medida": "cardio"
     },
     {
       "id": "outdoor_run",
@@ -2939,7 +3150,8 @@
       "tipo": "cardio",
       "padrao_movimento": "corrida",
       "unilateral": false,
-      "tipo_carga": "distancia"
+      "tipo_carga": "distancia",
+      "medida": "distancia"
     },
     {
       "id": "stationary_bike",
@@ -2953,7 +3165,8 @@
       "tipo": "cardio",
       "padrao_movimento": "ciclismo",
       "unilateral": false,
-      "tipo_carga": "tempo"
+      "tipo_carga": "tempo",
+      "medida": "cardio"
     },
     {
       "id": "air_bike",
@@ -2968,7 +3181,8 @@
       "tipo": "cardio",
       "padrao_movimento": "ciclismo",
       "unilateral": false,
-      "tipo_carga": "tempo"
+      "tipo_carga": "tempo",
+      "medida": "cardio"
     },
     {
       "id": "elliptical",
@@ -2980,7 +3194,8 @@
       "tipo": "cardio",
       "padrao_movimento": "eliptica",
       "unilateral": false,
-      "tipo_carga": "tempo"
+      "tipo_carga": "tempo",
+      "medida": "cardio"
     },
     {
       "id": "rowing_machine",
@@ -2995,7 +3210,8 @@
       "tipo": "cardio",
       "padrao_movimento": "remo",
       "unilateral": false,
-      "tipo_carga": "distancia"
+      "tipo_carga": "distancia",
+      "medida": "distancia"
     },
     {
       "id": "stair_climber",
@@ -3010,7 +3226,8 @@
       "tipo": "cardio",
       "padrao_movimento": "escadas",
       "unilateral": false,
-      "tipo_carga": "tempo"
+      "tipo_carga": "tempo",
+      "medida": "cardio"
     },
     {
       "id": "skierg",
@@ -3025,7 +3242,8 @@
       "tipo": "cardio",
       "padrao_movimento": "ski",
       "unilateral": false,
-      "tipo_carga": "distancia"
+      "tipo_carga": "distancia",
+      "medida": "distancia"
     },
     {
       "id": "jump_rope",
@@ -3039,7 +3257,8 @@
       "tipo": "cardio",
       "padrao_movimento": "saltos",
       "unilateral": false,
-      "tipo_carga": "tempo"
+      "tipo_carga": "tempo",
+      "medida": "cardio"
     },
     {
       "id": "swimming",
@@ -3054,7 +3273,8 @@
       "tipo": "cardio",
       "padrao_movimento": "natacao",
       "unilateral": false,
-      "tipo_carga": "distancia"
+      "tipo_carga": "distancia",
+      "medida": "distancia"
     },
     {
       "id": "hiit_intervals",
@@ -3066,7 +3286,8 @@
       "tipo": "cardio",
       "padrao_movimento": "intervalado",
       "unilateral": false,
-      "tipo_carga": "tempo"
+      "tipo_carga": "tempo",
+      "medida": "cardio"
     }
   ],
   "padroes_forca": [

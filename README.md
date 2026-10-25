@@ -24,6 +24,17 @@ PWA em Next.js 14 + Prisma/PostgreSQL + NextAuth. Foi criada a partir da base t�
 - **Campo de exercício com pesquisa (PT/EN):** escreve-se para procurar; se não existir, usa-se o nome escrito e fica registado em Catálogo › "por rever".
 - **Animação de cada exercício:** 196 dos 221 exercícios têm demonstração (toca na miniatura). Fonte: [free-exercise-db](https://github.com/yuhonas/free-exercise-db), domínio público (Unlicense).
 
+## Novidades (v1.2)
+
+- **Cada exercício mede-se como deve ser:** o registo mostra só os campos que fazem sentido.
+  - Carga (157): séries × reps × kg. Peso do corpo + lastro (11): kg extra opcional. Assistido (1): contrapeso.
+  - Só repetições (30, ex.: burpee, flexões): séries × reps, sem kg.
+  - Tempo (8, ex.: prancha): séries × segundos.
+  - Cardio por tempo (8, ex.: passadeira, bicicleta): minutos + distância opcional.
+  - Cardio por distância (4, ex.: remo, ski, corrida, natação): metros + tempo → ritmo.
+  - Carga × distância (2, farmer's carry, trenó): séries × metros × kg.
+- A evolução usa o número certo para cada tipo (1RM, reps, segundos, ritmo m/min). O gerador de planos prescreve no mesmo formato.
+
 ## Estrutura
 
 ```

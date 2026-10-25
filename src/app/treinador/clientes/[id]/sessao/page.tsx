@@ -14,8 +14,9 @@ export default async function NewSessionPage({ params, searchParams }: { params:
   const a = await loadAthlete(athlete.id);
 
   // Última vez que cada exercício foi feito → pré-preenche a carga.
-  const last: Record<string, { sets: number; reps: number; kg: number }> = {};
-  for (const s of a.sessions) for (const e of s.entries) last[e.exerciseId] = { sets: e.sets, reps: e.reps, kg: e.kg };
+  const last: Record<string, { sets: number; reps: number; kg: number; durationSec: number | null; distanceM: number | null; mode: string | null }> = {};
+  for (const s of a.sessions)
+    for (const e of s.entries) last[e.exerciseId] = { sets: e.sets, reps: e.reps, kg: e.kg, durationSec: e.durationSec, distanceM: e.distanceM, mode: e.mode };
 
   return (
     <div className="flex flex-col gap-5">

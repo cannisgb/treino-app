@@ -1,14 +1,15 @@
 import Link from "next/link";
 import type { AthleteData } from "@/lib/athleteData";
 import { exName, getExercise, groupName, type Lang } from "@/lib/catalog";
-import { effectiveLoad, epley, fmt, progressionSeries } from "@/lib/metrics";
+import { fmt } from "@/lib/metrics";
+import { formatEntry, modeOf, performance, performanceSeries, usesLoadFor1RM } from "@/lib/measure";
 import { IndexChart } from "@/components/charts";
 
 export function EvolutionView({ a, lang, selected, baseHref }: { a: AthleteData; lang: Lang; selected?: string; baseHref: string }) {
   // Exercícios mais frequentes primeiro.
   const freq = new Map<string, number>();
   for (const e of a.entries) freq.set(e.exerciseId, (freq.get(e.exerciseId) ?? 0) + 1);
-  const ids = [...freq.entries()].sort((x, y) => y[1] - x[1]).map(([id]) => id).filter((id) => getExercise(id)?.tipo !== "cardio");
+  const ids = [...freq.entries()].sort((x, y) => y[1] - x[1]).map(([id]) => id).filter((id) => performanceSeries(a.entries, id, a.bodyweight).length > 0);
   const top = ids.slice(0, 6);
   const sel = selected && ids.includes(selected) ? selected : top[0];
 
@@ -31,22 +32,24 @@ export function EvolutionView({ a, lang, selected, baseHref }: { a: AthleteData;
     );
   }
 
-  const series = top.map((id) => ({ id, points: progressionSeries(a.entries, id, a.bodyweight) }));
-  if (!top.includes(sel)) series.push({ id: sel, points: progressionSeries(a.entries, sel, a.bodyweight) });
+  const series = top.map((id) => ({ id, points: performanceSeries(a.entries, id, a.bodyweight) }));
+  if (!top.includes(sel)) series.push({ id: sel, points: performanceSeries(a.entries, sel, a.bodyweight) });
   const s = series.find((x) => x.id === sel)!.points;
   const last = s[s.length - 1];
-  const bestSet = a.entries
+  const selMode = modeOf(sel, a.entries.find((e) => e.exerciseId === sel)?.mode);
+  const bestEntry = a.entries
     .filter((e) => e.exerciseId === sel)
-    .reduce<{ kg: number; reps: number; orm: number } | null>((b, e) => {
-      const orm = epley(effectiveLoad(e.exerciseId, e.kg, a.bodyweight), e.reps);
-      return !b || orm > b.orm ? { kg: e.kg, reps: e.reps, orm } : b;
+    .reduce<{ e: (typeof a.entries)[number]; v: number } | null>((b, e) => {
+      const v = performance(e, a.bodyweight).value;
+      return !b || v > b.v ? { e, v } : b;
     }, null);
+  const valueText = (v: number, unit: string) => (unit === "kg" ? `${fmt(v, 0)} kg` : unit === "m/min" ? `${fmt(v, 0)} m/min` : `${fmt(v, unit === "min" ? 0 : 0)} ${unit}`);
   const weeks = s.length > 1 ? Math.max(1, Math.round((last.date.getTime() - s[0].date.getTime()) / (7 * 86400000))) : 0;
 
   return (
     <div className="flex flex-col gap-3.5">
       <div>
-        <div className="font-mono text-xs text-muted">1.ª sessão = 100 · melhor 1RM estimado por sessão</div>
+        <div className="font-mono text-xs text-muted">1.ª sessão = 100 · melhor resultado por sessão (1RM, reps, tempo ou ritmo)</div>
         <h1 className="h-display mt-1 text-4xl">Evolução</h1>
       </div>
       <div className="flex flex-wrap gap-2">
@@ -73,9 +76,12 @@ export function EvolutionView({ a, lang, selected, baseHref }: { a: AthleteData;
         <IndexChart series={series} highlight={sel} />
       </div>
       <div className="grid grid-cols-3 gap-2">
-        <div className="card px-3 py-2.5"><div className="font-mono text-[10px] text-muted">1RM est.</div><div className="h-display text-2xl">{fmt(last.orm, 0)} kg</div></div>
-        <div className="card px-3 py-2.5"><div className="font-mono text-[10px] text-muted">Melhor série</div><div className="h-display text-2xl">{bestSet ? `${fmt(bestSet.kg)}×${bestSet.reps}` : "—"}</div></div>
-        <div className="card px-3 py-2.5"><div className="font-mono text-[10px] text-muted">Força rel.</div><div className="h-display text-2xl">{a.bodyweight ? `${fmt(last.orm / a.bodyweight, 2)}×` : "—"}</div></div>
+        <div className="card px-3 py-2.5"><div className="font-mono text-[10px] text-muted">{last.label}</div><div className="h-display text-2xl">{valueText(last.value, last.unit)}</div></div>
+        <div className="card px-3 py-2.5"><div className="font-mono text-[10px] text-muted">Melhor registo</div><div className="h-display text-xl">{bestEntry ? formatEntry(bestEntry.e) : "—"}</div></div>
+        <div className="card px-3 py-2.5">
+          <div className="font-mono text-[10px] text-muted">{usesLoadFor1RM(selMode) && last.unit === "kg" ? "Força rel." : "Sessões"}</div>
+          <div className="h-display text-2xl">{usesLoadFor1RM(selMode) && last.unit === "kg" ? (a.bodyweight ? `${fmt(last.value / a.bodyweight, 2)}×` : "—") : s.length}</div>
+        </div>
       </div>
       {volRows.length > 0 && (
         <div className="card flex flex-col gap-2 px-4 py-3">

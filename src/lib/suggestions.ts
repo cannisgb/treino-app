@@ -1,6 +1,6 @@
 import type { AthleteData } from "@/lib/athleteData";
 import { EXERCISES, exName, getExercise, groupName, type Lang } from "@/lib/catalog";
-import { stagnant } from "@/lib/metrics";
+import { stagnantIds } from "@/lib/measure";
 import type { Suggestion } from "@/components/SessionForm";
 
 /** Sugestões para o ecrã de registo: grupos em atraso, desequilíbrios e estagnação. */
@@ -34,7 +34,7 @@ export function buildSuggestions(a: AthleteData, lang: Lang): Suggestion[] {
     });
   }
 
-  for (const id of stagnant(a.entries).slice(0, 2)) {
+  for (const id of stagnantIds(a.entries, a.bodyweight).slice(0, 2)) {
     const ex = getExercise(id);
     if (!ex) continue;
     const alt = EXERCISES.filter((e) => e.padrao_movimento === ex.padrao_movimento && e.id !== id && e.grupo === ex.grupo).slice(0, 2);
