@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { requirePageUser, trainerAthlete } from "@/lib/guards";
@@ -21,8 +20,7 @@ export default async function PlanPage({ params }: { params: { id: string } }) {
   return (
     <div className="flex flex-col gap-6">
       <div>
-        <Link href={`/treinador/clientes/${athlete.id}`} className="font-mono text-xs text-muted hover:text-lime">← {athlete.name}</Link>
-        <h1 className="h-display mt-1 text-4xl">Gerador de plano</h1>
+        <h2 className="h-display text-4xl">Plano</h2>
       </div>
       {a.sessions.length < 4 && (
         <p className="text-sm text-warn">Com menos de 4 sessões registadas, as cargas ficam por preencher: o plano usa o histórico para as calcular.</p>

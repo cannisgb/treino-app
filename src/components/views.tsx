@@ -5,13 +5,25 @@ import { exName, type Lang } from "@/lib/catalog";
 import { LEVEL_LABEL, LEVELS, fmt } from "@/lib/metrics";
 import { LevelBar, Radar } from "@/components/charts";
 
-export function BodyView({ a, measureHref }: { a: AthleteData; measureHref: string }) {
-  const labels = a.now.axes.map((x) => x.label);
-  const hasTarget = a.now.axes.some((x) => x.target);
-  const prio = a.now.axes
+/** As 3 medidas mais longe do ideal (abaixo de 85%). */
+export function bodyPriorities(a: AthleteData) {
+  return a.now.axes
     .filter((x) => x.pct !== null && x.pct < 85 && x.key !== "waist")
     .sort((x, y) => (x.pct ?? 0) - (y.pct ?? 0))
     .slice(0, 3);
+}
+
+/** Nível geral de força (texto) ou null sem dados. */
+export function overallLevel(a: AthleteData) {
+  if (!a.levels.length) return null;
+  const overall = Math.round(a.levels.reduce((s, l) => s + Math.max(0, l.levelIndex) + l.progress, 0) / a.levels.length);
+  return LEVEL_LABEL[LEVELS[Math.min(4, overall)]];
+}
+
+export function BodyView({ a, measureHref }: { a: AthleteData; measureHref: string }) {
+  const labels = a.now.axes.map((x) => x.label);
+  const hasTarget = a.now.axes.some((x) => x.target);
+  const prio = bodyPriorities(a);
   const last = a.measurements[a.measurements.length - 1];
   const delta = a.then?.score != null && a.now.score != null ? a.now.score - a.then.score : null;
 

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { requirePageUser, trainerAthlete } from "@/lib/guards";
@@ -22,8 +21,7 @@ export default async function ClientMeasurementsPage({ params }: { params: { id:
   return (
     <div className="flex flex-col gap-5">
       <div>
-        <Link href={base} className="font-mono text-xs text-muted hover:text-lime">← {athlete.name}</Link>
-        <h1 className="h-display mt-1 text-4xl">Medidas</h1>
+        <h2 className="h-display text-4xl">Medidas</h2>
       </div>
       <div className="flex flex-wrap gap-6">
         <div className="min-w-0 flex-[999_1_560px]">

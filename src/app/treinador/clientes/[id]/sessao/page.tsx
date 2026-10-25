@@ -1,11 +1,9 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { requirePageUser, trainerAthlete } from "@/lib/guards";
 import { loadAthlete } from "@/lib/athleteData";
 import { buildSuggestions } from "@/lib/suggestions";
 import SessionForm from "@/components/SessionForm";
 import { isLang } from "@/lib/catalog";
-import { fmt } from "@/lib/metrics";
 
 export default async function NewSessionPage({ params, searchParams }: { params: { id: string }; searchParams: { tipo?: string } }) {
   const trainer = await requirePageUser("TRAINER");
@@ -21,9 +19,7 @@ export default async function NewSessionPage({ params, searchParams }: { params:
   return (
     <div className="flex flex-col gap-5">
       <div>
-        <Link href={`/treinador/clientes/${athlete.id}`} className="font-mono text-xs text-muted hover:text-lime">← {athlete.name}</Link>
-        <div className="font-mono text-xs text-muted">{a.bodyweight ? `${fmt(a.bodyweight)} kg` : "peso por registar"}</div>
-        <h1 className="h-display mt-1 text-4xl">{searchParams.tipo === "teste" ? "Teste de RM" : "Registo de sessão"}</h1>
+        <h2 className="h-display text-4xl">{searchParams.tipo === "teste" ? "Teste de RM" : "Registar sessão"}</h2>
       </div>
       <SessionForm
         athleteId={athlete.id}

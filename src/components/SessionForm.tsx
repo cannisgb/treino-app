@@ -65,7 +65,9 @@ export default function SessionForm({
   last,
   suggestions,
   bodyweight,
+  editing,
 }: {
+  editing?: { id: string; date: string; title: string | null; kind: Kind; entries: (LastEntry & { exerciseId: string })[] };
   athleteId: string;
   initialLang: Lang;
   initialKind: Kind;
@@ -75,11 +77,15 @@ export default function SessionForm({
 }) {
   const router = useRouter();
   const [lang, setLang] = useState<Lang>(initialLang);
-  const [kind, setKind] = useState<Kind>(initialKind);
-  const [date, setDate] = useState(() => new Date().toISOString().slice(0, 10));
-  const [title, setTitle] = useState(initialKind === "teste" ? "Teste de RM" : "");
+  const [kind, setKind] = useState<Kind>(editing?.kind ?? initialKind);
+  const [date, setDate] = useState(() => editing?.date ?? new Date().toISOString().slice(0, 10));
+  const [title, setTitle] = useState(editing ? editing.title ?? "" : initialKind === "teste" ? "Teste de RM" : "");
   const [rows, setRows] = useState<Row[]>(() =>
-    initialKind === "teste" ? testRows(last) : [{ key: seq++, ...rowFor("") }]
+    editing
+      ? editing.entries.map((e) => ({ key: seq++, ...rowFor(e.exerciseId, e), mode: isCustom(e.exerciseId) ? (e.mode as Mode) : undefined }))
+      : initialKind === "teste"
+        ? testRows(last)
+        : [{ key: seq++, ...rowFor("") }]
   );
   const [error, setError] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
@@ -87,6 +93,7 @@ export default function SessionForm({
   function switchKind(k: Kind) {
     if (k === kind) return;
     setKind(k);
+    if (editing) return; // ao corrigir, mudar o tipo não apaga os exercícios
     if (k === "teste") {
       setRows(testRows(last));
       setTitle("Teste de RM");
@@ -134,14 +141,14 @@ export default function SessionForm({
       if (bad) return setError(`Confirma os valores de “${exName(e.exerciseId, lang)}”: ${m.hint.toLowerCase()}.`);
     }
     setSaving(true);
-    const res = await fetch("/api/sessions", {
-      method: "POST",
+    const res = await fetch(editing ? `/api/sessions/${editing.id}` : "/api/sessions", {
+      method: editing ? "PATCH" : "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ athleteId, date, title: title || null, kind, entries }),
     });
     setSaving(false);
     if (!res.ok) return setError((await res.json()).error || "Algo correu mal.");
-    router.push(`/treinador/clientes/${athleteId}`);
+    router.push(`/treinador/clientes/${athleteId}${editing ? "/sessoes" : ""}`);
     router.refresh();
   }
 
@@ -287,7 +294,7 @@ export default function SessionForm({
               + Adicionar exercício
             </button>
             <button type="button" onClick={submit} disabled={saving} className="btn-primary ml-auto">
-              {saving ? "A guardar…" : kind === "teste" ? "Guardar teste" : "Guardar sessão"}
+              {saving ? "A guardar…" : editing ? "Guardar alterações" : kind === "teste" ? "Guardar teste" : "Guardar sessão"}
             </button>
           </div>
           {customCount > 0 && (
@@ -302,6 +309,7 @@ export default function SessionForm({
         </p>
       </div>
 
+      {!editing && (
       <aside className="flex flex-[1_1_280px] flex-col gap-2.5">
         <div className="h-display text-base text-muted">Sugestões</div>
         {suggestions[lang].length === 0 && <p className="text-sm text-muted">Ainda sem histórico suficiente para sugestões.</p>}
@@ -321,6 +329,7 @@ export default function SessionForm({
           </div>
         ))}
       </aside>
+      )}
     </div>
   );
 }

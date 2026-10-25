@@ -35,6 +35,12 @@ PWA em Next.js 14 + Prisma/PostgreSQL + NextAuth. Foi criada a partir da base t�
   - Carga × distância (2, farmer's carry, trenó): séries × metros × kg.
 - A evolução usa o número certo para cada tipo (1RM, reps, segundos, ritmo m/min). O gerador de planos prescreve no mesmo formato.
 
+## Novidades (v1.3)
+
+- **Ficha do cliente reorganizada:** menu à esquerda (separadores no telemóvel) com Resumo, Corpo, Força, Evolução, Sessões, Medidas, Plano e Teste de RM.
+- **Resumo:** corpo, nível de força, peso, treinos dos últimos 30 dias, última sessão, prioridades e maiores progressos.
+- **Sessões editáveis:** cada sessão pode ser corrigida (valores, data, nome, tipo, exercícios) ou apagada com confirmação.
+
 ## Estrutura
 
 ```
